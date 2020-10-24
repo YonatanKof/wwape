@@ -6,5 +6,15 @@
 
 module.exports = {
   siteName: 'Gridsome',
-  plugins: []
+  plugins: [
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Product', // Required
+        baseDir: './content/prods', // Where .md files are located
+        pathPrefix: '/product', // Add route prefix. Optional
+        template: './src/templates/Product.vue' // Optional
+      }
+    }
+  ]
 }

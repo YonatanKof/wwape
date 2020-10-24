@@ -7,8 +7,6 @@ image_main: ./imgs/image-01.jpg
 ---
 ## My first prod
 
-import Hr from "~/components/Hr";
-
 Regrettably, I could do nothing to prevent the disaster which devastated Tristram. It would appear that our greatest fears have come to pass. Diablo, the Lord of Terror, has once again been set loose upon the world!
 
 As you know, some time ago Diablo was slain beneath Tristram. And when our hero emerged triumphant from the labyrinth beneath town, we held a grand celebration that lasted several days.
