@@ -5,8 +5,8 @@
         <h3 v-html="'<span>Added on: </span>' + $page.product.date_added" />
         <p v-html="$page.product.description" />
         <hr />
-        <div v-html="$page.product.content" />
         <g-image :src="$page.product.image_main" />
+        <VueRemarkContent />
     </Layout>
 </template>
 
