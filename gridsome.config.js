@@ -5,16 +5,17 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: [
-    {
-      use: '@gridsome/vue-remark',
-      options: {
-        typeName: 'Product', // Required
-        baseDir: './content/prods', // Where .md files are located
-        pathPrefix: '/product', // Add route prefix. Optional
-        template: './src/templates/Product.vue' // Optional
-      }
-    }
-  ]
-}
+    siteName: "Gridsome",
+    plugins: [
+        {
+            use: "@gridsome/vue-remark",
+            options: {
+                typeName: "Product", // Required
+                baseDir: "./content/prods", // Where .md files are located
+                pathPrefix: "/product", // Add route prefix. Optional
+                template: "./src/templates/Product.vue", // Optional
+                plugins: ["@gridsome/remark-prismjs"],
+            },
+        },
+    ],
+};
