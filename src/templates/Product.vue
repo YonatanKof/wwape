@@ -1,8 +1,14 @@
 <template>
     <Layout>
         <h1 v-html="$page.product.title" />
-        <h3 v-html="'<span>Item ID: </span>' + $page.product.prodID" />
-        <h3 v-html="'<span>Added on: </span>' + $page.product.date_added" />
+        <h3>
+            <span>Item ID: </span>
+            {{ $page.product.prodID }}
+        </h3>
+        <h3>
+            <span>Added on: </span>
+            {{ $page.product.date_added }}
+        </h3>
         <p v-html="$page.product.description" />
         <hr />
         <g-image :src="$page.product.image_main" />
@@ -15,9 +21,7 @@ export default {
     metaInfo() {
         return {
             title:
-                this.$page.product.title +
-                " on " +
-                this.$page.product.date_added,
+                this.$page.product.title + ", id: " + this.$page.product.prodID,
             meta: [
                 {
                     name: "description",
@@ -43,6 +47,9 @@ export default {
 </page-query>
 
 <style>
+p{
+    font-size: 1.1em;
+}
 span {
     color: red;
     font-weight: 400;
