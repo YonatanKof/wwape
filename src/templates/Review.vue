@@ -1,17 +1,17 @@
 <template>
     <Layout>
-        <h1 v-html="$page.product.title" />
+        <h1 v-html="$page.review.title" />
         <h3>
             <span>Item ID: </span>
-            {{ $page.product.prodID }}
+            {{ $page.review.prodID }}
         </h3>
         <h3>
             <span>Added on: </span>
-            {{ $page.product.date_added }}
+            {{ $page.review.date_added }}
         </h3>
-        <p v-html="$page.product.description" />
+        <p v-html="$page.review.description" />
         <hr />
-        <g-image :src="$page.product.image_main" />
+        <g-image :src="$page.review.image_main" />
         <VueRemarkContent />
     </Layout>
 </template>
@@ -21,11 +21,11 @@ export default {
     metaInfo() {
         return {
             title:
-                this.$page.product.title + ", id: " + this.$page.product.prodID,
+                this.$page.review.title + ", id: " + this.$page.review.prodID,
             meta: [
                 {
                     name: "description",
-                    content: this.$page.product.description,
+                    content: this.$page.review.description,
                 },
             ],
         };
@@ -34,8 +34,8 @@ export default {
 </script>
 
 <page-query>
-  query Product ($id: ID!) {
-    product (id: $id) {
+  query review ($id: ID!) {
+    review (id: $id) {
       title
       prodID
       date_added (format:"MMMM DD, YYYY")

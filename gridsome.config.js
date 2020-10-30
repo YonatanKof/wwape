@@ -10,10 +10,10 @@ module.exports = {
         {
             use: "@gridsome/vue-remark",
             options: {
-                typeName: "Product", // Required
+                typeName: "Review", // Required
                 baseDir: "./content/prods", // Where .md files are located
-                pathPrefix: "/product", // Add route prefix. Optional
-                template: "./src/templates/Product.vue", // Optional
+                pathPrefix: "/review", // Add route prefix. Optional
+                template: "./src/templates/Review.vue", // Optional
                 plugins: ["@gridsome/remark-prismjs"],
             },
         },

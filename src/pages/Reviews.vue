@@ -1,7 +1,7 @@
 <template>
     <Layout>
-        <ProductCard
-            v-for="edge in $page.products.edges"
+        <ReviewCard
+            v-for="edge in $page.review.edges"
             :key="edge.node.id"
             :prefix="edge.node"
         />
@@ -9,20 +9,20 @@
 </template>
 
 <script>
-import ProductCard from "../components/ProductCard.vue";
+import ReviewCard from "../components/ReviewCard.vue";
 export default {
     components: {
-        ProductCard,
+        ReviewCard,
     },
     metaInfo: {
-        title: "Products",
+        title: "Review",
     },
 };
 </script>
 
 <page-query>
-query Products {
-  products: allProduct {
+query review {
+  review: allReview {
     edges {
       node {
         id
