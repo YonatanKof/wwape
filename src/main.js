@@ -1,4 +1,7 @@
-// This is the main.js file. Import global CSS and scripts here.
+// This is the main.js file. 
+// Import global CSS and scripts here.
+import '~/assets/style/index.scss'
+
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from '~/layouts/Default.vue'
