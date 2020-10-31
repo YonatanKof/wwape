@@ -2,16 +2,15 @@
     <Layout>
         <Author
             :show-title="true"
-            v-bind:author-title="'# ' + $page.tag.title"
+            v-bind:author-title="'# ' + $page.tag.id"
             :show-bio-text="true"
-            v-bind:author-bio="'Some writing about ' + $page.tag.title + ', by the kof himself'"
+            v-bind:author-bio="'Some writing about ' + $page.tag.id + ', by the kof himself'"
         />
-        <!-- <h1 class="tag-title text-center space-bottom"># {{ $page.tag.title }}</h1> -->
         <div class="posts">
             <PostCard
                 v-for="edge in $page.tag.belongsTo.edges"
                 :key="edge.node.id"
-                :post="edge.node"
+                :postdata="edge.node"
             />
         </div>
     </Layout>
@@ -20,7 +19,7 @@
 <page-query>
 query Tag ($id: ID!) {
   tag (id: $id) {
-    title
+    id
     belongsTo {
       edges {
         node {
@@ -31,7 +30,7 @@ query Tag ($id: ID!) {
             cover_image (width: 770, height: 380, blur: 10)
             cover_caption
             date (format: "D. MMMM YYYY")
-            timeToRead
+            # timeToRead
             description
             content
           }

@@ -11,7 +11,7 @@
             <PostCard 
                 v-for="edge in $page.posts.edges" 
                 :key="edge.node.id" 
-                :post="edge.node" 
+                :postdata="edge.node" 
             />
         </div>
         <!-- Author intro -->
@@ -28,14 +28,14 @@ query {
         path
         author_name
         date (format: "D. MMMM YYYY")
-        timeToRead
+        # timeToRead
         description
         cover_image (width: 770, height: 380, blur: 10)
         cover_caption
         urlname
         tags {
           id
-          title
+          # title
           path
         }
       }
