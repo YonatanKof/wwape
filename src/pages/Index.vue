@@ -1,33 +1,34 @@
 <template>
-  <Layout>
-
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
-  </Layout>
+    <Layout :show-logo="true">
+        <!-- Author intro -->
+        <Author
+            :show-title="true"
+            :author-title="$static.metadata.siteName"
+            :show-bio-text="true"
+            author-bio="As a great ape I love helping individuals and organizations getting 💩 done, while keeping it agile and keeping it real. I like to create things from nothing, concepts form talks, products from ideas"
+            
+        />
+    </Layout>
 </template>
 
-<script>
-export default {
-  metaInfo: {
-    title: 'Hello, world!'
+<static-query>
+query {
+  metadata {
+    siteName,
+    siteDescription
   }
 }
-</script>
+</static-query>
 
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>
+<script>
+import Author from "~/components/Author.vue";
+
+export default {
+    components: {
+        Author,
+    },
+    metaInfo: {
+        title: "Yonatan Ben Knaan",
+    },
+};
+</script>
