@@ -1,19 +1,19 @@
 <template>
-    <div class="post-card" :class="{'post-card--has-poster' :post.poster}">
+    <div class="post-card" :class="{'post-card--has-poster' :postdata.poster}">
         <div class="post-card__header">
             <g-image
                 alt="Cover image"
-                v-if="post.cover_image"
+                v-if="postdata.cover_image"
                 class="post-card__image"
-                :src="post.cover_image"
+                :src="postdata.cover_image"
             />
         </div>
         <div class="post-card__content">
-            <h3 class="post-card__title" v-html="post.title" />
-            <p class="post-card__description" v-html="post.description" />
+            <h3 class="post-card__title" v-html="postdata.title" />
+            <p class="post-card__description" v-html="postdata.description" />
             <PostMeta class="post-card__meta" :post="post" />
-            <PostTags v-if="post.tags" class="post-card__tags" :post="post" />
-            <g-link class="post-card__link" :to="post.path">Link</g-link>
+            <PostTags v-if="postdata.tags" class="post-card__tags" :posttags="postdata" />
+            <g-link class="post-card__link" :to="postdata.path">Link</g-link>
         </div>
     </div>
 </template>
@@ -26,7 +26,7 @@ export default {
         PostMeta,
         PostTags
     },
-    props: ["post"]
+    props: ["postdata"]
 };
 </script>
 
