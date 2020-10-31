@@ -6,11 +6,11 @@ date: 2020-10-20
 updated: 2020-10-20
 published: true
 tags: ['macOS', 'Shortcuts', 'Sketch','Productivity']
-series: false
-cover_image: ./macOS_SC/cover.jpg
+cover_image: ./macOS/cover.jpg
 cover_caption: Screen shot of Mac keyboard shortcuts page on Apple support
-canonical_url: false
 description: How to create, edit or remove shortcuts for a macOS
+canonical_url: false
+series: false
 ---
 Lift($L$) can be determined by Lift Coefficient ($C_L$) like the following
 equation.
@@ -119,30 +119,30 @@ Well, that's all for today. See you in the next post when we'll deal with the Sk
 ---
 
 ## This blogs images 
-[^fig.unmerged]: Scattered finder windows ![An example of scattered finder windows](./macOS_SC/Merge_All_Window-Unmerged.png)
+[^fig.unmerged]: Scattered finder windows ![An example of scattered finder windows](./macOS/Merge_All_Window-Unmerged.png)
 
-[^fig.merged]: Same finder windows merged into one window shown as tabs ![An example of scattered finder windows](./macOS_SC/Merge_All_Windows-Merged.png)
+[^fig.merged]: Same finder windows merged into one window shown as tabs ![An example of scattered finder windows](./macOS/Merge_All_Windows-Merged.png)
  
-[^fig.spot]: macOS Spotlight Search ![macOS Spotlight Search](./macOS_SC/Extra-Spotlight_Search.png)
+[^fig.spot]: macOS Spotlight Search ![macOS Spotlight Search](./macOS/Extra-Spotlight_Search.png)
  
-[^fig.apple_menu]: The Apple menu - You can fine the preferences menu here ![The Apple menu - You can fine the preferences menu here](./macOS_SC/Extra-Apple_Menu.png)
+[^fig.apple_menu]: The Apple menu - You can fine the preferences menu here ![The Apple menu - You can fine the preferences menu here](./macOS/Extra-Apple_Menu.png)
 
-[^fig.keyOS]: macOS Keyboard Shortcut Manager ![macOS Keyboard Shortcut Manager](./macOS_SC/MasOS-Shortcut_Manager.png)
+[^fig.keyOS]: macOS Keyboard Shortcut Manager ![macOS Keyboard Shortcut Manager](./macOS/MasOS-Shortcut_Manager.png)
 
-[^fig.prompt]: A prompt widow to add command to an app ![A prompt widow to add command to an app](./macOS_SC/MasOS-Add_Shortcut_Prompt.png)
+[^fig.prompt]: A prompt widow to add command to an app ![A prompt widow to add command to an app](./macOS/MasOS-Add_Shortcut_Prompt.png)
 
-[^fig.filled-prompt]: Added the command name and shortcut in the prompt ![Added the command name and shortcut in the prompt](./macOS_SC/MasOS-Filled_Prompt.png)
+[^fig.filled-prompt]: Added the command name and shortcut in the prompt ![Added the command name and shortcut in the prompt](./macOS/MasOS-Filled_Prompt.png)
 
-[^fig.pick-app]: Make the shortcut specific by selecting an app ![Make the shortcut specific by selecting an app](./macOS_SC/MasOS-Shortcut_Pick_App.png)
+[^fig.pick-app]: Make the shortcut specific by selecting an app ![Make the shortcut specific by selecting an app](./macOS/MasOS-Shortcut_Pick_App.png)
 
-[^fig.unique]: An example of a unique command using a the command’s path ![An example of a unique command using a the command’s path](./macOS_SC/MasOS-Shortcut_Manager_Full.png)
+[^fig.unique]: An example of a unique command using a the command’s path ![An example of a unique command using a the command’s path](./macOS/MasOS-Shortcut_Manager_Full.png)
 
-[^fig.comma]: Comma plugin banner taken form their Github Page ![Comma plugin banner taken form their Github Page](./macOS_SC/Comma_plugin.png)
+[^fig.comma]: Comma plugin banner taken form their Github Page ![Comma plugin banner taken form their Github Page](./macOS/Comma_plugin.png)
 
-[^fig.Text_Align_Left]: The text left align command ![The text left align command](./macOS_SC/Sketch_Menu-Text_Align_Left.png)
+[^fig.Text_Align_Left]: The text left align command ![The text left align command](./macOS/Sketch_Menu-Text_Align_Left.png)
 
-[^fig.Arrange_Align_Left]: The arrange left align command ![The arrange left align command](./macOS_SC/Sketch_Menu-Arrange_Align_Left.png)
+[^fig.Arrange_Align_Left]: The arrange left align command ![The arrange left align command](./macOS/Sketch_Menu-Arrange_Align_Left.png)
 
-[^fig.Karabiner]: The Karabiner app on the Complex modification tab - An Empty state ![The Karabiner app on the Complex modification tab - An Empty state](./macOS_SC/Karabiner_Elements-01-Complex_modification_tab.png)
+[^fig.Karabiner]: The Karabiner app on the Complex modification tab - An Empty state ![The Karabiner app on the Complex modification tab - An Empty state](./macOS/Karabiner_Elements-01-Complex_modification_tab.png)
 
-[^fig.Karabiner_prompt]: A prompt window to enable the command+control+option+shift as *Caps lock* on Karabiner ![A prompt window to enable the command+control+option+shift as Caps lock on Karabiner](./macOS_SC/Karabiner_Elements-02-Add_rule.png)
+[^fig.Karabiner_prompt]: A prompt window to enable the command+control+option+shift as *Caps lock* on Karabiner ![A prompt window to enable the command+control+option+shift as Caps lock on Karabiner](./macOS/Karabiner_Elements-02-Add_rule.png)
