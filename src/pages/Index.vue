@@ -5,7 +5,7 @@
             :show-title="true"
             :author-title="$static.metadata.siteName"
             :show-bio-text="true"
-            author-bio="As a great ape I love helping individuals and organizations getting 💩 done, while keeping it agile and keeping it real. I like to create things from nothing, concepts form talks, products from ideas"
+            author-bio="I help individuals &amp; organizations get 💩 done while keeping it agile &amp; keeping it real. I love creating things from nothing, concepts form conversetions &amp; products from ideas"
             
         />
     </Layout>
