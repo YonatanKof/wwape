@@ -9,7 +9,7 @@
                 A design system manager, a mismatched persona and an alright
                 dude from TLV 🇮🇱
             </h2>
-            <Hr hr-color="red" hr-margin-bottom="100px" />
+            <Hr hr-margin-bottom="var(--spacem-2xl)" />
             <div class="about__bio-text">
                 <div id="the-text">
                     <p>
