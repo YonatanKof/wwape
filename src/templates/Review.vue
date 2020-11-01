@@ -46,7 +46,7 @@ export default {
   }
 </page-query>
 
-<style>
+<style scoped>
 p{
     font-size: 1.1em;
 }
