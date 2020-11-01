@@ -5,7 +5,6 @@
         <Logo v-if="showLogo" />
       </div>
       <div class="header__right">
-        <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about/">About</g-link>
         <g-link class="nav__link" to="/posts/">Posts</g-link>
         <g-link class="nav__link" to="/reviews/">Reviews</g-link>
