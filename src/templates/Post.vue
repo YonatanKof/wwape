@@ -8,7 +8,7 @@
         />
         <div class="post-title">
             <!-- <h2 class="post-title__text">{{ $page.post.title }}</h2> -->
-            <PostMeta :post="$page.post" />
+            <PostMeta :postmeta="$page.post" />
         </div>
         <div class="post">
             <div class="post__header">
@@ -70,7 +70,6 @@ query Post ($id: ID!) {
     content
     cover_image (width: 860, blur: 10)
     cover_caption
-    urlname
   }
 }
 </page-query>

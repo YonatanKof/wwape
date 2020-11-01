@@ -11,7 +11,7 @@
         <div class="post-card__content">
             <h3 class="post-card__title" v-html="postdata.title" />
             <p class="post-card__description" v-html="postdata.description" />
-            <PostMeta class="post-card__meta" :post="post" />
+            <PostMeta class="post-card__meta" :postmeta="postdata" />
             <PostTags v-if="postdata.tags" class="post-card__tags" :posttags="postdata" />
             <g-link class="post-card__link" :to="postdata.path">Link</g-link>
         </div>
