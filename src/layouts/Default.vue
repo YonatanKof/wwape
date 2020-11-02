@@ -76,7 +76,9 @@ query {
     justify-content: space-between;
     align-items: center;
     min-height: var(--header-height);
-    padding: 0 var(--content-space);
+    padding: 0;
+    padding-left: calc(max(var(--content-space), env(safe-area-inset-left)));
+    padding-right: calc(max(var(--content-space), env(safe-area-inset-right)));
     top: 0;
     z-index: 10;
     .active--exact {
@@ -106,6 +108,8 @@ query {
     align-items: center;
     justify-content: center;
     padding: var(--content-space);
+    padding-left: calc(max(var(--content-space), env(safe-area-inset-left)));
+    padding-right: calc(max(var(--content-space), env(safe-area-inset-right)));
     margin-bottom: var(--spacem-md);
     text-align: center;
     &__links {
