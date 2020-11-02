@@ -68,8 +68,8 @@ query {
 .main {
     margin: 0 auto;
     padding: 0;
-    padding-left: max(var(--content-space), env(safe-area-inset-left));
-    padding-right: max(var(--content-space), env(safe-area-inset-right));
+    padding-left: calc(max(var(--content-space), env(safe-area-inset-left)));
+    padding-right: calc(max(var(--content-space), env(safe-area-inset-right)));
 }
 .header {
     display: flex;
