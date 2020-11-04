@@ -12,12 +12,6 @@ description: How to create, edit or remove shortcuts for a macOS
 canonical_url: false
 series: false
 ---
-Lift($L$) can be determined by Lift Coefficient ($C_L$) like the following
-equation.
-
-$$
-L = \frac{1}{2} \rho v^2 S C_L
-$$
 
 The macOS and the apps installed comes pack with sweet sweet shortcuts but not all is perfect. You might easily find yourself doing the same task over and over again by navigating and clicking items in menus unfitting to Fitts’s Law. Or even worse than that is that you didn't click that command because you where to lazy to navigate then damn menus - and by that hindering your workflow - which is already quite difficult. Such a shame...
 
@@ -41,6 +35,7 @@ Then let's learn how solve these problems and have a better workflow 🎉
 ## Create a custom macOS shortcut 
 
 Let's start with the *Merge All Windows* command.
+
 1. Open the *Keyboard* Preferences
    
    You can use the *Spotlight Search* with the `control` + `spacebar`, which is a great shortcut by *itself*, and start typing what your looking for. We're looking for the *Keyboard* Preferences, so I'll start typing `ke` [^fig.spot], then I'll see it as an option, click it! 
