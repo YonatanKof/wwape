@@ -7,7 +7,11 @@
 module.exports = {
     siteName: "Kof'R'Us",
     siteDescription:
-        "Yonatan Ben Knaan - A design system manager, a creative director, a mismatched persona and an alright dude.",
+        "Yonatan Ben Knaan - A design system manager, a mismatched persona and an alright dude.",
+    icon: {
+        favicon: "./src/assets/images/kof-logo.png",
+        touchicon: "./src/assets/images/kof-logo-full.png.png",
+    },
     plugins: [
         {
             use: "@gridsome/vue-remark",
