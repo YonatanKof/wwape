@@ -43,6 +43,11 @@ module.exports = {
                 refs: {
                     tags: "Tag",
                 },
+                remark: {
+                    config: {
+                        footnotes: true,
+                    },
+                },
             },
         },
     ],
