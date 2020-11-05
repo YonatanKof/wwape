@@ -64,6 +64,8 @@ query {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(180deg, var(--bg-color), var(--bg-color-HL));
 }
 .main {
     margin: 0 auto;

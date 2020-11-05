@@ -84,10 +84,21 @@ query Post ($id: ID!) {
 .post {
     @include content-box;
     margin-bottom: 0;
-    @include mQ-max($display-size-xs) {
+    @include mQ-max($display-size-sm) {
         // Remove padding on small screens
         margin: 0 calc(var(--content-space) * -1);
         border-radius: 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: var(--spacem-md);
+    }
+    :is(h1, h2, h3, h4, h5, h6):first-child {
+        margin-top: 0;
     }
     &__header {
         /* width: calc(100% + var(--space) * 2); */
@@ -97,7 +108,7 @@ query Post ($id: ID!) {
         margin-top: calc(var(--space-2xl) * -1);
         overflow: hidden;
         border-radius: var(--radius) var(--radius) 0 0;
-        @include mQ-max($display-size-xs) {
+        @include mQ-max($display-size-sm) {
             // Remove border-radius on small screens
             border-radius: 0;
         }
@@ -109,17 +120,6 @@ query Post ($id: ID!) {
         }
     }
     &__content {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin-top: var(--spacem-md);
-        }
-        :is(h1, h2, h3, h4, h5, h6):first-child {
-            margin-top: 0;
-        }
         img {
             width: calc(100% + var(--content-space) * 2);
             margin-left: calc(var(--content-space) * -1);
@@ -136,5 +136,58 @@ query Post ($id: ID!) {
 }
 .post-author {
     margin-top: calc(var(--content-space) / 2);
+}
+
+.footnotes {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    ol {
+        list-style-type: none;
+        margin: 0;
+    }
+    li {
+        margin-bottom: var(--space-2xl);
+        background-color: var(--bg-pre);
+        padding: var(--space-lg);
+        border-radius: var(--radius);
+    }
+    img {
+        margin-top: var(--spacem-xs);
+        border-radius: var(--radius);
+    }
+    a {
+        font-size: var(--font-size-md);
+        background-color: var(--bg-code);
+        font-weight: var(--font-wight--bolder);
+        padding: var(--spacem-2xs) var(--spacem-xs);
+        border-radius: var(--radius);
+        margin: 0;
+        display: inline-block;
+        &::after {
+            content: " Back to footnote";
+        }
+    }
+}
+
+sup {
+    vertical-align: super;
+    font-size: var(--font-size-sm);
+    // font-size: smaller;
+    padding-inline-start: var(--spacem-3xs);
+    padding-inline-end: var(--spacem-4xs);
+    @include dimmed;
+    transition: opacity ease-in-out 0.25s;
+    &:hover {
+        opacity: 1;
+    }
+    &::before {
+        content: "[";
+        padding-inline-end: var(--spacem-3xs);
+    }
+    &::after {
+        content: "]";
+        padding-inline-start: var(--spacem-3xs);
+    }
 }
 </style>
