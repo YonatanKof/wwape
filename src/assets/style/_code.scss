@@ -11,14 +11,19 @@ pre {
 	font-size: 0.95em;
 }
 code {
-	white-space: nowrap;
+	// font-size: 0.9em;
+	font-style: italic;
 	background-color: var(--bg-code);
-	font-weight: var(--font-wight--bolder);
-	margin-inline-start: var(--spacem-2xs);
-	margin-inline-end: var(--spacem-2xs);
-	padding: var(--spacem-3xs) var(--spacem-2xs);
-	// border: none;
+	// font-weight: var(--font-wight--bold);
+	padding: var(--spacem-4xs) var(--spacem-2xs);
+	border-radius: var(--radius);
+	margin-inline-start: var(--spacem-4xs);
+	margin-inline-end: var(--spacem-4xs);
 }
+
+// code + code {
+// 	margin-inline-start: 20px;
+// }
 
 pre {
 	position: relative;
