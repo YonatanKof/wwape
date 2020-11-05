@@ -107,7 +107,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/style/index";
+@import "../assets/style/_layout.scss";
+@import "../assets/style/_typography.scss";
 
 .grab-word {
     white-space: nowrap;

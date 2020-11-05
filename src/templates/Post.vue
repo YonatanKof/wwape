@@ -75,7 +75,9 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
-@import "../assets/style/index";
+@import "../assets/style/_layout.scss";
+@import "../assets/style/_content-box.scss";
+@import "../assets/style/_typography.scss";
 
 .post-title {
     padding-bottom: var(--space-xl);
