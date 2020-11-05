@@ -24,9 +24,9 @@ I guess that if you don't know how to create shortcuts for mac then here are two
  
 ## Some jobs to be done
 
-Here's two custom commands that can really improve your workflow, I'll use then as examples:
+Here's two examples of custom commands that can improve your workflow:
 
-1. `Merge all window` - This command is relevant for **all** apps that are multi window: Let's say you find yourself with 7 open *Sketch* files and 6 *Finder* windows, and you're clicking like crazy trying to find the window you're looking for. Such an hassle. The `Merge all window` command is the best cleaner upper you'll get. It will merge all of your open windows [^fig-unmerged] into one window and shown as tabs [^fig-merged].
+1. *`Merge all window`* - This command is relevant for **all** apps that are multi window: Let's say you find yourself with 7 open *Sketch* files and 6 *Finder* windows, and you're clicking like crazy trying to find the window you're looking for. Such an hassle. The `Merge all window` command is the best cleaner upper you'll get. It will merge all of your open windows [^fig-unmerged] into one window and shown as tabs [^fig-merged].
 2. The next command is specific for *Sketch*: The issue with reviewing the *Layers* or *Components* panel on a big file. Of course you can scroll, it's nice, but sometimes you'd like the get an overview at a glance. That's why the `Collapse All Groups` command is good for. Unfortunately it has no shortcut 😢
 
 
@@ -83,10 +83,10 @@ Most apps on the macOS has a wildcard shortcut that allows to fussy search for y
 Shortcuts in mac need to be unique. Let's take for example the `Left` command in *Sketch*, if you'll ever create a shortcut for it as explain above, it won't work. The reason is, this command ain't unique. You can find it both under `Text → Align → Left` and under `Arrange → Align → Left`. The app won't know which *left* you're referring to, so it will just diss you 😒 You'll have to make it unique for it to work, one way to do so is by adding its location. 
 
 Let's brake it down: 
-- `Text → Align → Left` [^fig-Text_Align_Left]
-- `Arrange → Align → Left` [^fig-Arrange_Align_Left]
+- `Text → Align → Left`  [^fig-Text_Align_Left]
+- `Arrange → Align → Left`  [^fig-Arrange_Align_Left]
   
-`Left` and `Align` are identical at both command - `Text` and `Arrange` are unique. So let's say you wanna shortcut the `Arrange` bit, so you'll need to copy the complete path by using the `dash` + `greater than` pattern to mark nest descent. So the left align arrange command needs to look like this: `Arrange->Align->Left` [^fig-unique], and there you have it, a command the is unique as a snowflake ❄️
+`Left` and `Align` are identical at both command - `Text` and `Arrange` are unique. So let's say you wanna shortcut the `Arrange` bit, so you'll need to copy the complete path by using the `dash` + `greater than` pattern to mark nest descent. So the left align arrange command needs to look like this: `Arrange → Align → Left` [^fig-unique], and there you have it, a command the is unique as a snowflake ❄️
 
 I'll make sure the Application is on *Sketch* and for the shortcut I'll use the `ctrl` + `option` + `cmd` + `shift` + `→` and voila - a new shortcut is born 👶 
 
