@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
@@ -13,8 +13,8 @@
     --font-family--body: "Inter", "Inter var", -apple-system, system-ui,
         BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     --font-family--title: "Inknut Antiqua", Georgia, serif;
-    --font-family--code: "Source Code Pro", Consolas, Monaco, "Andale Mono",
-        "Ubuntu Mono", monospace;
+    --font-family--code: "DM Mono", Consolas, Monaco, "Andale Mono",
+        "Ubuntu Mono", monospace;   
 
     --font-wight--regular: 400;
     --font-wight--bold: 500;
@@ -54,11 +54,12 @@ body {
     font-family: var(--font-family--body);
     font-weight: var(--font-wight--regular);
     font-size: var(--font-size--regular);
-    line-height: 1.25;
+    // line-height: 20;
     font-feature-settings: "frac", "salt";
 }
 p {
     color: var(--system-color);
+    line-height: 1.75;
 }
 
 p,
@@ -90,7 +91,7 @@ h6 {
     color: var(--title-color);
     font-family: var(--font-family--title);
     font-weight: var(--font-wight--bolder);
-    margin-bottom: var(--spacem-xs);
+    margin-bottom: var(--space-xs);
     line-height: 1.25;
 }
 
@@ -127,10 +128,10 @@ i {
     font-style: italic;
 }
 em {
-    font-weight: var(--font-wight--bolder);
+    font-weight: var(--font-wight--bold);
 }
 strong {
-    font-weight: var(--font-wight--bolder);
+    font-weight: var(--font-wight--bold);
     text-transform: uppercase;
 }
 
