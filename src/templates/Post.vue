@@ -93,15 +93,22 @@ query Post ($id: ID!) {
     }
     h1,
     h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    h3 {
         margin-top: var(--spacem-md);
     }
-    :is(h1, h2, h3, h4, h5, h6):first-child {
-        margin-top: 0;
+
+    h1 {
+        font-size: var(--font-size-6xl);
     }
+
+    h2 {
+        font-size: var(--font-size-4xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-2xl);
+    }
+
     &__header {
         /* width: calc(100% + var(--space) * 2); */
         margin-left: calc(var(--space-2xl) * -1);
@@ -121,14 +128,6 @@ query Post ($id: ID!) {
             display: none;
         }
     }
-    &__content {
-        img {
-            width: calc(100% + var(--content-space) * 2);
-            margin-left: calc(var(--content-space) * -1);
-            display: block;
-            max-width: none;
-        }
-    }
 }
 .post-comments {
     padding: calc(var(--content-space) / 2);
@@ -140,10 +139,45 @@ query Post ($id: ID!) {
     margin-top: calc(var(--content-space) / 2);
 }
 
+@mixin blockquote {
+    border-left-width: var(--space-xs);
+    border-left-style: solid;
+    border-left-color: var(--border-color);
+    padding: var(--space-xs) var(--space-md);
+    background-color: var(--bg-pre);
+    color: var(--title-color);
+    margin-bottom: var(--spacem-xs);
+    p {
+        margin: 0;
+    }
+}
+
+blockquote {
+    @include blockquote;
+}
+
+.hint {
+    @include blockquote;
+}
+
+.tip {
+    background-color: var(--bg-primary);
+    border-left-color: var(--bg-primary-HL);
+}
+.warn {
+    color: var(--system-color-invert);
+    font-weight: var(--font-wight--bold);
+    background-color: var(--bg-color-invert);
+    border-left-color: var(--system-color-HL);
+}
+.error {
+    background-color: var(--bg-caution);
+    border-left-color: var(--bg-caution-HL);
+}
+
 .footnotes {
     margin: 0;
     padding: 0;
-    text-align: center;
     ol {
         list-style-type: none;
         margin: 0;
@@ -157,6 +191,8 @@ query Post ($id: ID!) {
     img {
         margin-top: var(--spacem-xs);
         border-radius: var(--radius);
+        max-height: calc(16 * var(--space-4xl));
+        width: auto;
     }
     a {
         font-size: var(--font-size-md);
@@ -165,7 +201,8 @@ query Post ($id: ID!) {
         padding: var(--spacem-2xs) var(--spacem-xs);
         border-radius: var(--radius);
         margin: 0;
-        display: inline-block;
+        display: block;
+        max-width: max-content;
         &::after {
             content: " Back to footnote";
         }
