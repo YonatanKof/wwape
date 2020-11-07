@@ -14,7 +14,7 @@
         BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     --font-family--title: "Inknut Antiqua", Georgia, serif;
     --font-family--code: "DM Mono", Consolas, Monaco, "Andale Mono",
-        "Ubuntu Mono", monospace;   
+        "Ubuntu Mono", monospace;
 
     --font-wight--regular: 400;
     --font-wight--bold: 500;
@@ -91,7 +91,7 @@ h6 {
     color: var(--title-color);
     font-family: var(--font-family--title);
     font-weight: var(--font-wight--bolder);
-    margin-bottom: var(--space-xs);
+    margin-bottom: var(--spacem-2xs);
     line-height: 1.25;
 }
 
@@ -108,6 +108,7 @@ h2 {
 
 h3 {
     font-size: var(--font-size-4xl);
+    font-weight: var(--font-wight--black);
 }
 
 h4 {
@@ -130,15 +131,10 @@ i {
 em {
     font-weight: var(--font-wight--bold);
 }
+
 strong {
     font-weight: var(--font-wight--bold);
     text-transform: uppercase;
-}
-
-blockquote {
-    border-left: 4px solid var(--border-color);
-    padding-left: calc(var(--space) / 2);
-    color: var(--title-color);
 }
 
 ul {
