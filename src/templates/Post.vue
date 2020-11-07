@@ -169,6 +169,9 @@ blockquote {
     font-weight: var(--font-wight--bold);
     background-color: var(--bg-color-invert);
     border-left-color: var(--system-color-HL);
+    code {
+        background-color: var(--system-color);
+    }
 }
 .error {
     background-color: var(--bg-caution);
@@ -184,12 +187,13 @@ blockquote {
     }
     li {
         margin-bottom: var(--space-2xl);
-        background-color: var(--bg-pre);
+        background-color: var(--bg-code);
         padding: var(--space-lg);
         border-radius: var(--radius);
     }
     img {
         margin-top: var(--spacem-xs);
+        margin-bottom: var(--spacem-xs);
         border-radius: var(--radius);
         max-height: calc(16 * var(--space-4xl));
         width: auto;
@@ -198,7 +202,7 @@ blockquote {
         font-size: var(--font-size-md);
         background-color: var(--bg-code);
         font-weight: var(--font-wight--bolder);
-        padding: var(--spacem-2xs) var(--spacem-xs);
+        padding: var(--spacem-xs) var(--spacem-sm);
         border-radius: var(--radius);
         margin: 0;
         display: block;
