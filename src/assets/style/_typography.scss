@@ -1,21 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
+// Because of Webpack font import are at Default.vue
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
-// @import url("https://rsms.me/inter/inter.css?family=Inter:wght@400;500;700;900&display=swap");
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 :root {
     //
-    --font-family--body: "Inter", "Inter var", -apple-system, system-ui,
+    --font-family--body: "Inter var", -apple-system, system-ui,
         BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     --font-family--title: "Inknut Antiqua", Georgia, serif;
     --font-family--code: "DM Mono", Consolas, Monaco, "Andale Mono",
         "Ubuntu Mono", monospace;
 
+    --font-wight--light: 200;
     --font-wight--regular: 400;
     --font-wight--bold: 500;
     --font-wight--bolder: 700;
@@ -41,7 +39,7 @@
     --font-size-12xl: 7rem; // 112px;
     // types
     --font-size--small: var(--font-size-xs);
-    --font-size--regular: var(--font-size-lg);
+    --font-size--regular: var(--font-size-xl);
     --font-size--big: var(--font-size-xl);
 }
 
@@ -54,8 +52,10 @@ body {
     font-family: var(--font-family--body);
     font-weight: var(--font-wight--regular);
     font-size: var(--font-size--regular);
-    // line-height: 20;
-    font-feature-settings: "frac", "salt";
+    font-kerning: normal;
+    // word-spacing: 0.025em;
+    letter-spacing: -0.005em;
+    font-feature-settings: "kern" 1, "zero" 1, "frac" 1, "ss01" 1, "ss02" 1;
 }
 p {
     color: var(--system-color);
@@ -70,11 +70,13 @@ a {
 a {
     color: var(--link-color);
     font-variation-settings: "wght" var(--font-wight--bold);
+    // font-weight: var(--font-wight--bold);
     text-decoration: none;
     text-decoration-skip-ink: auto;
     transition: all 0.35s ease-in;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
     &:hover {
+        // font-weight: var(--font-wight--bolder);
         letter-spacing: calc(var(--spacem-2xs) * -0.05);
         font-variation-settings: "wght" var(--font-wight--bolder);
         border-bottom: 1px solid var(--link-color);
@@ -130,11 +132,11 @@ i {
 }
 em {
     font-weight: var(--font-wight--bold);
+    font-style: italic ;
 }
 
 strong {
-    font-weight: var(--font-wight--bold);
-    text-transform: uppercase;
+    font-weight: var(--font-wight--bolder);
 }
 
 ul {
@@ -153,7 +155,7 @@ li {
 
 // Text state
 @mixin dimmed {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 @mixin disabled {
     opacity: 0.35;
