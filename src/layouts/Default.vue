@@ -59,7 +59,11 @@ query {
 }
 </static-query>
 
-<style lang="scss">
+<style lang="scss">     
+@import "../assets/fonts/Inter/inter.css";
+@import "../assets/fonts/Inknut-Antiqua/InknutAntiqua.css";
+@import "../assets/fonts/DM_Mono/DM_Mono.css";
+
 .wrapper {
     min-height: 100vh;
     display: grid;
