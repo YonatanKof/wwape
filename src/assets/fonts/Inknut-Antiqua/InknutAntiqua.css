@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Inknut Antiqua";
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url("InknutAntiqua-Light.woff2") format("woff2"),
+        url("InknutAntiqua-Light.woff") format("woff");
+}
+@font-face {
+    font-family: "Inknut Antiqua";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("InknutAntiqua-Regular.woff2") format("woff2"),
+        url("InknutAntiqua-Regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Inknut Antiqua";
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url("InknutAntiqua-Medium.woff2") format("woff2"),
+        url("InknutAntiqua-Medium.woff") format("woff");
+}
+@font-face {
+    font-family: "Inknut Antiqua";
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    src: url("InknutAntiqua-SemiBold.woff2") format("woff2"),
+        url("InknutAntiqua-SemiBold.woff") format("woff");
+}
+@font-face {
+    font-family: "Inknut Antiqua";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("InknutAntiqua-Bold.woff2") format("woff2"),
+        url("InknutAntiqua-Bold.woff") format("woff");
+}
+@font-face {
+    font-family: "Inknut Antiqua";
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+    src: url("InknutAntiqua-ExtraBold.woff2") format("woff2"),
+        url("InknutAntiqua-ExtraBold.woff") format("woff");
+}
+@font-face {
+    font-family: "Inknut Antiqua";
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+    src: url("InknutAntiqua-Black.woff") format("woff");
+}
