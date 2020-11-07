@@ -75,7 +75,9 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
-@import "../assets/style/index";
+@import "../assets/style/_layout.scss";
+@import "../assets/style/_content-box.scss";
+@import "../assets/style/_typography.scss";
 
 .post-title {
     padding-bottom: var(--space-xl);
@@ -84,11 +86,29 @@ query Post ($id: ID!) {
 .post {
     @include content-box;
     margin-bottom: 0;
-    @include mQ-max($display-size-xs) {
+    @include mQ-max($display-size-sm) {
         // Remove padding on small screens
         margin: 0 calc(var(--content-space) * -1);
         border-radius: 0;
     }
+    h1,
+    h2,
+    h3 {
+        margin-top: var(--spacem-md);
+    }
+
+    h1 {
+        font-size: var(--font-size-6xl);
+    }
+
+    h2 {
+        font-size: var(--font-size-4xl);
+    }
+
+    h3 {
+        font-size: var(--font-size-2xl);
+    }
+
     &__header {
         /* width: calc(100% + var(--space) * 2); */
         margin-left: calc(var(--space-2xl) * -1);
@@ -97,7 +117,7 @@ query Post ($id: ID!) {
         margin-top: calc(var(--space-2xl) * -1);
         overflow: hidden;
         border-radius: var(--radius) var(--radius) 0 0;
-        @include mQ-max($display-size-xs) {
+        @include mQ-max($display-size-sm) {
             // Remove border-radius on small screens
             border-radius: 0;
         }
@@ -106,25 +126,6 @@ query Post ($id: ID!) {
         }
         &:empty {
             display: none;
-        }
-    }
-    &__content {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin-top: var(--spacem-md);
-        }
-        :is(h1, h2, h3, h4, h5, h6):first-child {
-            margin-top: 0;
-        }
-        img {
-            width: calc(100% + var(--content-space) * 2);
-            margin-left: calc(var(--content-space) * -1);
-            display: block;
-            max-width: none;
         }
     }
 }
@@ -136,5 +137,100 @@ query Post ($id: ID!) {
 }
 .post-author {
     margin-top: calc(var(--content-space) / 2);
+}
+
+@mixin blockquote {
+    border-left-width: var(--space-xs);
+    border-left-style: solid;
+    border-left-color: var(--border-color);
+    padding: var(--space-xs) var(--space-md);
+    background-color: var(--bg-pre);
+    color: var(--title-color);
+    margin-bottom: var(--spacem-xs);
+    p {
+        margin: 0;
+    }
+}
+
+blockquote {
+    @include blockquote;
+}
+
+.hint {
+    @include blockquote;
+}
+
+.tip {
+    background-color: var(--bg-primary);
+    border-left-color: var(--bg-primary-HL);
+}
+.warn {
+    color: var(--system-color-invert);
+    font-weight: var(--font-wight--bold);
+    background-color: var(--bg-color-invert);
+    border-left-color: var(--system-color-HL);
+    code {
+        background-color: var(--system-color);
+    }
+}
+.error {
+    background-color: var(--bg-caution);
+    border-left-color: var(--bg-caution-HL);
+}
+
+.footnotes {
+    margin: 0;
+    padding: 0;
+    ol {
+        list-style-type: none;
+        margin: 0;
+    }
+    li {
+        margin-bottom: var(--space-2xl);
+        background-color: var(--bg-code);
+        padding: var(--space-lg);
+        border-radius: var(--radius);
+    }
+    img {
+        margin-top: var(--spacem-xs);
+        margin-bottom: var(--spacem-xs);
+        border-radius: var(--radius);
+        max-height: calc(16 * var(--space-4xl));
+        width: auto;
+    }
+    a {
+        font-size: var(--font-size-md);
+        background-color: var(--bg-code);
+        font-weight: var(--font-wight--bolder);
+        padding: var(--spacem-xs) var(--spacem-sm);
+        border-radius: var(--radius);
+        margin: 0;
+        display: block;
+        max-width: max-content;
+        &::after {
+            content: " Back to footnote";
+        }
+    }
+}
+
+sup {
+    vertical-align: super;
+    font-size: var(--font-size-sm);
+    // font-size: smaller;
+    padding-inline-start: var(--spacem-3xs);
+    padding-inline-end: var(--spacem-4xs);
+    @include dimmed;
+    transition: opacity ease-in-out 0.25s;
+    &:hover {
+        opacity: 1;
+    }
+    &::before {
+        content: "[";
+        padding-inline-end: var(--spacem-3xs);
+    }
+    &::after {
+        content: "]";
+        padding-inline-start: var(--spacem-3xs);
+    }
 }
 </style>

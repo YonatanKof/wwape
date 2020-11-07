@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/style/index";
+@import "../assets/style/_content-box.scss";
 
 .post-card {
     @include content-box;

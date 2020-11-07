@@ -59,11 +59,17 @@ query {
 }
 </static-query>
 
-<style lang="scss">
+<style lang="scss">     
+@import "../assets/fonts/Inter/inter.css";
+@import "../assets/fonts/Inknut-Antiqua/InknutAntiqua.css";
+@import "../assets/fonts/DM_Mono/DM_Mono.css";
+
 .wrapper {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(180deg, var(--bg-color), var(--bg-color-HL));
 }
 .main {
     margin: 0 auto;
