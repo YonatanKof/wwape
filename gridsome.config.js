@@ -8,6 +8,7 @@ module.exports = {
     siteName: "Kof'R'Us",
     siteDescription:
         "Yonatan Ben Knaan - A design system manager, a mismatched persona and an alright dude.",
+    siteUrl: "https://kofrus-dev.netlify.app/",
     icon: {
         favicon: "./src/assets/images/kof-logo.png",
         touchicon: "./src/assets/images/kof-logo-full.png.png",
@@ -39,7 +40,11 @@ module.exports = {
                 baseDir: "./content/posts", // Where .md files are located
                 pathPrefix: "/post", // Add route prefix. Optional
                 template: "./src/templates/Post.vue", // Optional
-                plugins: ["@gridsome/remark-prismjs"],
+                plugins: [
+                    "@gridsome/remark-prismjs",
+                    "remark-hint",
+                    "remark-autolink-headings",
+                ],
                 refs: {
                     tags: "Tag",
                 },
@@ -51,4 +56,12 @@ module.exports = {
             },
         },
     ],
+    transformers: {
+        //Add markdown support to all file-system sources
+        remark: {
+            externalLinksTarget: "_blank",
+            externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+            anchorClassName: "icon icon-link",
+        },
+    },
 };
