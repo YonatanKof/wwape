@@ -21,7 +21,17 @@ $color-primary-dark: darken($color-primary-base, 10%);
 $color-primary-O50: transparentize($color-primary-base, 0.5);
 $color-primary-O20: transparentize($color-primary-base, 0.7);
 $color-primary-O10: transparentize($color-primary-base, 0.9);
-
+:root{
+    // Shadows
+    --shadow-sm: 0px var(--space-4xs) var(--space-3xs) 0 rgba(0, 0, 0, 0.04),
+        0px var(--space-3xs) var(--space-2xs) 0 rgba(0, 0, 0, 0.04),
+        0px var(--space-2xs) var(--space-xs) 0 rgba(0, 0, 0, 0.04),
+        0px var(--space-xs) var(--space-md) 0 rgba(0, 0, 0, 0.04);
+    --shadow-md: 0px var(--space-3xs) var(--space-2xs) 0 rgba(0, 0, 0, 0.06),
+        0px var(--space-2xs) var(--space-xs) 0 rgba(0, 0, 0, 0.06),
+        0px var(--space-xs) var(--space-sm) 0 rgba(0, 0, 0, 0.06),
+        0px var(--space-md) var(--space-2xl) 0 rgba(0, 0, 0, 0.06);
+}
 // Light default theme
 body {
     // Colors -- BG
