@@ -3,25 +3,13 @@
     transition-timing-function: $easing;
 }
 // Default
-body {
-    // transition: color 0.6s, background-color 0.6s;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
 
-    // Shadows
-    --shadow-sm: 0px var(--space-4xs) var(--space-3xs) 0 rgba(0, 0, 0, 0.04),
-        0px var(--space-3xs) var(--space-2xs) 0 rgba(0, 0, 0, 0.04),
-        0px var(--space-2xs) var(--space-xs) 0 rgba(0, 0, 0, 0.04),
-        0px var(--space-xs) var(--space-md) 0 rgba(0, 0, 0, 0.04);
-    --shadow-md: 0px var(--space-3xs) var(--space-2xs) 0 rgba(0, 0, 0, 0.06),
-        0px var(--space-2xs) var(--space-xs) 0 rgba(0, 0, 0, 0.06),
-        0px var(--space-xs) var(--space-sm) 0 rgba(0, 0, 0, 0.06),
-        0px var(--space-md) var(--space-2xl) 0 rgba(0, 0, 0, 0.06);
+body {
+    line-height: 1.5;
+    background-color: var(--bg-color);
 }
 
 // a:not(.button) {
-
 // }
 
 img {

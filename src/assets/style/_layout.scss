@@ -6,11 +6,15 @@ $display-size-sm: 760px;
 $display-size-xs: 480px;
 
 // Width mixins
+
+// When smaller
 @mixin mQ-max($width-number) {
     @media screen and (max-width: $width-number) {
         @content;
     }
 }
+
+// When bigger
 @mixin mQ-min($width-number) {
     @media screen and (min-width: $width-number) {
         @content;
