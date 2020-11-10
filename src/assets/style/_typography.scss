@@ -1,23 +1,34 @@
 // Because of Webpack font import are at Default.vue
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
+@import "./layout";
+
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 :root {
-    //
+    //! Families
     --font-family--body: "Inter var", -apple-system, system-ui,
-        BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     --font-family--title: "Inknut Antiqua", Georgia, serif;
     --font-family--code: "DM Mono", Consolas, Monaco, "Andale Mono",
-        "Ubuntu Mono", monospace;
-
+    "Ubuntu Mono", monospace;
+    --font-family--hand: "Permanent Marker", "Marker Felt", "Comic Sans MS",
+    cursive, sans-serif;
+    
     --font-wight--light: 200;
     --font-wight--regular: 400;
     --font-wight--bold: 500;
     --font-wight--bolder: 700;
     --font-wight--black: 900;
+    //
+    //! Type size
+    --base-font-size: 16px;
+    // Make things smaller for mobile
+    @include mQ-max($display-size-sm) {
+        --base-font-size: 14px;
+    }
     //
     --font-size-3xs: 0.5rem; // 8px;
     --font-size-2xs: 0.625rem; // 10px;
@@ -131,8 +142,11 @@ i {
     font-style: italic;
 }
 em {
-    font-weight: var(--font-wight--bold);
-    font-style: italic ;
+    // font-weight: var(--font-wight--bold);
+    // font-style: italic ;
+    font-family: var(--font-family--hand);
+    letter-spacing: 0.02em;
+    opacity: 0.9;
 }
 
 strong {
@@ -141,13 +155,13 @@ strong {
 
 ul {
     list-style-type: disc;
-    margin-left: 1.25em;
-    margin-bottom: 1.25em;
+    margin-left: var(--space-3xl);
+    margin-bottom: var(--space-3xl);
 }
 ol {
     list-style-type: decimal;
-    margin-left: 1.25em;
-    margin-bottom: 1.25em;
+    margin-left: var(--space-3xl);
+    margin-bottom: var(--space-3xl);
 }
 li {
     margin-bottom: 0.6em;
