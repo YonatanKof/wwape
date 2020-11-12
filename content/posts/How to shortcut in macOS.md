@@ -42,7 +42,7 @@ Let's start with the *Merge All Windows* command.
    
    You can also just look for it in the *System Preferences*, found in the Apple menu [^fig-apple_menu].
 2. Select the *Shortcut* tab and click the *App Shortcut* on left panel [^fig-keyOS].
-3. At the bottom of the right panel you'll see [`+`] and [`-`] buttons. Clicking the [`+`] button will open a prompt window [^fig-prompt].
+3. At the bottom of the right panel you'll see `+` and `-` buttons. Clicking the `+` button will open a prompt window [^fig-prompt].
 4. In the prompt window you'll see a few inputs, leave the default `All Applications` in the *Application* dropdown.
 5. Type in the `Merge all window ` command in Menu Title input. 
    
@@ -105,7 +105,7 @@ The app is called [Karabiner-Elements](https://karabiner-elements.pqrs.org) and 
 1. Install the app
 2. Got the the *Complex modification* tab [^fig-Karabiner]
 3. Click the *Add rule* button
-4. In the prompt window click *Enable* on the 1st item from the example list called *Change the caps_lock to command+control+option+shift* [^fig-Karabiner_prompt]
+4. In the prompt window click *Enable* on the 1st item from the example list called Change the caps_lock to command + control + option + shift [^fig-Karabiner_prompt]
 
 That's it, you have it! Now you can add a command using all for 4 keys but clicking just the one key. So now, if you'd like to have the *Collapse All Groups* with `Caps lock`+`c`. Try it, it's nice.
 
