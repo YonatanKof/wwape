@@ -18,9 +18,11 @@
                     :alt="$page.post.cover_caption"
                 />
             </div>
-            <VueRemarkContent />
-            <div class="post__footer">
-                <PostTags :posttags="$page.post" />
+            <div class="post__content">
+                <VueRemarkContent />
+                <div class="post__footer">
+                    <PostTags :posttags="$page.post" />
+                </div>
             </div>
         </div>
         <div class="post-comments">
@@ -77,20 +79,14 @@ query Post ($id: ID!) {
 <style lang="scss">
 @import "../assets/style/_layout.scss";
 @import "../assets/style/_content-box.scss";
-@import "../assets/style/_typography.scss";
 
 .post-title {
     padding-bottom: var(--space-xl);
     text-align: center;
 }
 .post {
-    @include content-box;
+    @include content-box($display-size-sm);
     margin-bottom: 0;
-    @include mQ-max($display-size-sm) {
-        // Remove padding on small screens
-        margin: 0 calc(var(--content-space) * -1);
-        border-radius: 0;
-    }
     h1,
     h2,
     h3 {
@@ -108,24 +104,22 @@ query Post ($id: ID!) {
     h3 {
         font-size: var(--font-size-2xl);
     }
-
     &__header {
-        /* width: calc(100% + var(--space) * 2); */
-        margin-left: calc(var(--space-2xl) * -1);
-        margin-right: calc(var(--space-2xl) * -1);
-        margin-bottom: var(--space-md);
-        margin-top: calc(var(--space-2xl) * -1);
-        overflow: hidden;
-        border-radius: var(--radius) var(--radius) 0 0;
-        @include mQ-max($display-size-sm) {
-            // Remove border-radius on small screens
-            border-radius: 0;
+        @include content-box-image($display-size-sm);
+    } 
+
+    &__content{
+        // @include content-box-padding;
+        padding: var(--space-4xl);
+        padding-top: var(--space-2xl);
+        @include mQ-max($display-size-sm){
+            padding: var(--space-2xl);
         }
-        img {
-            width: 100%;
-        }
-        &:empty {
-            display: none;
+    }
+    pre{
+        max-width: calc(100vw - calc(calc(var(--space-4xl) + var(--content-space))*2) - 2px);
+        @include mQ-max($display-size-sm){
+            max-width: calc(100vw - calc(var(--space-2xl)*2) - 2px);
         }
     }
 }
@@ -179,7 +173,6 @@ blockquote {
 }
 
 .footnotes {
-    margin: 0;
     padding: 0;
     ol {
         list-style-type: none;
@@ -187,7 +180,7 @@ blockquote {
     }
     li {
         margin-bottom: var(--space-2xl);
-        background-color: var(--bg-code);
+        background-color: var(--bg-pre);
         padding: var(--space-lg);
         border-radius: var(--radius);
     }
@@ -200,7 +193,7 @@ blockquote {
     }
     a {
         font-size: var(--font-size-md);
-        background-color: var(--bg-code);
+        background-color: var(--bg-pre);
         font-weight: var(--font-wight--bolder);
         padding: var(--spacem-xs) var(--spacem-sm);
         border-radius: var(--radius);
@@ -219,7 +212,8 @@ sup {
     // font-size: smaller;
     padding-inline-start: var(--spacem-3xs);
     padding-inline-end: var(--spacem-4xs);
-    @include dimmed;
+    // @include dimmed;
+    opacity: 0.8;
     transition: opacity ease-in-out 0.25s;
     &:hover {
         opacity: 1;
