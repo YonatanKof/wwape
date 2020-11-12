@@ -11,7 +11,6 @@ pre {
 	font-size: 0.95em;
 }
 code {
-	// font-size: 0.9em;
 	font-style: italic;
 	background-color: var(--bg-code);
 	padding: var(--spacem-4xs) var(--spacem-2xs);
@@ -20,10 +19,6 @@ code {
 	margin-inline-end: var(--spacem-4xs);
 }
 
-// code + code {
-// 	margin-inline-start: 20px;
-// }
-
 pre {
 	position: relative;
 	background-color: var(--bg-pre);
@@ -31,26 +26,19 @@ pre {
 	margin-bottom: var(--space-md);
 	border: 1px solid var(--border-color);
 	border-radius: var(--radius);
-	//
-	max-width: calc(100vw - calc(calc(var(--content-space) * 2) + calc(var(--content-space) * 2)));
-	@media screen and (max-width: 480px) {
-		max-width: calc(100vw - calc(var(--content-space) * 2));
-	}
 }
 pre code {
 	margin-inline-start: 0;
 	margin-inline-end: 0;
 	padding: var(--spacem-2xl);
-	overflow-x: auto;
 	white-space: pre;
 	display: block;
 	background-color: transparent;
-	font-weight: var(--font-wight--regular);
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
-	font-family: var(--font-family--code);
+	// font-family: var(--font-family--code);
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
