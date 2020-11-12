@@ -30,7 +30,7 @@ query {
         date (format: "D. MMMM YYYY")
         # timeToRead
         description
-        cover_image (width: 770, height: 380, blur: 10)
+        cover_image (width: 800, blur: 10)
         cover_caption
         tags {
           id
@@ -62,14 +62,6 @@ export default {
 </script>
 
 <style lang="scss">
-.logoooo {
-    margin: 0 auto;
-    width: calc(var(--space-7xl) * 2);
-    height: calc(var(--space-7xl) * 2);
-    margin-bottom: var(--space-md);
-}
-.title {
-    text-align: center;
-}
+
 </style>
 
