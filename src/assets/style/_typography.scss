@@ -24,10 +24,13 @@
     --font-wight--black: 900;
     //
     //! Type size
-    --base-font-size: 16px;
+    --base-font-size: 15px;
     // Make things smaller for mobile
-    @include mQ-max($display-size-sm) {
+    @include mQ-max($display-size-md) {
         --base-font-size: 14px;
+    }
+    @include mQ-max($display-size-sm) {
+        --base-font-size: 13px;
     }
     //
     --font-size-3xs: 0.5rem; // 8px;
@@ -56,6 +59,7 @@
 
 html {
     font-size: var(--base-font-size);
+    line-height: 1.5;
 }
 
 body {
@@ -66,7 +70,7 @@ body {
     font-kerning: normal;
     // word-spacing: 0.025em;
     letter-spacing: -0.005em;
-    font-feature-settings: "kern" 1, "zero" 1, "frac" 1, "ss01" 1, "ss02" 1;
+    font-feature-settings: "kern" 1, "frac" 1, "ss01" 1, "cv08" 1;
 }
 p {
     color: var(--system-color);
