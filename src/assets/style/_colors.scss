@@ -4,12 +4,12 @@ $color-bright-dark: darken($color-bright-base, 20%);
 $color-bright-O75: transparentize($color-bright-base, 0.1);
 $color-bright-O50: transparentize($color-bright-base, 0.5);
 $color-bright-O40: transparentize($color-bright-base, 0.7);
-$color-bright-O20: transparentize($color-bright-base, 0.8);
+$color-bright-O20: transparentize($color-bright-base, 0.85);
 $color-bright-O10: transparentize($color-bright-base, 0.9);
 
-$color-dark-base: hsl(60, 30%, 15%); // should be darker then
-$color-dark-light: lighten($color-dark-base, 4%);
-$color-dark-dark: darken($color-dark-base, 50%);
+$color-dark-base: hsl(60, 30%, 8%); // should be darker then
+$color-dark-light: lighten($color-dark-base, 7%);
+$color-dark-dark: darken($color-dark-base, 20%);
 $color-dark-O80: transparentize($color-dark-light, 0.15);
 $color-dark-O60: transparentize($color-dark-light, 0.55);
 $color-dark-O40: transparentize($color-dark-light, 0.88);
@@ -33,9 +33,9 @@ $color-primary-O10: transparentize($color-primary-base, 0.9);
         0px 0.6rem 1.2rem 0 rgba(0, 0, 0, 0.08),
         0px 1.2rem 1.6rem 0 rgba(0, 0, 0, 0.12);
 }
-// Light default theme
 body {
-    // Colors -- BG
+    // Default Light theme
+    // BG
     --bg-color: #{$color-bright-base};
     --bg-color-HL: #{$color-bright-dark};
     --bg-color-invert: #{$color-dark-O80};
@@ -48,7 +48,7 @@ body {
     --bg-primary-HL: #{$color-primary-base};
     --border-color: #{$color-dark-O40};
     
-    // Colors -- Typography
+    // Typography
     --title-color: #{$color-dark-light};
     --system-color: #{$color-dark-base};
     --system-color-HL: #{$color-dark-dark};
@@ -57,20 +57,20 @@ body {
     --link-color-HL: #{$color-primary-light};
 }
 
-// Override variables for Dark theme
 body[data-theme="dark"] {
-    // Colors -- BG
+    // Override variables for Dark theme
+    // BG
     --bg-color: #{$color-dark-light};
-    --bg-color-HL: #{$color-dark-base};
+    --bg-color-HL: #{$color-dark-dark};
     --bg-color-invert: #{$color-bright-O75};
-    --bg-content: #{$color-dark-dark};
-    --bg-code: #{$color-bright-O40};
-    --bg-pre: #{$color-bright-O20};
+    --bg-content: #{$color-dark-base};
+    --bg-code: #{$color-bright-O20};
+    --bg-pre: #{$color-bright-O10};
     --bg-primary: #{$color-primary-O20};
     --bg-primary-HL: #{$color-primary-light};
     --border-color: #{$color-bright-O20};
     
-    // Colors -- Typography
+    // Typography
     --title-color: #{$color-bright-base};
     --system-color: #{$color-bright-light};
     --system-color-HL: #{$color-bright-base};
