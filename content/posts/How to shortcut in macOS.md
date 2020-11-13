@@ -20,6 +20,7 @@ The macOS and the apps installed comes pack with sweet sweet shortcuts but not a
 I guess that if you don't know how to create shortcuts for mac then you have two problems:
 
 1. How to set up a shortcut on **macOS**? 
+
 2. How to create a shortcut specifically for **Sketch**?
  
 ## Jobs to be done
@@ -27,6 +28,7 @@ I guess that if you don't know how to create shortcuts for mac then you have two
 We'll solve these problem by presenting two examples of custom commands that will improve your workflow:
 
 1. **Merge all window** - This command is relevant for **all** apps that are multi window: Let's say you find yourself with 7 open *Sketch* files and 6 *Finder* windows, and you're clicking like crazy trying to find the window you're looking for. Such an hassle. The `Merge all window` command is the best cleaner upper you'll get. It will merge all of your open windows [^fig-unmerged] into one window to be shown as tabs [^fig-merged].
+
 2. **Collapse All Groups** - This command is specific for *Sketch* and it deals with the issue when reviewing the *Layers* or *Components* panel on a big file. Of course you can scroll, it's nice, but sometimes you'd like the get an overview at a glance. That's where this command comes in handy 🤲 Unfortunately it has no shortcut 😢
 
 
@@ -103,8 +105,11 @@ Well, you're not the first to feel pain missing keys combos. Someone felt it bef
 The app is called [Karabiner-Elements](https://karabiner-elements.pqrs.org) and it does much more then hacking the *Caps lock* key, but that’s why I'm using it for. Anyways, the reassigning the is quite easy. Let's see how its done: 
 
 1. Install the app
+
 2. Got the the *Complex modification* tab [^fig-Karabiner]
+
 3. Click the *Add rule* button
+
 4. In the prompt window click *Enable* on the 1st item from the example list called Change the caps_lock to command + control + option + shift [^fig-Karabiner_prompt]
 
 That's it, you have it! Now you can add a command using all for 4 keys but clicking just the one key. So now, if you'd like to have the *Collapse All Groups* with `Caps lock`+`c`. Try it, it's nice.
