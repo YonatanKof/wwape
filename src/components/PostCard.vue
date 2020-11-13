@@ -44,7 +44,7 @@ export default {
     @include content-box($display-size-xs);
     position: relative;
     &:hover{
-        transform: translateY(calc(var(--space-4xs) * -1));
+        transform: translateY(calc(var(--space-3xs) * -1));
         box-shadow: var(--shadow-md);
     }
     &__header {

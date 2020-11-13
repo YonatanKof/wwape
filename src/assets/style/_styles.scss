@@ -45,6 +45,7 @@ body {
 
 body {
     background-color: var(--bg-color);
+    transition: background-color ease-in-out 0.25s;
 }
 
 // a:not(.button) {

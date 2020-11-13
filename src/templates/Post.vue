@@ -94,7 +94,7 @@ query Post ($id: ID!) {
     }
 
     h1 {
-        font-size: var(--font-size-6xl);
+        font-size: var(--font-size-5xl);
     }
 
     h2 {
@@ -102,7 +102,7 @@ query Post ($id: ID!) {
     }
 
     h3 {
-        font-size: var(--font-size-2xl);
+        font-size: var(--font-size-3xl);
     }
     &__header {
         @include content-box-image($display-size-sm);
@@ -140,7 +140,9 @@ query Post ($id: ID!) {
     padding: var(--space-xs) var(--space-md);
     background-color: var(--bg-pre);
     color: var(--title-color);
+    margin-top: var(--spacem-3xs);
     margin-bottom: var(--spacem-xs);
+    font-size: 90%;
     p {
         margin: 0;
     }
@@ -174,30 +176,38 @@ blockquote {
 
 .footnotes {
     padding: 0;
+    line-height: 1.5;
+    hr{
+        margin-bottom: var(--space-lg);
+
+    }
     ol {
         list-style-type: none;
         margin: 0;
     }
+    li:only-of-type{
+        margin-bottom: 0;
+    }
     li {
-        margin-bottom: var(--space-2xl);
+        // margin-bottom: var(--space-2xl);
         background-color: var(--bg-pre);
         padding: var(--space-lg);
         border-radius: var(--radius);
     }
     img {
-        margin-top: var(--spacem-xs);
-        margin-bottom: var(--spacem-xs);
+        margin-top: var(--spacem-sm);
         border-radius: var(--radius);
         max-height: calc(16 * var(--space-4xl));
         width: auto;
     }
     a {
-        font-size: var(--font-size-md);
+        font-size: var(--font-size-sm);
         background-color: var(--bg-pre);
         font-weight: var(--font-wight--bolder);
         padding: var(--spacem-xs) var(--spacem-sm);
         border-radius: var(--radius);
         margin: 0;
+        margin-top: var(--spacem-sm);
         display: block;
         max-width: max-content;
         &::after {
@@ -208,7 +218,7 @@ blockquote {
 
 sup {
     vertical-align: super;
-    font-size: var(--font-size-sm);
+    font-size: 80%;
     // font-size: smaller;
     padding-inline-start: var(--spacem-3xs);
     padding-inline-end: var(--spacem-4xs);
@@ -227,4 +237,5 @@ sup {
         padding-inline-start: var(--spacem-3xs);
     }
 }
+
 </style>

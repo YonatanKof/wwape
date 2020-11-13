@@ -25,7 +25,6 @@
     //
     //! Type size
     --base-font-size: 15px;
-    // Make things smaller for mobile
     @include mQ-max($display-size-md) {
         --base-font-size: 14px;
     }
@@ -59,7 +58,7 @@
 
 html {
     font-size: var(--base-font-size);
-    line-height: 1.5;
+    line-height: 1.75;
 }
 
 body {
@@ -74,7 +73,7 @@ body {
 }
 p {
     color: var(--system-color);
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
 p,
@@ -104,7 +103,7 @@ h3,
 h4,
 h5,
 h6 {
-    transition: color 0.6s;
+    transition: color 0.25s;
     color: var(--title-color);
     font-family: var(--font-family--title);
     font-weight: var(--font-wight--bolder);
@@ -160,15 +159,23 @@ strong {
 ul {
     list-style-type: disc;
     margin-left: var(--space-3xl);
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-2xl);
 }
 ol {
     list-style-type: decimal;
     margin-left: var(--space-3xl);
-    margin-bottom: var(--space-3xl);
+    margin-bottom: var(--space-2xl);
 }
 li {
-    margin-bottom: 0.6em;
+    margin-bottom: var(--space-xs);
+    line-height: 1.5;
+}
+li p {
+    margin-bottom: var(--space-2xs);
+}
+li ol,
+li ul {
+    margin-bottom: var(--space-md);
 }
 
 // Text state

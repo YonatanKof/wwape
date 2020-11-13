@@ -8,7 +8,7 @@
     margin-bottom: var(--content-space);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
-    transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.3s;
+    transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.25s;
     @include mQ-max($collapse-size) {
         // Remove padding on small screens
         margin: 0 calc(var(--content-space) * -1);

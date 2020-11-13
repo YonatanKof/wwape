@@ -71,11 +71,9 @@ query {
 }
 
 .wrapper {
-    // overflow-x: hidden;
     display: grid;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
-    height: 100%;
     background-image: linear-gradient(
         to bottom,
         var(--bg-color),
@@ -128,6 +126,7 @@ query {
     @include main-padding;
     padding-bottom: calc(max(var(--space-lg), env(safe-area-inset-bottom)));
     text-align: center;
+    min-height: var(--header-height);
     @include mQ-max($display-size-sm) {
         font-size: 0.9em;
     }

@@ -39,7 +39,7 @@ export default {
     margin: 0 auto;
     max-width: calc(var(--spacem-8xl) * 6);
     text-align: center;
-    padding: var(--spacem-md) var(--content-space);
+    padding: var(--spacem-md) var(--content-space) var(--spacem-2xs);
     @media screen and (max-width: 480px) {
         // Remove padding on small screens
         padding: var(--spacem-md) 0;
