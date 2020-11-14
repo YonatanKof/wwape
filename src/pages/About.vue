@@ -185,7 +185,7 @@ export default {
     }
     #my-name {
         font-family: var(--font-family--hand);
-        line-height: 1.1;
+        line-height: 1.1em;
         // @include dimmed;
         opacity: 0.7;
         transform: rotateZ(-12deg);

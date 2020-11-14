@@ -176,7 +176,7 @@ blockquote {
 
 .footnotes {
     padding: 0;
-    line-height: 1.5;
+    line-height: 1.5em;
     hr{
         margin-bottom: var(--space-lg);
 
