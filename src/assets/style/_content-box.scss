@@ -5,14 +5,12 @@
     background-color: var(--bg-content);
     max-width: var(--content-width-sm);
     margin: 0 auto;
-    margin-bottom: var(--content-space);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
     transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.25s;
     @include mQ-max($collapse-size) {
-        // Remove padding on small screens
-        margin: 0 calc(var(--content-space) * -1);
-        margin-bottom: var(--content-space);
+        margin-inline-start: calc(var(--content-space) * -1);
+        margin-inline-end: calc(var(--content-space) * -1);
         border-radius: 0;
     }
 }
@@ -24,7 +22,6 @@
             display: none;
         }
         @include mQ-max($collapse-size) {
-            // Remove border-radius on small screens
             border-radius: 0;
         }
 }

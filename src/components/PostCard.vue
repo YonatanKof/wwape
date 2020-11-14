@@ -43,6 +43,13 @@ export default {
 .post-card {
     @include content-box($display-size-xs);
     position: relative;
+    margin-bottom: var(--content-space);
+    &:last-child{
+        margin-bottom: 0;
+    }
+    p {
+        line-height: 1.5em;
+    }
     &:hover{
         transform: translateY(calc(var(--space-3xs) * -1));
         box-shadow: var(--shadow-md);

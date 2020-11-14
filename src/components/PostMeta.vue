@@ -1,15 +1,18 @@
 <template>
     <div class="post-meta">
-        Written by <em>{{ postmeta.author_name }}</em> • Posted {{ postmeta.date }}
-        <template v-if="postmeta.timeToRead">
-            <em> • {{ postmeta.timeToRead }} min read</em>
-        </template>
+        <p>
+            Written by <em>{{ postmeta.author_name }}</em>
+             • {{ postmeta.date }}
+            <template v-if="postmeta.timeToRead">
+                <em> • {{ postmeta.timeToRead }} min read</em>
+            </template>
+        </p>
     </div>
 </template>
 
 <script>
 export default {
-    props: ["postmeta"]
+    props: ["postmeta"],
 };
 </script>
 
