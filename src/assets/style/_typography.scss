@@ -109,6 +109,7 @@ h6 {
     font-weight: var(--font-wight--bolder);
     margin-bottom: var(--spacem-2xs);
     line-height: 1.25em;
+    font-feature-settings: "frac" 0;
 }
 
 h1 {
@@ -128,14 +129,16 @@ h3 {
 }
 
 h4 {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-3xl);
 }
 
 h5 {
-    font-size: var(--font-size-1xl);
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-wight--bold);
 }
 h6 {
-    font-size: var(--font-size-1xl);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-wight--bold);
 }
 
 small {
@@ -147,8 +150,8 @@ i {
 em {
     font-family: var(--font-family--hand);
     letter-spacing: 0.02em;
-    opacity: 0.95;
-    line-height: inherit;
+    font-size: 105%;
+    line-height: 0.9em;
 }
 
 strong {

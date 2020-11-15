@@ -22,8 +22,7 @@ code {
 pre {
 	position: relative;
 	background-color: var(--bg-pre);
-	margin-top: var(--space-md);
-	margin-bottom: var(--space-md);
+	margin: var(--space-sm) 0;
 	border: 1px solid var(--border-color);
 	border-radius: var(--radius);
 }
