@@ -1,0 +1,29 @@
+table {
+    --darken-it: rgba(0, 0, 0, 0.025);
+    --darken-it-header: rgba(0, 0, 0, 0.05);
+    text-align: left;
+    background-color: var(--bg-card);
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    // width: 100%;
+}
+thead {
+    background-color: var(--darken-it-header);
+    font-weight: bold;
+}
+th,
+td {
+    padding: 1rem;
+}
+tr:nth-child(even) {
+    background-color: var(--darken-it);
+}
+td:nth-child(even) {
+    background-color: var(--darken-it);
+}
+th:nth-child(even) {
+    background-color: var(--darken-it);
+}
