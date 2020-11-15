@@ -89,20 +89,24 @@ query Post ($id: ID!) {
     margin-bottom: 0;
     h1,
     h2,
-    h3 {
+    h3,
+    h4,
+    h5,
+    h6 {
         margin-top: var(--spacem-md);
+        margin-bottom: var(--space-xs);
     }
 
     h1 {
-        font-size: var(--font-size-5xl);
+        font-size: var(--font-size-6xl);
     }
 
     h2 {
-        font-size: var(--font-size-4xl);
+        font-size: var(--font-size-5xl);
     }
 
     h3 {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-4xl);
     }
     &__header {
         @include content-box-image($display-size-sm);
@@ -140,9 +144,8 @@ query Post ($id: ID!) {
     padding: var(--space-xs) var(--space-md);
     background-color: var(--bg-pre);
     color: var(--title-color);
-    margin-top: var(--spacem-3xs);
-    margin-bottom: var(--spacem-xs);
-    font-size: 90%;
+    margin: var(--spacem-xs) 0;
+    font-size: 95%;
     p {
         margin: 0;
     }
