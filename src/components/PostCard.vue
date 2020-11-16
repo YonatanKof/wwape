@@ -1,5 +1,8 @@
 <template>
-    <div class="post-card" :class="{'post-card--has-poster' :postdata.poster}">
+    <div
+        class="post-card"
+        :class="{ 'post-card--has-poster': postdata.poster }"
+    >
         <div class="post-card__header">
             <g-image
                 alt="Cover image"
@@ -12,9 +15,13 @@
             <h3 class="post-card__title" v-html="postdata.title" />
             <p class="post-card__description" v-html="postdata.description" />
             <PostMeta class="post-card__meta" :postmeta="postdata" />
-            <PostTags v-if="postdata.tags" class="post-card__tags" :posttags="postdata" />
-            <g-link class="post-card__link" :to="postdata.path">Link</g-link>
+            <PostTags
+                v-if="postdata.tags"
+                class="post-card__tags"
+                :posttags="postdata"
+            />
         </div>
+        <g-link class="post-card__link" :to="postdata.path"></g-link>
     </div>
 </template>
 
@@ -24,9 +31,9 @@ import PostTags from "~/components/PostTags";
 export default {
     components: {
         PostMeta,
-        PostTags
+        PostTags,
     },
-    props: ["postdata"]
+    props: ["postdata"],
 };
 </script>
 
@@ -34,29 +41,28 @@ export default {
 @import "../assets/style/_content-box.scss";
 
 .post-card {
-    @include content-box;
+    @include content-box($display-size-xs);
     position: relative;
+    margin-bottom: var(--content-space);
+    &:last-child{
+        margin-bottom: 0;
+    }
+    p {
+        line-height: 1.5em;
+    }
+    &:hover{
+        transform: translateY(calc(var(--space-3xs) * -1));
+        box-shadow: var(--shadow-md);
+    }
     &__header {
-        /* margin: var(--space-2xl); */
-        margin-left: calc(var(--content-space) * -1);
-        margin-right: calc(var(--content-space) * -1);
-        margin-bottom: var(--space-lg);
-        margin-top: calc(var(--content-space) * -1);
-        overflow: hidden;
-        border-radius: var(--radius) var(--radius) 0 0;
-        &:empty {
-            display: none;
-        }
+        @include content-box-image($display-size-xs);
     }
     &__image {
         min-width: 100%;
+        margin-bottom: var(--space-lg);
     }
     &__title {
         margin-top: 0;
-    }
-    &:hover {
-        transform: translateY(calc(var(--space-3xs) * -1));
-        box-shadow: var(--shadow-md);
     }
     &__tags {
         z-index: 1;
@@ -72,6 +78,10 @@ export default {
         overflow: hidden;
         text-indent: -9999px;
         z-index: 0;
+    }
+    &__content {
+        padding: var(--space-lg);
+        padding-top: 0;
     }
 }
 </style>

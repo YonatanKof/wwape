@@ -18,9 +18,11 @@
                     :alt="$page.post.cover_caption"
                 />
             </div>
-            <VueRemarkContent />
-            <div class="post__footer">
-                <PostTags :posttags="$page.post" />
+            <div class="post__content">
+                <VueRemarkContent />
+                <div class="post__footer">
+                    <PostTags :posttags="$page.post" />
+                </div>
             </div>
         </div>
         <div class="post-comments">
@@ -77,24 +79,22 @@ query Post ($id: ID!) {
 <style lang="scss">
 @import "../assets/style/_layout.scss";
 @import "../assets/style/_content-box.scss";
-@import "../assets/style/_typography.scss";
 
 .post-title {
     padding-bottom: var(--space-xl);
     text-align: center;
 }
 .post {
-    @include content-box;
+    @include content-box($display-size-sm);
     margin-bottom: 0;
-    @include mQ-max($display-size-sm) {
-        // Remove padding on small screens
-        margin: 0 calc(var(--content-space) * -1);
-        border-radius: 0;
-    }
     h1,
     h2,
-    h3 {
+    h3,
+    h4,
+    h5,
+    h6 {
         margin-top: var(--spacem-md);
+        margin-bottom: var(--space-xs);
     }
 
     h1 {
@@ -102,30 +102,28 @@ query Post ($id: ID!) {
     }
 
     h2 {
-        font-size: var(--font-size-4xl);
+        font-size: var(--font-size-5xl);
     }
 
     h3 {
-        font-size: var(--font-size-2xl);
+        font-size: var(--font-size-4xl);
     }
-
     &__header {
-        /* width: calc(100% + var(--space) * 2); */
-        margin-left: calc(var(--space-2xl) * -1);
-        margin-right: calc(var(--space-2xl) * -1);
-        margin-bottom: var(--space-md);
-        margin-top: calc(var(--space-2xl) * -1);
-        overflow: hidden;
-        border-radius: var(--radius) var(--radius) 0 0;
-        @include mQ-max($display-size-sm) {
-            // Remove border-radius on small screens
-            border-radius: 0;
+        @include content-box-image($display-size-sm);
+    } 
+
+    &__content{
+        // @include content-box-padding;
+        padding: var(--space-4xl);
+        padding-top: var(--space-2xl);
+        @include mQ-max($display-size-sm){
+            padding: var(--space-2xl);
         }
-        img {
-            width: 100%;
-        }
-        &:empty {
-            display: none;
+    }
+    pre{
+        max-width: calc(100vw - calc(calc(var(--space-4xl) + var(--content-space))*2) - 2px);
+        @include mQ-max($display-size-sm){
+            max-width: calc(100vw - calc(var(--space-2xl)*2) - 2px);
         }
     }
 }
@@ -146,7 +144,8 @@ query Post ($id: ID!) {
     padding: var(--space-xs) var(--space-md);
     background-color: var(--bg-pre);
     color: var(--title-color);
-    margin-bottom: var(--spacem-xs);
+    margin: var(--spacem-xs) 0;
+    font-size: 95%;
     p {
         margin: 0;
     }
@@ -179,32 +178,39 @@ blockquote {
 }
 
 .footnotes {
-    margin: 0;
     padding: 0;
+    line-height: 1.5em;
+    hr{
+        margin-bottom: var(--space-lg);
+
+    }
     ol {
         list-style-type: none;
         margin: 0;
     }
+    li:only-of-type{
+        margin-bottom: 0;
+    }
     li {
-        margin-bottom: var(--space-2xl);
-        background-color: var(--bg-code);
+        // margin-bottom: var(--space-2xl);
+        background-color: var(--bg-pre);
         padding: var(--space-lg);
         border-radius: var(--radius);
     }
     img {
-        margin-top: var(--spacem-xs);
-        margin-bottom: var(--spacem-xs);
+        margin-top: var(--spacem-sm);
         border-radius: var(--radius);
         max-height: calc(16 * var(--space-4xl));
         width: auto;
     }
     a {
-        font-size: var(--font-size-md);
-        background-color: var(--bg-code);
+        font-size: var(--font-size-sm);
+        background-color: var(--bg-pre);
         font-weight: var(--font-wight--bolder);
         padding: var(--spacem-xs) var(--spacem-sm);
         border-radius: var(--radius);
         margin: 0;
+        margin-top: var(--spacem-sm);
         display: block;
         max-width: max-content;
         &::after {
@@ -215,11 +221,12 @@ blockquote {
 
 sup {
     vertical-align: super;
-    font-size: var(--font-size-sm);
+    font-size: 80%;
     // font-size: smaller;
     padding-inline-start: var(--spacem-3xs);
     padding-inline-end: var(--spacem-4xs);
-    @include dimmed;
+    // @include dimmed;
+    opacity: 0.8;
     transition: opacity ease-in-out 0.25s;
     &:hover {
         opacity: 1;
@@ -233,4 +240,5 @@ sup {
         padding-inline-start: var(--spacem-3xs);
     }
 }
+
 </style>

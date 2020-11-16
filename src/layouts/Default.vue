@@ -1,10 +1,10 @@
 <template>
     <div id="app" class="wrapper">
         <header class="header">
-            <div class="header__left">
+            <div class="header__start">
                 <Logo v-if="showLogo" />
             </div>
-            <div class="header__right">
+            <div class="header__end">
                 <g-link class="nav__link" to="/about/">About</g-link>
                 <g-link class="nav__link" to="/posts/">Posts</g-link>
                 <g-link class="nav__link" to="/reviews/">Reviews</g-link>
@@ -59,53 +59,63 @@ query {
 }
 </static-query>
 
-<style lang="scss">     
+<style lang="scss">
+@import "../assets/style/_layout.scss";
 @import "../assets/fonts/Inter/inter.css";
 @import "../assets/fonts/Inknut-Antiqua/InknutAntiqua.css";
 @import "../assets/fonts/DM_Mono/DM_Mono.css";
 
+@mixin main-padding {
+    padding-left: calc(max(2rem, env(safe-area-inset-left)));
+    padding-right: calc(max(2rem, env(safe-area-inset-right)));
+}
+
 .wrapper {
-    min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    background-color: var(--bg-color);
-    background-image: linear-gradient(180deg, var(--bg-color), var(--bg-color-HL));
+    min-height: 100vh;
+    min-height: -webkit-fill-available; // mobile viewport hidden footer fix
+    background-image: linear-gradient(
+        to bottom,
+        var(--bg-color),
+        var(--bg-color-HL)
+    );
 }
-.main {
-    margin: 0 auto;
-    padding: 0;
-    padding-left: calc(max(var(--content-space), env(safe-area-inset-left)));
-    padding-right: calc(max(var(--content-space), env(safe-area-inset-right)));
-}
+
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: var(--header-height);
-    padding: 0;
-    padding-left: calc(max(var(--content-space), env(safe-area-inset-left)));
-    padding-right: calc(max(var(--content-space), env(safe-area-inset-right)));
-    top: 0;
+    @include main-padding;
     z-index: 10;
-    .active--exact {
-        border-bottom: 1px solid var(--link-color);
+    @include mQ-max($display-size-xs) {
+        font-size: 0.9em;
     }
-    &__left,
-    a {
-        margin: 0;
-        margin-inline-end: var(--space-md);
+    &__start {
+        a {
+            margin: 0;
+            margin-inline-end: var(--space-md);
+        }
     }
-    &__right {
+    &__end {
         a {
             margin: 0;
             margin-inline-start: var(--space-md);
         }
     }
-    @media screen and (min-width: 1300px) {
+    @include mQ-min($display-size-lg) {
         //Make header sticky for large screens
         position: sticky;
         max-width: 100%;
+        top: 0;
     }
+}
+
+.main {
+    @include main-padding;
+    margin: 0 auto;
+    // padding: 0;
 }
 
 .footer {
@@ -113,11 +123,14 @@ query {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--content-space);
-    padding-left: calc(max(var(--content-space), env(safe-area-inset-left)));
-    padding-right: calc(max(var(--content-space), env(safe-area-inset-right)));
-    margin-bottom: var(--spacem-md);
+    padding-top: var(--spacem-md);
+    @include main-padding;
+    padding-bottom: calc(max(1rem, env(safe-area-inset-bottom)));
     text-align: center;
+    min-height: var(--header-height);
+    @include mQ-max($display-size-sm) {
+        font-size: 0.9em;
+    }
     &__links {
         display: flex;
         align-items: center;
@@ -127,7 +140,7 @@ query {
         }
     }
     > span {
-        font-size: 0.8em;
+        font-size: 90%;
         margin-top: var(--spacem-xs) 0;
     }
 }

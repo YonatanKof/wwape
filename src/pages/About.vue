@@ -13,26 +13,27 @@
             <div class="about__bio-text">
                 <div id="the-text">
                     <p>
-                        Proficient in brand crafting, design management and
-                        hands-on UX/UI. With more then 10 years of experience.
+                        A design system manager, proficient in brand crafting
+                        and hands-on UX/UI with more them 10 years of
+                        experience.
                     </p>
                     <p>
                         My passion is merging <em>ideas</em> with
                         <em>business</em>, and <em>people</em> with
-                        <em>technology</em> -> where the goal is to create
-                        products that are valuable, beautiful and maintainable.
+                        <em>technology</em> with the goal of creating valuable
+                        and beautiful products that are easy to maintain.
                     </p>
                     <p>
-                        I design digital products for a living and build
-                        websites, like this one, for fun, to explore design in
-                        code and to tell short stories.
+                        I design digital products for a living but I build
+                        websites for fun, to explore the language of design in
+                        code and to tell stories.
                     </p>
                     <p id="cv-text">
-                        Wanna see my full CV?
+                        Check out
                         <g-link
                             to="https://www.notion.so/yonatankof/Yonatan-Ben-Knaan-CV-615078174644460db169c928cd409f9e"
                         >
-                            Check it out on Notion</g-link
+                            my full CV on Notion</g-link
                         >.
                     </p>
                     <Hr
@@ -108,7 +109,6 @@ export default {
 
 <style lang="scss">
 @import "../assets/style/_layout.scss";
-@import "../assets/style/_typography.scss";
 
 .grab-word {
     white-space: nowrap;
@@ -121,12 +121,18 @@ export default {
 
     &__title {
         font-size: var(--font-size-9xl);
+        @include mQ-max($display-size-sm) {
+            font-size: var(--font-size-8xl);
+        }
     }
     &__subtitle {
         border-left: var(--spacem-xs) double var(--link-color-HL);
         padding: var(--spacem-2xs) 0 var(--spacem-2xs) var(--spacem-xs);
         font-weight: var(--font-wight--bold);
         font-family: var(--font-family--body);
+        @include mQ-max($display-size-sm) {
+            font-size: var(--font-size-5xl);
+        }
     }
 
     &__bio-text {
@@ -134,14 +140,14 @@ export default {
         font-size: var(--font-size-2xl);
         #cv-text {
             font-size: initial;
-            @include dimmed;
+            opacity: 0.7;
             margin-top: var(--space-2xl);
         }
         @include mQ-max($display-size-sm) {
             flex-direction: column;
         }
         #the-text {
-            margin-inline-end: var(--space-sm);
+            margin-inline-end: var(--space-2xl);
         }
         #meta-list {
             list-style: none;
@@ -178,26 +184,16 @@ export default {
         }
     }
     #my-name {
-        font-family: "Permanent Marker";
-        line-height: 1.1;
-        @include dimmed;
+        font-family: var(--font-family--hand);
+        line-height: 1.1em;
+        // @include dimmed;
+        opacity: 0.7;
         transform: rotateZ(-12deg);
         width: max-content;
         position: relative;
         left: calc(var(--space-md) * -1);
         top: var(--space-sm);
-        z-index: -10;
+        // z-index: -10;
     }
-    // @include mQ-max($display-size-md) {
-    //   background-color: wheat;
-    // }
-
-    // @include mQ-max($display-size-sm) {
-    //   background-color: salmon;
-    // }
-
-    // @include mQ-max($display-size-xs) {
-    //   background-color: aliceblue;
-    // }
 }
 </style>
