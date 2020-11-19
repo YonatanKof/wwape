@@ -6,28 +6,26 @@ date: 2020-10-20
 updated: 2020-10-20
 published: true
 tags: ['macOS', 'Shortcuts', 'Sketch','Productivity']
-cover_image: ./macOS/cover.jpg
+cover_image: ./macOS/Cover-Shortcuts.svg
 cover_caption: Screen shot of Mac keyboard shortcuts page on Apple support
 description: How to create, edit or remove shortcuts for a macOS
 canonical_url: false
 series: false
 ---
 
-The macOS and the apps installed comes pack with sweet sweet shortcuts but not all is perfect. You might easily find yourself doing the same task over and over again by navigating and clicking items in menus unfitting to Fitts’s Law. Or even worse than that is that you didn't click that command because you where to lazy to navigate then damn menus - and by that hindering your workflow - which is already quite difficult. Such a shame...
+The macOS and the apps installed comes pack with sweet sweet shortcuts but not all is perfect. You might easily find yourself doing the same task over and over again by navigating and clicking items in menus unfitting to Fitts’s Law. Or even worse than that is that you didn't click that command because you where to lazy to navigate then damn menus - and by that hindering your workflow - which is already quite difficult. Such a shame.
 
-## Problem statement
-
-I guess that if you don't know how to create shortcuts for mac then you have two problems:
+*So what's the problem?* I guess that if you don't know how to create shortcuts for mac then you have two of them:
 
 1. How to set up a shortcut on **macOS**? 
 
 2. How to create a shortcut specifically for **Sketch**?
  
-## Jobs to be done
+## Some jobs to be done
 
 We'll solve these problem by presenting two examples of custom commands that will improve your workflow:
 
-1. **Merge all window** - This command is relevant for **all** apps that are multi window: Let's say you find yourself with 7 open *Sketch* files and 6 *Finder* windows, and you're clicking like crazy trying to find the window you're looking for. Such an hassle. The `Merge all window` command is the best cleaner upper you'll get. It will merge all of your open windows [^fig-unmerged] into one window to be shown as tabs [^fig-merged].
+1. **Merge All Windows** - This command is relevant for **all** apps that are multi window: Let's say you find yourself with 7 open *Sketch* files and 6 *Finder* windows, and you're clicking like crazy trying to find the window you're looking for. What an hassle. The `Merge all window` command is the best cleaner upper you'll get. It will merge all of your open windows [^fig-unmerged] into one window to be shown as tabs [^fig-merged].
 
 2. **Collapse All Groups** - This command is specific for *Sketch* and it deals with the issue when reviewing the *Layers* or *Components* panel on a big file. Of course you can scroll, it's nice, but sometimes you'd like the get an overview at a glance. That's where this command comes in handy 🤲 Unfortunately it has no shortcut 😢
 
@@ -78,17 +76,23 @@ Once you've clicked Add you can get back to sketch and use this short cut to mak
 
 ## Wildcard shortcut
 
-Most apps on the macOS has a wildcard shortcut that allows to fussy search for you command just by typing it and return to it. It's the [*Help Menu*](https://support.apple.com/guide/mac-help/get-help-on-your-mac-hlpvw003/mac) available at the... wait for it... at the help menu. Just click `shift`+`control`+`\` and the search will be waiting for your quick action which ever the app you're at 🏃
+#### On the macOS
+
+Most apps on the macOS has a wildcard shortcut that allows to fussy search for you command just by typing it and return to it. It's the [Help Menu](https://support.apple.com/guide/mac-help/get-help-on-your-mac-hlpvw003/mac) available at the... wait for it... at the help menu. Just click `shift` + `control` + `\` and the search will be waiting for your quick action which ever the app you're at 🏃
+
+#### On Sketch
+
+You can also locate and run commands (and much much more) in *Sketch* using a plugin called [SketchRunner](https://sketchrunner.com/). That's a good one I'll discuses it in a future article. Stay tuned
 
 ## Identical commands
 
-Shortcuts in mac need to be unique. Let's take for example the `Left` command in *Sketch*, if you'll ever create a shortcut for it as explain above, it won't work. The reason is, this command ain't unique. You can find it both under `Text → Align → Left` and under `Arrange → Align → Left`. The app won't know which *left* you're referring to, so it will just diss you 😒 You'll have to make it unique for it to work, one way to do so is by adding its location. 
+Shortcuts in mac need to be unique. Let's take for example the *Top* command in *Sketch*, if you'll ever create a shortcut for it as explain above, it won't work. The reason is, this command ain't unique. You can find it both under `Text → Align → Top` and under `Arrange → Align → Top`. The app won't know which *Top* you're referring to, so it will just diss you 😒 You'll have to make it unique for it to work, one way to do so is by adding its location. 
 
 Let's brake it down: 
-- `Text → Align → Left`  [^fig-Text_Align_Left]
-- `Arrange → Align → Left`  [^fig-Arrange_Align_Left]
+- `Text → Align → Top`  [^fig-Text_Align_Top]
+- `Arrange → Align → Top`  [^fig-Arrange_Align_Top]
   
-`Left` and `Align` are identical at both command - `Text` and `Arrange` are unique. So let's say you wanna shortcut the `Arrange` bit, so you'll need to copy the complete path by using the `dash`+`greater than` pattern to mark nest descent. So the left align arrange command needs to look like this: `Arrange → Align → Left` [^fig-unique], and there you have it, a command the is unique as a snowflake ❄️
+`Top` and `Align` are identical at both command - `Text` and `Arrange` are unique. So let's say you wanna shortcut the `Arrange` bit, so you'll need to copy the complete path by using the `dash`+`greater than` pattern to mark nest descent. So the Top align arrange command needs to look like this: `Arrange → Align → Top` [^fig-unique], and there you have it, a command the is unique as a snowflake ❄️
 
 I'll make sure the Application is on *Sketch* and for the shortcut I'll use the `ctrl`+`option`+`cmd`+`shift`+`→` and voila - a new shortcut is born 👶 
 
