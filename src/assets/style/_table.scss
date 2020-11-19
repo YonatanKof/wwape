@@ -1,17 +1,18 @@
 table {
-    --darken-it: rgba(0, 0, 0, 0.025);
-    --darken-it-header: rgba(0, 0, 0, 0.05);
+    // --darken-it: rgba(0, 0, 0, 0.025);
+    // --darken-it-header: rgba(0, 0, 0, 0.05);
     text-align: left;
-    background-color: var(--bg-card);
-    padding: 1rem;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
+    background-color: var(--bg-color);
+    padding: var(--space-md);
+    border-radius: var(--radius);
+    margin-bottom: var(--space-xl);
     overflow: hidden;
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-md);
+    font-size: var(--font-size-lg);
     // width: 100%;
 }
 thead {
-    background-color: var(--darken-it-header);
+    background-color: var(--bg-pre);
     font-weight: bold;
 }
 th,
@@ -19,11 +20,11 @@ td {
     padding: 1rem;
 }
 tr:nth-child(even) {
-    background-color: var(--darken-it);
+    background-color: var(--bg-pre);
 }
 td:nth-child(even) {
-    background-color: var(--darken-it);
+    background-color: var(--bg-pre);
 }
 th:nth-child(even) {
-    background-color: var(--darken-it);
+    background-color: var(--bg-pre);
 }
