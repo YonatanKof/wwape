@@ -2,8 +2,8 @@
 title: Shortcuts for macOS
 author_name: Yonatan Ben Knnan
 urlname: shortcuts-for-macos
-date: 2020-10-20
-updated: 2020-10-20
+date: 2020-09-20
+updated: 2020-11-19
 published: true
 tags: ['macOS', 'Shortcuts', 'Sketch','Productivity']
 cover_image: ./macOS/Cover-Shortcuts.svg
@@ -76,25 +76,29 @@ Once you've clicked Add you can get back to sketch and use this short cut to mak
 
 ## Wildcard shortcut
 
-#### On the macOS
+#### With the Help Menu
 
 Most apps on the macOS has a wildcard shortcut that allows to fussy search for you command just by typing it and return to it. It's the [Help Menu](https://support.apple.com/guide/mac-help/get-help-on-your-mac-hlpvw003/mac) available at the... wait for it... at the help menu. Just click `shift` + `control` + `\` and the search will be waiting for your quick action which ever the app you're at 🏃
 
-#### On Sketch
+#### With Sketch Runner
 
-You can also locate and run commands (and much much more) in *Sketch* using a plugin called [SketchRunner](https://sketchrunner.com/). That's a good one I'll discuses it in a future article. Stay tuned
+You can also locate and run commands (and much much more) in *Sketch* using a plugin called [SketchRunner](https://sketchrunner.com/). That's a good one and it does a lot; it *Inserts* symbols, *Goes to* pages, artboards, or symbols , *Creates* symbols or styles, *Applies* styles and Installs plugins - but for the sake of this article - it *Runs* commands (just like the *Help Menu*) but with a nicer interface **and** with your latest actions.
 
 ## Identical commands
 
-Shortcuts in mac need to be unique. Let's take for example the *Top* command in *Sketch*, if you'll ever create a shortcut for it as explain above, it won't work. The reason is, this command ain't unique. You can find it both under `Text → Align → Top` and under `Arrange → Align → Top`. The app won't know which *Top* you're referring to, so it will just diss you 😒 You'll have to make it unique for it to work, one way to do so is by adding its location. 
+Shortcuts in mac need to be unique. Let's take for example the *Bottom* command in *Sketch*, if you'll ever create a shortcut for it as explain above, it won't work. The reason is, this command ain't unique. You can find it both under `Text → Align → Bottom` and under `Arrange → Align → Bottom`. The app won't know which *Bottom* you're referring to, so it will just diss you 😒 You'll have to make it unique for it to work, one way to do so is by adding its location. 
 
 Let's brake it down: 
-- `Text → Align → Top`  [^fig-Text_Align_Top]
-- `Arrange → Align → Top`  [^fig-Arrange_Align_Top]
+- `Text → Align → Bottom`  [^fig-Text_Align_Bottom]
+- `Arrange → Align → Bottom`  [^fig-Arrange_Align_Bottom]
   
-`Top` and `Align` are identical at both command - `Text` and `Arrange` are unique. So let's say you wanna shortcut the `Arrange` bit, so you'll need to copy the complete path by using the `dash`+`greater than` pattern to mark nest descent. So the Top align arrange command needs to look like this: `Arrange → Align → Top` [^fig-unique], and there you have it, a command the is unique as a snowflake ❄️
+`Bottom` and `Align` are identical at both command - `Text` and `Arrange` are unique. So let's say you wanna shortcut the `Arrange` bit, so you'll need to copy the complete path by using the `dash` + `greater than` pattern to mark nest descent. So the Bottom align arrange command needs to look like this: 
+```
+Arrange->Align->Bottom
+``` 
+There you have it, a command the is unique as a snowflake ❄️
 
-I'll make sure the Application is on *Sketch* and for the shortcut I'll use the `ctrl`+`option`+`cmd`+`shift`+`→` and voila - a new shortcut is born 👶 
+I'll make sure the Application is on *Sketch* and for the shortcut I'll use the `ctrl` + `option` + `cmd` + `shift` + `→` and voila - a new shortcut is born 👶 
 
 ## Create memorial shortcut
 
