@@ -58,10 +58,13 @@ This is a *Preformatted* tag (pre). Warp with ``` to use
         </body>
     </html>  
 
+- Yo
+  - [x] Write the press release
+  - [ ] Me not done
 
-[x] Write the press release
-[ ] Update the website
-[ ] Contact the media
+
+- [ ] Update the website
+- [ ] Contact the media
 
 ### Three types of *hint* blockquote
 
