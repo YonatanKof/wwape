@@ -221,18 +221,11 @@ blockquote {
     }
 }
 
-.task-list-item {
-    list-style: none;
-    margin-left: calc(-1 * var(--space-3xl));
-}
-
 sup {
     vertical-align: super;
     font-size: 75%;
-    // font-size: smaller;
     padding-inline-start: var(--spacem-3xs);
     padding-inline-end: var(--spacem-4xs);
-    // @include dimmed;
     opacity: 0.8;
     transition: opacity ease-out 0.25s;
     line-height: 1;
@@ -250,4 +243,16 @@ sup {
         }
     }
 }
+
+.task-list-item {
+    list-style: none;
+    margin-left: calc(-1 * var(--space-3xl));
+    position: relative;
+    display: flex;
+    input[type='checkbox']{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
 </style>
