@@ -29,90 +29,28 @@ We'll figure out the Jobs to be done, state the problem, go trough my solutions,
 
 Hope you guys enjoy it 🙆‍♂️ Let's go!
 
-
 ---
-# Jobs to be done
 
-## 1st job - macOS shortcuts
-
-1. Scrolling the *Layers* and *Components* panel on a big file is nice but sometimes I'd like the get an overview at a glance. That's why the `Collapse All Groups` command is good for. Unfortunately it has no shortcut 😢
-2. I do a lot aligning when I design, moving my courser to the top right *(fig.align)* all the time is annoying. I'd like to have a shortcut for the Center / Horizontal / Top / Bottom / Left / Right alignment.
-
-
-### 1st job problem
-
-1. How do I set up a shortcut on macOS? And how do I make it specific for *Sketch*?
-2. Commands need to be unique. Let's take for example the `Left` command. You can find it under `Text -> Align` or under `Arrange -> Align`. So the second problem is, how do I set up a none unique shortcut?
-
-![Fig.align - Sketch Alignment Tools](./pss-assets/Extra-Sketch_Alignment_Tools.png) *fig.align*
-
-## 2nd job - Plugin shortcut
-
-Recently I've installed the [Color Contrast Analyser for Sketch](https://github.com/getflourish/Sketch-Color-Contrast-Analyser), which a useful plugin if you'd like to make accessible products without leaving Sketch app for a solution online. The plugin ships without a shortcut and when working on a new design with a lot of contrast checking it can get real annoying real fast. As a keyboard fanatics I'd like to set a shortcut for it.
-
-### The problem
+### Problem statement
 
 macOS shortcuts works only for installed apps. Plugins are installed in the app, so the Keyboard Shortcut Manager won't work on them.  
 
-How do I create a short cut anyways?
+1. How do I create a shortcut anyways?
+2. How do I delete unwanted plugin shortcuts? 
+3. How do I edit existing plugin shortcuts? 
 
-## 3rd job - Editing plugin shortcut
+# Jobs to be done
 
-1. Some shortcuts are troublesome, let's say the [Comma plugin](https://github.com/margusholland/Comma). On the one hand I don't use it that often but on the other hand it holds a lot of valuable shortcuts (as you can see on *fig.comma*). I'd like to remove all these shortcuts because I might want to use them somewhere else and I also keep clicking them by mistake **all** the fricking time 😤
-2. There are two Comma shortcuts I'd like to keep while using a different key combo.
+1. Recently I've installed the [Color Contrast Analyser for Sketch](https://github.com/getflourish/Sketch-Color-Contrast-Analyser), which a useful plugin if you'd like to make accessible products without leaving Sketch app for a solution online. The plugin ships without a shortcut and when working on a new design with a lot of contrast checking it can get real annoying real fast. As a keyboard fanatics I'd like to set a shortcut for it.
+2. Some shortcuts are troublesome, let's say the [Comma plugin](https://github.com/margusholland/Comma). On the one hand I don't use it that often but on the other hand it holds a lot of valuable shortcuts (as you can see on *fig.comma*). I'd like to remove all these shortcuts because I might want to use them somewhere else and I also keep clicking them by mistake **all** the fricking time 😤
 
-![fig.comma - Comma plugin banner taken form their Github Page](./pss-assets/Comma_plugin.png)
-### The problem
+   There are two Comma shortcuts I'd like to keep while using a different key combo.
 
-1. How do I delete unwanted plugin shortcuts? 
-2. How do I edit existing plugin shortcuts? 
+![fig.comma - Comma plugin banner taken form their Github Page](./sketchSC/Comma_plugin.png)
 
 ---
 
 # The solutions
-
-## 1st job solution - macOS shortcuts
-### Create custom macOS shortcut 
-
-1. Open the *Keyboard* Preferences on the *Shortcut* tab and click the *App Shortcut* on left panel *<a href="#fig-keyOS">(fig.keyOS)</a>*.
-   
-   You can use the *Spotlight Search* with the `control + spacebar` shortcut and start typing `ke...` *<a href="#fig-spot">(fig.spot)</a>*  or just look for it in the System Preferences found in the Apple menu.
-2. At the bottom of the right panel you'll see `+` and `-` buttons. Clicking the `+` button will open a prompt window *<a href="#fig-prompt">(fig.prompt)</a>*.
-3. Pick the app at hand, in our case *Sketch*.
-4. Type the the  `Collapse All Groups` command.
-   
-   Be mindful - you'll have to type the command name exactly as it appears in the app's menu, including capital letters and spacing.
-  
-5. Type the shortcut you want into the *Keyboard Shortcut* input. You'll have to use a combination of a <a href="#mod-keys">modifier and a regular keys</a> .
-   
-   For this shortcut I'll use the `ctrl` `option` `cmd` + `c` combo - by typing them while in the input *<a href="#fig-filled-prompt">(fig.filled prompt)</a>*.
-
-6. Click `Add` and there you have it! Your first shortcut for Sketch using macOS's native panel
-
-> BTW - This technique can be used by **all** apps or a **specific** app, and not just *Sketch* 😎. You can see in the screenshot I've added the super useful `Merge All Windows` command for all application. Also super useful is the `Show Help menu`, which is a system shortcut that I'll review later.
-
-<span id="fig-keyOS">![fig.keyOS - macOS Keyboard Shortcut Manager](./pss-assets/MasOS-Shortcut_Manager.png) *fig.keyOS*</span>
-
-<span id="fig-spot">![fig.spot - macOS Spotlight Search](./pss-assets/Extra-Spotlight_Search.png) *fig.spot*</span>
-
-<span id="fig-prompt">![fig.prompt - A prompt widow to add command to an app](./pss-assets/MasOS-Add_Shortcut_Prompt.png) *fig.prompt*</span>
-
-<span id="fig-filled-prompt">![fig.filled prompt - A full add shortcut prompt](./pss-assets/MasOS-Filled_Prompt.png) *fig.filled prompt*</span>
-
-### 1.2 - Create shortcuts for none unique commands 
-
-In order to do so we'll need to write the command's full location using this pattern `->` (`dash` + `greater than`) to mark nest descent.
-So the left align arrange command needs to look like this: 
-```
-Arrange->Align->Top 
-```
-I'll use the `ctrl` + `option` + `cmd` + `shift` + `↑` combo for align *Top*, the `↓` for *Bottom*, the `→` *Right* and, you guessed it, `←` for *Left*. For the *Horizontally* i'll use `h` and `v` for *Vertically*
-
-![fig.keyOS - macOS Keyboard Shortcut Manager](./pss-assets/MasOS-Shortcut_Manager_Full.png) *fig.keyOS*
-
----
-
-## 2nd solution - Create plugin shortcut
 
 As mentioned, the macOS's shortcut manager won't work for an app plugin, in order to create a custom shortcut for  plugins we'll use the plugin's `manifest.json` file that can be found inside the plugin. 
 
@@ -121,7 +59,7 @@ As mentioned, the macOS's shortcut manager won't work for an app plugin, in orde
 So how do we do it?
 
 1. Find the plugin
-   
+
    The easiest way to locate the plugins folder is by opening *Sketch*'s Preferences panel (`⌘`+`,`) and under the *Plugins* tab click the *Reveal Plugin Folder* in the contextual menu (*fig.preferences panel*). 
    
    Another way is by using using the finder to navigate to the folder, usually to be found in this path; `Users ► {user name} ► Library  ► Application Support  ► com.bohemiancoding.sketch3 ► Plugins`   
@@ -146,19 +84,19 @@ So how do we do it?
 
 5. Save the file and enjoy it in *Sketch*
 
-![fig.preferences panel - The preferences panel showing the Plugin tab](./pss-assets/Plugins-Select_and_reveal_the_plugin_in_Finder.png) *fig.preferences panel*
+![fig.preferences panel - The preferences panel showing the Plugin tab](./sketchSC/Plugins-Select_and_reveal_the_plugin_in_Finder.png) *fig.preferences panel*
 
-![fig.plugin folder - The folder containing all of the plugins ](./pss-assets/Plugins-Folder.png) *fig.plugin folder*
+![fig.plugin folder - The folder containing all of the plugins ](./sketchSC/Plugins-Folder.png) *fig.plugin folder*
 
-![fig.manifest - The location of the manifest file in the plugin package contents folder](./pss-assets/Plugins-Find_and_open_manifest.js_in_an_editor.png) *fig.manifest*
+![fig.manifest - The location of the manifest file in the plugin package contents folder](./sketchSC/Plugins-Find_and_open_manifest.js_in_an_editor.png) *fig.manifest*
 
-![fig.empty shortcut - The color checker manifest file open in VS code with no shortcut](./pss-assets/Plugins-Find_the_relevant_command.png) *fig.empty shortcut*
+![fig.empty shortcut - The color checker manifest file open in VS code with no shortcut](./sketchSC/Plugins-Find_the_relevant_command.png) *fig.empty shortcut*
 
-![fig.with shortcut - The color checker manifest file open in VS code with a shortcut](./pss-assets/Plugins-Add_shortcut_string_and_save_file.png) *fig.with shortcut*
+![fig.with shortcut - The color checker manifest file open in VS code with a shortcut](./sketchSC/Plugins-Add_shortcut_string_and_save_file.png) *fig.with shortcut*
 
 ---
 
-## Good to know
+## Pro tips
 
 ### Duplicated shortcuts
 
@@ -203,7 +141,7 @@ Or by removing the *key/value pair* altogether
 "commands": [
     {
       "name": "God is love",
-			"identifier": "god_is_love",
+	  "identifier": "god_is_love",
       "script": "God_Is_Love.js"
     },
   ]
