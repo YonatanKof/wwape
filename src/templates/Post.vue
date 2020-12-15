@@ -110,20 +110,23 @@ query Post ($id: ID!) {
     }
     &__header {
         @include content-box-image($display-size-sm);
-    } 
+    }
 
-    &__content{
+    &__content {
         // @include content-box-padding;
         padding: var(--space-4xl);
         padding-top: var(--space-2xl);
-        @include mQ-max($display-size-sm){
+        @include mQ-max($display-size-sm) {
             padding: var(--space-2xl);
         }
     }
-    pre{
-        max-width: calc(100vw - calc(calc(var(--space-4xl) + var(--content-space))*2) - 2px);
-        @include mQ-max($display-size-sm){
-            max-width: calc(100vw - calc(var(--space-2xl)*2) - 2px);
+    pre {
+        max-width: calc(
+            100vw - calc(calc(var(--space-4xl) + var(--content-space)) * 2) -
+                2px
+        );
+        @include mQ-max($display-size-sm) {
+            max-width: calc(100vw - calc(var(--space-2xl) * 2) - 2px);
         }
     }
 }
@@ -180,15 +183,14 @@ blockquote {
 .footnotes {
     padding: 0;
     line-height: 1.5em;
-    hr{
+    hr {
         margin-bottom: var(--space-lg);
-
     }
     ol {
         list-style-type: none;
         margin: 0;
     }
-    li:only-of-type{
+    li:only-of-type {
         margin-bottom: 0;
     }
     li {
@@ -221,24 +223,34 @@ blockquote {
 
 sup {
     vertical-align: super;
-    font-size: 80%;
-    // font-size: smaller;
+    font-size: 75%;
     padding-inline-start: var(--spacem-3xs);
     padding-inline-end: var(--spacem-4xs);
-    // @include dimmed;
     opacity: 0.8;
-    transition: opacity ease-in-out 0.25s;
+    transition: opacity ease-out 0.25s;
+    line-height: 1;
     &:hover {
         opacity: 1;
     }
-    &::before {
-        content: "[";
-        padding-inline-end: var(--spacem-3xs);
-    }
-    &::after {
-        content: "]";
-        padding-inline-start: var(--spacem-3xs);
+    a {
+        &::before {
+            content: "[";
+            padding-inline-end: var(--spacem-3xs);
+        }
+        &::after {
+            content: "]";
+            padding-inline-start: var(--spacem-3xs);
+        }
     }
 }
 
+.task-list-item {
+    list-style: none;
+    margin-left: calc(-1 * var(--space-3xl));
+    position: relative;
+    display: flex;
+    input[type="checkbox"] {
+        width: var(--space-xl);
+        height: var(--space-xl);
+    }
 </style>
