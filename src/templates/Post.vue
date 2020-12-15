@@ -249,10 +249,8 @@ sup {
     margin-left: calc(-1 * var(--space-3xl));
     position: relative;
     display: flex;
-    input[type='checkbox']{
-        width: 2rem;
-        height: 2rem;
+    input[type="checkbox"] {
+        width: var(--space-xl);
+        height: var(--space-xl);
     }
-}
-
 </style>
