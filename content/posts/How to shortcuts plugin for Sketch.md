@@ -1,18 +1,18 @@
 ---
-title: Shortcuts for Sketch - Plugin and OS
+title: Shortcuts for Sketch App
 author_name: Yonatan Ben Knnan
 urlname: shortcuts-for-sketch
 date: 2020-07-12
 updated: 2019-02-06
 published: true
-tags: ['Sketch','Productivity', 'Git']
+tags: ['Sketch','Productivity', 'Shortcuts']
 cover_image: ./images/rotateme.svg
 cover_caption: Polls on the beach
 canonical_url: false
-description: How to create, edit or remove shortcuts for a Sketch plugin
+description: How to create, edit or remove shortcuts for a Sketch plugins
 ---
 
-There's a thing you're doing all day long - moving your hands and cursor to control your apps - When you add up all these small movements you'll quickly end up whit a big wasteful repetition. You might have missed it because it's small. You might haven't deal with it because you don't know how - Whatever the reason you've let it slide, it's a wast of your time and **this post is for you!** 
+There's a thing you're doing all day long - moving your hands and cursor to control your apps -**** When you add up all these small movements you'll quickly end up whit a big wasteful repetition. You might have missed it because it's small. You might haven't deal with it because you don't know how - Whatever the reason you've let it slide, it's a wast of your time and **this post is for you!** 
 
 # The painful movement of the hand
 Seeing top notch developers working without lifting their hands form the keyboard made me think _is there a way for me to work that way?_ So elegant, so efficient, keeping your hands from a wrist infection. At around 2015 the answer was a **soft no** - I've customized every possible shortcut in _Illustrator_. The nicest thing about Illustrator shortcuts was the ease of creating and managing shortcuts with the `Keyboard Shortcuts` panel _(Fig.Ill)_. but some basic functionalities like resizing a shape wasn't available to begin with, so no shortcut could be assigned.
@@ -170,46 +170,3 @@ Conversely, you can add a shortcut *key/value pair* if none exist, like in the c
 3. **Take control** 
 
     Our brain is plastic and it bends in certain way - When we use our memory to trigger a command instead of lookin for it in the UI we improve our chances to form a clearer path to the command and us using it. We're bound to the way we do things
-
-
----
----
----
----
----
----
----
----
----
----
----
----
----
----
----
-
-# Unused
-
-```javascript
-"shortcut": "ctrl option cmd shift c"
-// It should look like this 
-```
-
-Doing the same small-but-slow (`🐜`) thing over and over again leads up to a big-and-slower thing. You might have missed it because it's small. You might haven't deal with it because you don't know how - what ever the reason it's a wast of your time and **this post is for you!** 
-
-You might have missed it because it's small. You might haven't deal with it because you don't know how - But when adding small things you end up with a big one. I'm talking about what you do all day long - moving your hands and curser to control your apps. Whatever the reason you've let it slide, it's a wast of your time and **this post is for you!** 
-
-. How do I set a shortcuts for Sketch *Plugins* when most of them are nested command? 
-> Sad fact - macOS Keyboard Shortcut Manager will work **just** for an app's nested command and **not** for its plugins, which are the majority 🤦
-
-
-
-> What are **Nested command** you ask? As we can see an example in *fig.ZZZ* below, where the Alignment options are nested in the *Align* sub-menu.
->
-> ![fig.ZZZ - screen shot of Manager](./pss-assets/Extra-Nested_Commands.png) *fig.ZZZ*
-
-- How do I do it for nested commands?
-
-Either way we're looking for this pattern → in this example there are 2 commands with no shortcuts. We're looking for the `name` and `shortcut` key/value pair - The name will be identical to the command as it's presented in the [Plugins select menu](https://www.notion.so/yonatankof/Plugin-shortcuts-for-Sketch-81689b34a9814b4492afb1059e96b638#11a25485adbe49caad3bdf4a011e5891), and the shortcut, well, let's edit it 💪
-
-The contrast-checker plugin have just one command but some might hold dozens of commands, like the all encompassing [Automate-Sketch](https://github.com/Ashung/Automate-Sketch) plugin. 
