@@ -27,7 +27,7 @@ query {
         title
         path
         author_name
-        date (format: "D. MMMM YYYY")
+        date (format: "MMM D, YYYY")
         # timeToRead
         description
         cover_image (width: 800, blur: 10)
