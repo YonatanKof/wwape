@@ -44,13 +44,13 @@ export default {
     @include content-box($display-size-xs);
     position: relative;
     margin-bottom: var(--content-space);
-    &:last-child{
+    &:last-child {
         margin-bottom: 0;
     }
     p {
         line-height: 1.5em;
     }
-    &:hover{
+    &:hover {
         transform: translateY(calc(var(--space-3xs) * -1));
         box-shadow: var(--shadow-md);
     }
@@ -59,7 +59,6 @@ export default {
     }
     &__image {
         min-width: 100%;
-        margin-bottom: var(--space-lg);
     }
     &__title {
         margin-top: 0;
@@ -81,7 +80,6 @@ export default {
     }
     &__content {
         padding: var(--space-lg);
-        padding-top: 0;
     }
 }
 </style>
