@@ -253,4 +253,5 @@ sup {
         width: var(--space-xl);
         height: var(--space-xl);
     }
+}
 </style>
