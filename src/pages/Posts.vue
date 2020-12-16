@@ -8,10 +8,10 @@
         />
         <!-- List posts -->
         <div class="posts">
-            <PostCard 
-                v-for="edge in $page.posts.edges" 
-                :key="edge.node.id" 
-                :postdata="edge.node" 
+            <PostCard
+                v-for="edge in $page.posts.edges"
+                :key="edge.node.id"
+                :postdata="edge.node"
             />
         </div>
         <!-- Author intro -->
@@ -20,7 +20,11 @@
 
 <page-query>
 query {
-  posts: allPost(filter: { published: { eq: true }}) {
+  posts: allPost(
+    filter: { published: { eq: true }} 
+    sortBy: "date", order: ASC
+    ) 
+  {
     edges {
       node {
         id
@@ -53,15 +57,10 @@ export default {
         Author,
         PostCard,
         IconBase,
-        KofIcon
+        KofIcon,
     },
     metaInfo: {
-        title: "Posts by Yonatan Ben Knaan"
-    }
+        title: "Posts by Yonatan Ben Knaan",
+    },
 };
 </script>
-
-<style lang="scss">
-
-</style>
-
