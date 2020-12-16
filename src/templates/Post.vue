@@ -204,6 +204,9 @@ blockquote {
         border-radius: var(--radius);
         max-height: calc(16 * var(--space-4xl));
         width: auto;
+        // For images w/ caption
+        // transform: translateY(3.5rem) rotate(-1deg);
+        // And add z-index to the following <em>
     }
     a {
         font-size: var(--font-size-sm);
