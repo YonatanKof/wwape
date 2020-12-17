@@ -21,8 +21,8 @@ In this tutorial we'll draw a simple shape using the laws of perspective. The **
 
 These drawings can be done manually with physical tools or by using a digital tool like I do, in this case Affinity Designer. You can also do it freehand - and though the precision levels will drop it will still be accurate.
 
-![./perspective/Screen_Shot_2020-08-03_at_7.24.57_PM.png](./perspective/Screen_Shot_2020-08-03_at_7.24.57_PM.png)
-*My old school drawing tools - See all of these photos [at this link](https://www.dropbox.com/sh/sg3sksjw4ghbaxx/AAA_2z7NT1M8qJ1UsmBdaB_Da?dl=0)*
+![Old school drawing tools](./perspective/Screen_Shot_2020-08-03_at_7.24.57_PM.png)
+*My old school drawing tools - See more photos [on this link](https://www.dropbox.com/sh/sg3sksjw4ghbaxx/AAA_2z7NT1M8qJ1UsmBdaB_Da?dl=0)*
 
 BTW 
 
@@ -58,12 +58,12 @@ Before we get started let's see how a finalized layout looks like, so you get a 
   
     - TH origin
 
-![./perspective/Basic_layout-1.jpg](./perspective/Basic_layout-1.jpg)
+![A basic layout for creating a perspective drawing](./perspective/Basic_layout-1.jpg)
 *fig.layout - A basic layout for creating a perspective drawing*
 
 ---
 
-![./perspective/The_terms.jpg](./perspective/The_terms.jpg "Kof")
+![We'll get into further explanations as the article progress](./perspective/The_terms.jpg)
 *fig.terms - We'll get into further explanations as the article progress*
 
 ### **The example**
@@ -71,8 +71,7 @@ Before we get started let's see how a finalized layout looks like, so you get a 
 For this example let's choose a simple shape we probably all know from the game of Tetris - which I've spent too much time playing as a kind - one of the seven tetriminos will do (**fig.tetriminos**).
 
 ![./perspective/The_seven_tetriminos.jpg](./perspective/The_seven_tetriminos.jpg)
-
-**fig.tetriminos**
+*fig.tetriminos*
 
 # The 2D world
 
@@ -80,7 +79,8 @@ When modeling an object like house or a product designers and engineers use a 2d
 
 The object I'll use will be the `L` tetrimino - Here's how it looks like as a blueprint - I've also added an isometric view to explain the views with ease.  A ***Plan*** view can be 1 of 2 sides - The Top or  Bottom. An ***Elevation*** view can be 1 of 4 sides → Front, Rear, Side and the other Side - in this case it's just a mirror reflection of the first side
 
-![./perspective/L_block_views.jpg](./perspective/L_block_views.jpg)
+![The block view](./perspective/L_block_views.jpg)
+*The block view*
 
 ## A basic layout
 
@@ -88,7 +88,8 @@ Let's review a basic layout to get a perspective drawing going -  To make a pers
 
 Rotating the plan view will result with a rotated 3d view 😉
 
-![./perspective/Basic_layout.jpg](./perspective/Basic_layout.jpg)
+![The Basic layout](./perspective/Basic_layout.jpg)
+*The Basic layout*
 
 Use the views the holds most of the information in the clearer way - For the simple shape it doesn't really matter - As long as we use a ***Plan*** and an ***Elevation***
 
@@ -99,7 +100,8 @@ These plans are using the elevation views
 - **Ground plane** - As the name suggest, this is the ground and the base of the drawing
 - **Horizon plane** - This is the viewer's eye level - In a counter intuitive kinda way, if you'de like to draw a **smaller** object then place the Horizon plane **higher** then the elevation view, and the other way around to draw a bigger object. The following fig *(Viewing planes, by object)* shows it nicely
 
-![./perspective/Viewing_planes_by_viewer.jpg](./perspective/Viewing_planes_by_viewer.jpg)
+![Viewing planes by viewer](./perspective/Viewing_planes_by_viewer.jpg)
+*Viewing planes by viewer*
 
 # The 3D world
 
