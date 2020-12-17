@@ -159,8 +159,9 @@ export default {
 };
 ```
 ![image](~/assets/images/Yonatan_Ben-Knaan-Squere.jpg)
+*Now that's one good looking Kof*
 
-``Use `code` in your Markdown file.``
+`Use code in your Markdown file.`
 
 Visit my website [Yonatan Kof](https://yonatankof.com "The best designer in Israel").
 
@@ -186,13 +187,6 @@ Sandy hole with nothing in it to sit down on or to eat: it was a [hobbit-hole][1
 | :---        |    :----:   |          ---: |
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
-
-First Term
-: This is the definition of the first term.
-
-Second Term
-: This is one definition of the second term.
-: This is another definition of the second term.
 
 ### Footnotes 
 

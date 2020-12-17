@@ -180,6 +180,23 @@ blockquote {
     border-left-color: var(--bg-caution-HL);
 }
 
+img {
+    border-radius: var(--radius);
+}
+
+// These 2 styles are for image and caption that are placed in a div tag
+// Gridsome adds the noscript tag, if it didn't then -> img + em
+// Read more here - https://thesynack.com/posts/markdown-captions/
+
+noscript + em {
+    font-size: var(--font-size-3xl);
+    font-weight: 400;
+    line-height: 2em;
+}
+p img {
+    transform: translateY(var(--space-sm));
+}
+
 .footnotes {
     padding: 0;
     line-height: 1.5em;
@@ -201,7 +218,6 @@ blockquote {
     }
     img {
         margin-top: var(--spacem-sm);
-        border-radius: var(--radius);
         max-height: calc(16 * var(--space-4xl));
         width: auto;
         // For images w/ caption
