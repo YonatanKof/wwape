@@ -12,6 +12,9 @@ description: How to create, edit or remove shortcuts for a macOS
 canonical_url: false
 series: false
 ---
+import LShape from '~/components/forPosts/LShape.vue'
+
+<LShape/>
 
 ## Why do perspective
 
