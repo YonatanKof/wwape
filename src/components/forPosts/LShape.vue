@@ -11,7 +11,7 @@
                         compPres +
                         'em) translateY(' +
                         compAxleY +
-                        '%) rotateX(' +
+                        'em) rotateX(' +
                         compRotX +
                         'deg) rotateY(' +
                         compRotY +
@@ -33,72 +33,75 @@
             <div class="face-me plane plane-bottom">Plane Bottom</div>
             <div class="face-me plane plane-bottom shadow"></div>
         </div>
-        <input
-            name="perspective"
-            type="range"
-            class="this-input"
-            min="30"
-            max="300"
-            v-bind:value="compPres"
-            data-sizing="em"
-            orient="vertical"
-            v-on:input="onCompPres"
-        />
+        <label for="perspective"
+            >Size
+            <input
+                id="perspective"
+                type="range"
+                class="this-input"
+                min="30"
+                max="300"
+                v-bind:value="compPres"
+                orient="vertical"
+                v-on:input="onCompPres"
+            />
+        </label>
         <!-- <input
-            name="rot-x"
+            id="rot-x"
             type="range"
             class="this-input"
             min="-360"
             max="360"
             v-bind:value="compRotX"
-            data-sizing="deg"
             orient="vertical"
             v-on:input="onCompRotX"
         /> -->
-        <input
-            name="scale"
-            type="range"
-            class="this-input"
-            min="60"
-            max="100"
-            v-bind:value="compScale"
-            data-sizing="deg"
-            orient="vertical"
-            v-on:input="onCompScale"
-        />
+        <label for="scale"
+            >Distance
+            <input
+                id="scale"
+                type="range"
+                class="this-input"
+                min="60"
+                max="100"
+                v-bind:value="compScale"
+                orient="vertical"
+                v-on:input="onCompScale"
+            />
+        </label>
         <!-- <input
-            name="rot-y"
+            id="rot-y"
             type="range"
             class="this-input"
             min="-360"
             max="360"
             v-bind:value="compRotY"
-            data-sizing="deg"
             orient="vertical"
             v-on:input="onCompRotY"
         /> -->
         <!-- <input
-            name="rot-z"
+            id="rot-z"
             type="range"
             class="this-input"
             min="-360"
             max="360"
             v-bind:value="compRotZ"
-            data-sizing="deg"
             orient="vertical"
             v-on:input="onCompRotZ"
         /> -->
-        <input
-            name="axel-y"
-            type="range"
-            class="this-input"
-            min="-25"
-            max="25"
-            v-bind:value="compAxleY"
-            data-sizing="%"
-            orient="vertical"
-            v-on:input="onCompAxleY"
-        />
+        <label for="axel-y"
+            >Height
+            <input
+                id="axel-y"
+                type="range"
+                class="this-input"
+                min="-25"
+                max="50"
+                v-bind:value="compAxleY"
+                orient="vertical"
+                v-on:input="onCompAxleY"
+            />
+        </label>
     </div>
 </template>
 
@@ -106,12 +109,12 @@
 export default {
     data() {
         return {
-            compPres: 90,
+            compPres: 40,
             compRotX: 0,
             compRotY: 320,
             compRotZ: 0,
             compScale: 80,
-            compAxleY: 8, 
+            compAxleY: 8,
         };
     },
     methods: {
@@ -138,41 +141,44 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../../assets/style/_colors.scss";
+
+label {
+    text-align: center;
+    padding: 2rem;
+    // white-space: nowrap;
+    display: inline-block;
+}
 .this-input {
-    margin: 1rem;
+    margin-top: 3rem;
+    height: 32rem;
 }
 .three-d-group {
     width: 100%;
-    height: 32rem;
+    height: 48rem;
     background-color: var(--bg-primary);
     overflow: hidden;
     border-radius: var(--radius);
     display: flex;
 }
 .l-shape {
-    // transition: all 0.35s;
     font-size: 12px;
     width: 100%;
     height: 100%;
     backface-visibility: visible;
     perspective-origin: 50% 50%;
     transform-style: preserve-3d;
-    // perspective: 1000em;
-    // transform: rotateX(-30deg) rotateY(-30deg);
-    
 }
 .face-me {
     display: block;
     position: absolute;
-    // border: var(--system-color) solid 0.1em;
     border-radius: 0.25em;
     font-family: sans-serif;
     color: white;
     text-align: center;
 }
 .side {
-    // background: var(--border-color);
-    background: burlywood;
+    background: salmon;
 }
 .side-1a {
     width: 10em;
@@ -204,12 +210,30 @@ export default {
     background: salmon;
 }
 .front-1 {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include linear-gradient(0deg, black, 0.5, 100%);
+    }
     width: 10em;
     height: 20em;
     line-height: 20em;
     transform: rotateY(90deg) translateZ(5em);
 }
 .front-2 {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include linear-gradient(180deg, black, 0.2, 100%);
+    }
     width: 10em;
     height: 10em;
     line-height: 10em;
@@ -223,15 +247,33 @@ export default {
     transform: rotateY(-90deg) translateZ(5em);
 }
 .plane {
-    background: firebrick;
+    background: salmon;
 }
 .plane-top-1 {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include linear-gradient(260deg, black, 0.15, 100%);
+    }
     width: 10em;
     height: 10em;
     line-height: 10em;
     transform: rotateX(90deg) translateZ(5em);
 }
 .plane-top-2 {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include linear-gradient(90deg, black, 0.35, 100%);
+    }
     width: 10em;
     height: 10em;
     line-height: 10em;
