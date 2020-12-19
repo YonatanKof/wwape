@@ -1,50 +1,140 @@
 <template>
     <div class="three-d-group">
-        <div class="pressss l-shape">
-            <div class="face-me side side-1a">Side 1A</div>
-            <div class="face-me side side-1b">Side 1B</div>
+        <div
+            class="l-shape"
+            v-bind:style="[
+                { perspective: compPres + 'em' },
+                {
+                    transform:
+                        'rotateX(' +
+                        compRotX +
+                        'deg) rotateY(' +
+                        compRotY +
+                        'deg) rotateZ(' +
+                        compRotZ +
+                        'deg)',
+                },
+            ]"
+        >
+            <div class="face-me side side-1a">Side</div>
+            <div class="face-me side side-1b"></div>
             <div class="face-me front front-1">Front 1</div>
             <div class="face-me front front-2">Front 2</div>
-            <div class="face-me side side-2a">Side 2A</div>
-            <div class="face-me side side-2b">Side Ab</div>
+            <div class="face-me side side-2a">Other Side</div>
+            <div class="face-me side side-2b"></div>
             <div class="face-me rear">Rear</div>
             <div class="face-me plane plane-top-1">Plane Top 1</div>
             <div class="face-me plane plane-top-2">Plane Top 2</div>
             <div class="face-me plane plane-bottom">Plane Bottom</div>
         </div>
+        <input
+            class="this-input"
+            type="range"
+            name="perspective"
+            min="50"
+            max="300"
+            v-bind:value="compPres"
+            data-sizing="em"
+            orient="vertical"
+            v-on:input="onCompPres"
+        />
+        <input
+            class="this-input"
+            type="range"
+            name="rot-x"
+            min="-360"
+            max="360"
+            v-bind:value="compRotX"
+            data-sizing="deg"
+            orient="vertical"
+            v-on:input="onCompRotX"
+        />
+        <input
+            class="this-input"
+            type="range"
+            name="rot-y"
+            min="-360"
+            max="360"
+            v-bind:value="compRotY"
+            data-sizing="deg"
+            orient="vertical"
+            v-on:input="onCompRotY"
+        />
+        <input
+            class="this-input"
+            type="range"
+            name="rot-z"
+            min="-360"
+            max="360"
+            v-bind:value="compRotZ"
+            data-sizing="deg"
+            orient="vertical"
+            v-on:input="onCompRotZ"
+        />
     </div>
 </template>
 
-<style lang="scss">
-.pressss {
-    transition: all 0.35s;
-}
+<script>
+export default {
+    data() {
+        return {
+            compPres: 300,
+            compRotX: 0,
+            compRotY: 0,
+            compRotZ: 0,
+        };
+    },
+    methods: {
+        onCompPres(e) {
+            this.compPres = e.target.value;
+        },
+        onCompRotX(e) {
+            this.compRotX = e.target.value;
+        },
+        onCompRotY(e) {
+            this.compRotY = e.target.value;
+        },
+        onCompRotZ(e) {
+            this.compRotZ = e.target.value;
+        },
+    },
+};
+</script>
 
+<style lang="scss">
+.this-input {
+    margin: 1rem;
+}
 .three-d-group {
-    font-size: 16px;
     width: 100%;
     height: 32rem;
-    background-color: burlywood;
+    background-color: var(--bg-primary);
+    overflow: hidden;
+    border-radius: var(--radius);
+    display: flex;
 }
 .l-shape {
+    transition: all 0.35s;
+    font-size: 12px;
     width: 100%;
     height: 100%;
     backface-visibility: visible;
     perspective-origin: 150% 150%;
     transform-style: preserve-3d;
-    perspective: 5000em;
-    transform: rotateX(-30deg) rotateY(-30deg);
+    // perspective: 1000em;
+    // transform: rotateX(-30deg) rotateY(-30deg);
 }
 .face-me {
     display: block;
     position: absolute;
-    border: coral solid 0.1em;
+    border: var(--system-color) solid 0.1em;
+    border-radius: 0.25em;
     font-family: sans-serif;
     color: white;
     text-align: center;
 }
 .side {
-    background: rgba(black, 0.1);
+    background: var(--border-color);
 }
 .side-1a {
     width: 10em;
@@ -71,7 +161,7 @@
     transform: translateX(10em) rotateY(180deg) translateY(20em) translateZ(5em);
 }
 .front {
-    background: rgba(black, 0.3);
+    background: var(--border-color);
 }
 .front-1 {
     width: 10em;
@@ -86,14 +176,14 @@
     transform: translateX(10em) rotateY(90deg) translateY(20em) translateZ(5em);
 }
 .rear {
-    background: rgba(black, 0.1);
+    background: var(--border-color);
     width: 10em;
     height: 30em;
     line-height: 30em;
     transform: rotateY(-90deg) translateZ(5em);
 }
 .plane {
-    background: rgba(black, 0.1);
+    background: var(--border-color);
 }
 .plane-top-1 {
     width: 10em;
