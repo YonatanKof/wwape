@@ -7,7 +7,7 @@ updated: 2020-12-16
 published: true
 tags: ['Creative']
 cover_image: ./perspective/Тетрис-Cover.png
-cover_caption: Le Corbusier's Modulor in differnt scales over the over 
+cover_caption: Le Corbusier's Modulor in different scales over the over 
 description: How to create, edit or remove shortcuts for a macOS
 canonical_url: false
 series: false
