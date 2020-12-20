@@ -180,10 +180,6 @@ blockquote {
     border-left-color: var(--bg-caution-HL);
 }
 
-img {
-    border-radius: var(--radius);
-}
-
 // These 2 styles are for image and caption that are placed in a div tag
 // Gridsome adds the noscript tag, if it didn't then -> img + em
 // Read more here - https://thesynack.com/posts/markdown-captions/
