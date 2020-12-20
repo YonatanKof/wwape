@@ -14,6 +14,9 @@ series: false
 ---
 import LShape from '~/components/forPosts/LShape.vue'
 
+import MyShape from '~/components/forPosts/MyShape.vue'
+
+<MyShape/>
 <LShape/>
 
 ## Why do perspective
