@@ -33,20 +33,22 @@
             <div class="face-me plane plane-bottom">Plane Bottom</div>
             <div class="face-me plane plane-bottom shadow"></div>
         </div>
-        <label for="perspective"
-            >Size
-            <input
-                id="perspective"
-                type="range"
-                class="this-input"
-                min="30"
-                max="300"
-                v-bind:value="compPres"
-                orient="vertical"
-                v-on:input="onCompPres"
-            />
-        </label>
-        <!-- <input
+        <fieldset>
+            <legend>Play Me</legend>
+            <label for="perspective"
+                >Size
+                <input
+                    id="perspective"
+                    type="range"
+                    class="this-input"
+                    min="30"
+                    max="300"
+                    v-bind:value="compPres"
+                    orient="vertical"
+                    v-on:input="onCompPres"
+                />
+            </label>
+            <!-- <input
             id="rot-x"
             type="range"
             class="this-input"
@@ -56,20 +58,20 @@
             orient="vertical"
             v-on:input="onCompRotX"
         /> -->
-        <label for="scale"
-            >Distance
-            <input
-                id="scale"
-                type="range"
-                class="this-input"
-                min="60"
-                max="100"
-                v-bind:value="compScale"
-                orient="vertical"
-                v-on:input="onCompScale"
-            />
-        </label>
-        <!-- <input
+            <label for="scale"
+                >Distance
+                <input
+                    id="scale"
+                    type="range"
+                    class="this-input"
+                    min="60"
+                    max="100"
+                    v-bind:value="compScale"
+                    orient="vertical"
+                    v-on:input="onCompScale"
+                />
+            </label>
+            <!-- <input
             id="rot-y"
             type="range"
             class="this-input"
@@ -79,7 +81,7 @@
             orient="vertical"
             v-on:input="onCompRotY"
         /> -->
-        <!-- <input
+            <!-- <input
             id="rot-z"
             type="range"
             class="this-input"
@@ -89,19 +91,20 @@
             orient="vertical"
             v-on:input="onCompRotZ"
         /> -->
-        <label for="axel-y"
-            >Height
-            <input
-                id="axel-y"
-                type="range"
-                class="this-input"
-                min="-25"
-                max="50"
-                v-bind:value="compAxleY"
-                orient="vertical"
-                v-on:input="onCompAxleY"
-            />
-        </label>
+            <label for="axel-y"
+                >Height
+                <input
+                    id="axel-y"
+                    type="range"
+                    class="this-input"
+                    min="-25"
+                    max="50"
+                    v-bind:value="compAxleY"
+                    orient="vertical"
+                    v-on:input="onCompAxleY"
+                />
+            </label>
+        </fieldset>
     </div>
 </template>
 
@@ -142,11 +145,13 @@ export default {
 
 <style lang="scss">
 @import "../../assets/style/_colors.scss";
-
+$color-l-shape: hsl(35, 85%, 55%);
+fieldset {
+    display: flex;
+}
 label {
     text-align: center;
     padding: 2rem;
-    // white-space: nowrap;
     display: inline-block;
 }
 .this-input {
@@ -176,9 +181,9 @@ label {
     font-family: sans-serif;
     color: white;
     text-align: center;
+    background: $color-l-shape;
 }
 .side {
-    background: salmon;
 }
 .side-1a {
     width: 10em;
@@ -193,21 +198,18 @@ label {
     transform: translateX(10em) translateY(20em) translateZ(5em);
 }
 .side-2a {
-    background: chocolate;
     width: 10em;
     height: 30em;
     line-height: 30em;
     transform: rotateY(180deg) translateZ(5em);
 }
 .side-2b {
-    background: chocolate;
     width: 10em;
     height: 10em;
     line-height: 10em;
     transform: translateX(10em) rotateY(180deg) translateY(20em) translateZ(5em);
 }
 .front {
-    background: salmon;
 }
 .front-1 {
     &::after {
@@ -247,7 +249,6 @@ label {
     transform: rotateY(-90deg) translateZ(5em);
 }
 .plane {
-    background: salmon;
 }
 .plane-top-1 {
     &::after {
