@@ -7,7 +7,7 @@
                     transform:
                         'scale(' +
                         compScale +
-                        '%) perspective(' +
+                        ') perspective(' +
                         compPres +
                         'em) translateY(' +
                         compAxleY +
@@ -33,74 +33,59 @@
             <div class="face-me plane plane-bottom">Plane Bottom</div>
             <div class="face-me plane plane-bottom shadow"></div>
         </div>
-        <fieldset>
-            <legend>Play Me</legend>
+        <fieldset class="perspective-form">
             <label for="perspective"
-                >Size
+                >Perspective
+                <span>Narrow</span>
                 <input
                     id="perspective"
                     type="range"
                     class="this-input"
                     min="30"
                     max="300"
-                    v-bind:value="compPres"
                     orient="vertical"
+                    v-bind:value="compPres"
                     v-on:input="onCompPres"
                 />
+                <span>Wide</span>
             </label>
-            <!-- <input
-            id="rot-x"
-            type="range"
-            class="this-input"
-            min="-360"
-            max="360"
-            v-bind:value="compRotX"
-            orient="vertical"
-            v-on:input="onCompRotX"
-        /> -->
             <label for="scale"
                 >Distance
                 <input
                     id="scale"
                     type="range"
                     class="this-input"
-                    min="60"
-                    max="100"
-                    v-bind:value="compScale"
+                    min=".5"
+                    max="1.5"
                     orient="vertical"
+                    step="0.01"
+                    v-bind:value="compScale"
                     v-on:input="onCompScale"
                 />
             </label>
-            <!-- <input
-            id="rot-y"
-            type="range"
-            class="this-input"
-            min="-360"
-            max="360"
-            v-bind:value="compRotY"
-            orient="vertical"
-            v-on:input="onCompRotY"
-        /> -->
-            <!-- <input
-            id="rot-z"
-            type="range"
-            class="this-input"
-            min="-360"
-            max="360"
-            v-bind:value="compRotZ"
-            orient="vertical"
-            v-on:input="onCompRotZ"
-        /> -->
+            <label for="rot-y"
+                >Rotate Y
+                <input
+                    id="rot-y"
+                    type="range"
+                    class="this-input"
+                    min="-60"
+                    max="400"
+                    orient="vertical"
+                    v-bind:value="compRotY"
+                    v-on:input="onCompRotY"
+                />
+            </label>
             <label for="axel-y"
                 >Height
                 <input
                     id="axel-y"
                     type="range"
                     class="this-input"
-                    min="-25"
-                    max="50"
-                    v-bind:value="compAxleY"
+                    min="-20"
+                    max="40"
                     orient="vertical"
+                    v-bind:value="compAxleY"
                     v-on:input="onCompAxleY"
                 />
             </label>
@@ -116,7 +101,7 @@ export default {
             compRotX: 0,
             compRotY: 320,
             compRotZ: 0,
-            compScale: 80,
+            compScale: 1,
             compAxleY: 8,
         };
     },
@@ -145,7 +130,9 @@ export default {
 
 <style lang="scss">
 @import "../../assets/style/_colors.scss";
+
 $color-l-shape: hsl(35, 85%, 55%);
+
 fieldset {
     display: flex;
 }
