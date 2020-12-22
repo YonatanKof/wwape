@@ -100,14 +100,8 @@ export default {
         onCompPres(e) {
             this.compPres = e.target.value;
         },
-        onCompRotX(e) {
-            this.compRotX = e.target.value;
-        },
         onCompRotY(e) {
             this.compRotY = e.target.value;
-        },
-        onCompRotZ(e) {
-            this.compRotZ = e.target.value;
         },
         onCompAxleY(e) {
             this.compAxleY = e.target.value;
