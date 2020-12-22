@@ -11,80 +11,73 @@
                         compPres +
                         'em) translateY(' +
                         compAxleY +
-                        'em) rotateX(' +
-                        compRotX +
-                        'deg) rotateY(' +
+                        'em) rotateY(' +
                         compRotY +
-                        'deg) rotateZ(' +
-                        compRotZ +
                         'deg)',
                 },
             ]"
         >
             <div class="face-me side side-1a">Side</div>
             <div class="face-me side side-1b"></div>
-            <div class="face-me front front-1">Front 1</div>
-            <div class="face-me front front-2">Front 2</div>
+            <div class="face-me front front-1">Front</div>
+            <div class="face-me front front-2">Front</div>
             <div class="face-me side side-2a">Other Side</div>
             <div class="face-me side side-2b"></div>
             <div class="face-me rear">Rear</div>
-            <div class="face-me plane plane-top-1">Plane Top 1</div>
-            <div class="face-me plane plane-top-2">Plane Top 2</div>
+            <div class="face-me plane plane-top-1">Plane Top</div>
+            <div class="face-me plane plane-top-2">Plane Top</div>
             <div class="face-me plane plane-bottom">Plane Bottom</div>
             <div class="face-me plane plane-bottom shadow"></div>
         </div>
-        <fieldset class="perspective-form">
-            <label for="perspective"
+        <fieldset class="pers-form">
+            <label class="pers-form__label" for="perspective"
                 >Perspective
-                <span>Narrow</span>
+                <!-- <span>Narrow</span> -->
                 <input
+                    class="pers-form__input"
                     id="perspective"
                     type="range"
-                    class="this-input"
                     min="30"
                     max="300"
-                    orient="vertical"
                     v-bind:value="compPres"
                     v-on:input="onCompPres"
                 />
-                <span>Wide</span>
+                <!-- <span>Wide</span> -->
             </label>
-            <label for="scale"
+
+            <label class="pers-form__label" for="scale"
                 >Distance
                 <input
+                    class="pers-form__input"
                     id="scale"
                     type="range"
-                    class="this-input"
                     min=".5"
                     max="1.5"
-                    orient="vertical"
                     step="0.01"
                     v-bind:value="compScale"
                     v-on:input="onCompScale"
                 />
             </label>
-            <label for="rot-y"
+            <label class="pers-form__label" for="rot-y"
                 >Rotate Y
                 <input
+                    class="pers-form__input"
                     id="rot-y"
                     type="range"
-                    class="this-input"
                     min="-60"
                     max="400"
-                    orient="vertical"
                     v-bind:value="compRotY"
                     v-on:input="onCompRotY"
                 />
             </label>
-            <label for="axel-y"
+            <label class="pers-form__label" for="axel-y"
                 >Height
                 <input
+                    class="pers-form__input"
                     id="axel-y"
                     type="range"
-                    class="this-input"
                     min="-20"
                     max="40"
-                    orient="vertical"
                     v-bind:value="compAxleY"
                     v-on:input="onCompAxleY"
                 />
@@ -98,9 +91,7 @@ export default {
     data() {
         return {
             compPres: 40,
-            compRotX: 0,
             compRotY: 320,
-            compRotZ: 0,
             compScale: 1,
             compAxleY: 8,
         };
@@ -133,19 +124,21 @@ export default {
 
 $color-l-shape: hsl(35, 85%, 55%);
 
-fieldset {
+.pers-form {
+    z-index: 100;
     display: flex;
-}
-label {
-    text-align: center;
-    padding: 2rem;
-    display: inline-block;
-}
-.this-input {
-    margin-top: 3rem;
-    height: 32rem;
+    flex-direction: column;
+    &__label {
+        padding: 1rem 0;
+        text-align: start;
+        display: inline-block;
+    }
+    &__input {
+        padding: 1rem 0;
+    }
 }
 .three-d-group {
+    z-index: 0;
     width: 100%;
     height: 48rem;
     background-color: var(--bg-primary);
@@ -155,10 +148,11 @@ label {
 }
 .l-shape {
     font-size: 12px;
+    font-weight: 900;
     width: 100%;
     height: 100%;
     backface-visibility: visible;
-    perspective-origin: 50% 50%;
+    // perspective-origin: 50% 50%;
     transform-style: preserve-3d;
 }
 .face-me {
@@ -168,7 +162,7 @@ label {
     font-family: sans-serif;
     color: white;
     text-align: center;
-    background: $color-l-shape;
+    background-color: $color-l-shape;
 }
 .side {
 }
@@ -229,7 +223,15 @@ label {
     transform: translateX(10em) rotateY(90deg) translateY(20em) translateZ(5em);
 }
 .rear {
-    background: var(--border-color);
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include linear-gradient(180deg, black, 0.2, 100%);
+    }
     width: 10em;
     height: 30em;
     line-height: 30em;
