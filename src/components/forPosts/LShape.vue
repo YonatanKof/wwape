@@ -164,25 +164,25 @@ $color-l-shape: hsl(35, 85%, 55%);
     width: 10em;
     height: 30em;
     line-height: 30em;
-    transform: translateZ(5em);
+    transform: translateX(10em) translateZ(5em);
 }
 .side-1b {
     width: 10em;
     height: 10em;
     line-height: 10em;
-    transform: translateX(10em) translateY(20em) translateZ(5em);
+    transform: translateX(20em) translateY(20em) translateZ(5em);
 }
 .side-2a {
     width: 10em;
     height: 30em;
     line-height: 30em;
-    transform: rotateY(180deg) translateZ(5em);
+    transform: translateX(10em) rotateY(180deg) translateZ(5em);
 }
 .side-2b {
     width: 10em;
     height: 10em;
     line-height: 10em;
-    transform: translateX(10em) rotateY(180deg) translateY(20em) translateZ(5em);
+    transform: translateX(20em) rotateY(180deg) translateY(20em) translateZ(5em);
 }
 .front {
 }
@@ -199,7 +199,7 @@ $color-l-shape: hsl(35, 85%, 55%);
     width: 10em;
     height: 20em;
     line-height: 20em;
-    transform: rotateY(90deg) translateZ(5em);
+    transform: translateX(10em) rotateY(90deg) translateZ(5em);
 }
 .front-2 {
     &::after {
@@ -214,7 +214,7 @@ $color-l-shape: hsl(35, 85%, 55%);
     width: 10em;
     height: 10em;
     line-height: 10em;
-    transform: translateX(10em) rotateY(90deg) translateY(20em) translateZ(5em);
+    transform: translateX(20em) rotateY(90deg) translateY(20em) translateZ(5em);
 }
 .rear {
     &::after {
@@ -229,7 +229,7 @@ $color-l-shape: hsl(35, 85%, 55%);
     width: 10em;
     height: 30em;
     line-height: 30em;
-    transform: rotateY(-90deg) translateZ(5em);
+    transform: translateX(10em) rotateY(-90deg) translateZ(5em);
 }
 .plane {
 }
@@ -246,7 +246,7 @@ $color-l-shape: hsl(35, 85%, 55%);
     width: 10em;
     height: 10em;
     line-height: 10em;
-    transform: rotateX(90deg) translateZ(5em);
+    transform: translateX(10em) rotateX(90deg) translateZ(5em);
 }
 .plane-top-2 {
     &::after {
@@ -261,18 +261,18 @@ $color-l-shape: hsl(35, 85%, 55%);
     width: 10em;
     height: 10em;
     line-height: 10em;
-    transform: translateX(10em) translateY(20em) rotateX(90deg) translateZ(5em);
+    transform: translateX(20em) translateY(20em) rotateX(90deg) translateZ(5em);
 }
 .plane-bottom {
     width: 20em;
     height: 10em;
     line-height: 10em;
-    transform: translateY(20em) rotateX(-90deg) translateZ(5em);
+    transform: translateX(10em) translateY(20em) rotateX(-90deg) translateZ(5em);
 }
 .shadow {
     width: 20em;
     height: 10em;
-    transform: translateY(20.5em) rotateX(-90deg) translateZ(5em);
+    transform: translateX(10em) translateY(20.5em) rotateX(-90deg) translateZ(5em);
     background-color: rgba(black, 0.5);
     border-radius: 10em;
     filter: blur(4em);
