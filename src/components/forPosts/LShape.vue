@@ -13,7 +13,7 @@
                         compAxleY +
                         'em) rotateY(' +
                         compRotY +
-                        'deg)',
+                        'deg) translateX(-2em)',
                 },
             ]"
         >
@@ -93,7 +93,7 @@ export default {
             compPres: 40,
             compRotY: 320,
             compScale: 1,
-            compAxleY: 8,
+            compAxleY: 6,
         };
     },
     methods: {
@@ -152,7 +152,6 @@ $color-l-shape: hsl(35, 85%, 55%);
 .face-me {
     display: block;
     position: absolute;
-    border-radius: 0.25em;
     font-family: sans-serif;
     color: white;
     text-align: center;
