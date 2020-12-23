@@ -119,6 +119,9 @@ query Post ($id: ID!) {
         @include mQ-max($display-size-sm) {
             padding: var(--space-2xl);
         }
+        img {
+            border-radius: var(--radius);
+        }
     }
     pre {
         max-width: calc(
