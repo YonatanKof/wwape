@@ -15,14 +15,15 @@ description: How to create, edit or remove shortcuts for a Sketch plugins
 There's a thing you're doing all day long - moving your hands and cursor to control your apps - When you add up all these small movements you'll quickly end up whit a big wasteful repetition. You might have missed it because it's small. You might haven't deal with it because you don't know how - Whatever the reason you've let it slide, it's a wast of your time and **this post is for you!** 
 
 # The painful movement of the hand
-Seeing top notch developers working without lifting their hands form the keyboard made me think _is there a way for me to work that way?_ So elegant, so efficient, keeping your hands from a wrist infection. At around 2015 the answer was a **soft no** - I've customized every possible shortcut in _Illustrator_. The nicest thing about Illustrator shortcuts was the ease of creating and managing shortcuts with the `Keyboard Shortcuts` panel _(Fig.Ill)_. but some basic functionalities like resizing a shape wasn't available to begin with, so no shortcut could be assigned.
+Seeing top notch developers working without lifting their hands form the keyboard made me think if is there a way for me – a designer – to work that way? So elegant, so efficient, keeping your hands from needlesy moving awarkdly and from a wrist infection. Around 2015 the answer was a soft **no** - I've customized every possible shortcut in *Illustrator* but some basic functionalities like resizing a shape wasn't available to begin with, so no shortcut could be assigned.
 
 ![Fig.Ill - Illustrator Keyboard Shortcut panel](./sketchSC/Extra-Illustrator_Shortcuts.png)
 
-That same year it looked like *Sketch* was stable enough for production. One of the first things I've noticed that blow my mind when I've stated using it was the ability to resize shapes with stroke of some keys. **Amazing!** It made me feel that this product was build by my kind of people - at least, we share the same compulsion. Unfortunately, there there was no easy way to manage keyboard shortcut in *Sketch*. Managing shortcuts on macOS *(fig.keyOS)* ain't a breeze too (see) - beside being cumbersome it's unaware of existing Plugin shortcuts but even worst it doesn't allow you the select nested Plugin commands.
+That same year it looked like *Sketch* was stable enough for production. One of the first things I've noticed that blow my mind when I've stated using it was the ability to resize shapes using just key strokes. **Amazing!** It made me feel that this product was build by my kind of people - at least, we share the same compulsion. Unfortunately, unlike *Illustrator* that had a built-in shortcuts manager in the form of the `Keyboard Shortcuts` panel)  _(Fig.Ill)_, there was no easy way to manage keyboard shortcut in *Sketch*, just the cumbersom macOS keyborad prefrencesc – but even worst – no was no way to manage *Sketch*'s plugin shortcuts.
 
-**In this article we'll review 2 ways to rectify the situation.**
-- One is by using the macOS's keyboard panel
+## In this article we'll review ways to rectify the situation
+- For general shortcuts we'll be using the macOS's keyboard panel which 
+i've writen anout [in this article](shortcuts-for-macos). 
 - The other in by using the plugin's `manifest.json`
 
 We'll figure out the Jobs to be done, state the problem, go trough my solutions, cover some edge cases and install a tool that might help a little.  
