@@ -18,35 +18,33 @@ import LShape from '~/components/forPosts/LShape.vue'
 
 ## Why do perspective
 
-My big brother studied some kind of engineering thingies when he was at Secondary school. As a kid I've used to observe while he did this isometric tricks - drawing 3d objects from plans and using simple tools like a sheet of paper, pencils and some rules. Him creating these shapes looked like magic - so as a good monkey, I've immediately started follow along - the amazing thing was - I was able the recreate the magic and it felt awesome 
+My big brother studied some kind of engineering thingies when he was at Secondary school, and as a kid I've used to observe while he did this isometric tricks — drawing 3d objects from plans and using simple tools like a sheet of paper, pencils and some rules. Him creating these shapes looked like magic — and me, as a good monkey, immediately started to imamate — the amazing thing was that I was able the recreate the magic — and it felt awesome!
 
-In this tutorial we'll draw a simple shape using the laws of perspective. The **Law** in the of laws of perspective means that you'll be able to precisely reproduce the same view by using the same parameters - set your own view by demand -  to accurately create a perspective - and to create plans for other to read and use.
+In this tutorial we'll draw a simple shape using the laws of perspective. The **Law** in the of laws of perspective means that you'll be able to precisely reproduce the same view by using the same parameters — set your own view by demand, to accurately compose a perspective and to create plans for other to read and use. BTW, ever wondered what's the difference between *accuracy* and *precision*? Then check out [this video by Matt Anticole](https://youtu.be/hRAFPdDppzs)
 
-These drawings can be done manually with physical tools or by using a digital tool like I do, in this case Affinity Designer. You can also do it freehand - and though the precision levels will drop it will still be accurate.
 
 ![Old school drawing tools](./perspective/Screen_Shot_2020-08-03_at_7.24.57_PM.png)
-*My old school drawing tools - See more photos [on this link](https://www.dropbox.com/sh/sg3sksjw4ghbaxx/AAA_2z7NT1M8qJ1UsmBdaB_Da?dl=0)*
-
-BTW 
-
-[What's the difference between accuracy and precision? - Matt Anticole](https://youtu.be/hRAFPdDppzs)
+*My old school drawing tools*
 
 ## Overview
 
-Before we get started let's see how a finalized layout looks like, so you get a better idea of the project's scope - see it at **fig.layout**. I'll also be referring to some terms we'll be working with so I've listed them and added an image to show them in context (**fig.terms**).
+You should know that these perspective can be done manually with physical tools or digitally, like I do, in this case, with *Affinity Designer*. You can also do it freehand - and though the precision levels will drop it will still be accurate.
 
-### **List of Term**
+Before we get started let's see how a finalized layout looks like, so you get a better idea of the project's scope - check it out here [^fig-layout-and-terms]. I'll also be referring to some terms we'll be working with so I've listed them and added an image to show them in context.
 
-**The 2D world**
+### **List of Terms**
+
+#### The 2D world
 
 - Plan view
 - Elevation view
   
     - Height Helpers
+
 - Ground plane
 - Horizon plane
 
-**The 3D world**
+#### The 3D world
 
 - Picture plane
 - Station Point
@@ -54,36 +52,29 @@ Before we get started let's see how a finalized layout looks like, so you get a 
   
     - VP Helper
     - VP Crossing
+
 - Projection Lines
   
     - PL crossing
+
 - True Height
   
     - TH origin
-
-![A basic layout for creating a perspective drawing](./perspective/Basic_layout-1.jpg)
-*fig.layout - A basic layout for creating a perspective drawing*
-
----
-
-![We'll get into further explanations as the article progress](./perspective/The_terms.jpg)
-*fig.terms - We'll get into further explanations as the article progress*
-
 ### **The example**
 
-For this example let's choose a simple shape we probably all know from the game of Tetris - which I've spent too much time playing as a kind - one of the seven tetriminos will do (**fig.tetriminos**).
+For this example let's choose a simple shape we probably all know from the game of Tetris - which I've spent too much time playing as a kind - one of the seven tetriminos will do.
 
 ![./perspective/The_seven_tetriminos.jpg](./perspective/The_seven_tetriminos.jpg)
-*fig.tetriminos*
+*The Seven Tetriminos*
 
 # The 2D world
 
-When modeling an object like house or a product designers and engineers use a 2d representation for simplicity sake - sometimes called a blueprint. These blueprints might have many views, for this article let's call them ***Plans*** (usually the top view) and ***Elevations*** (usually the side view).
+When modeling 3D objects like house or a chair — designers and engineers use 2d drawings for simplicity sake, to visually communicate how things function or constructed — these drawings are called a blueprints or floor plans, and they can have many views.For this article we'll use the **top** & **bottom** view *(Plans)* and the **side/rear/front** and **other side** views *(Elevations)*. 
 
-The object I'll use will be the `L` tetrimino - Here's how it looks like as a blueprint - I've also added an isometric view to explain the views with ease.  A ***Plan*** view can be 1 of 2 sides - The Top or  Bottom. An ***Elevation*** view can be 1 of 4 sides → Front, Rear, Side and the other Side - in this case it's just a mirror reflection of the first side
+The object I'll use will be the `L` tetrimino — In the image below we can see all of the shape's views *(blueprint)* + an isometric view to explain the views with ease.  
 
-![The block view](./perspective/L_block_views.jpg)
-*The block view*
+![The block view](./perspective/L_block_views.png)
+*The L Block Tetrimino Views*
 
 ## A basic layout
 
@@ -131,3 +122,6 @@ The station point is the distance of the viewer from the object. The closer the 
 # Links
 
 [3 point perspective tutorial.](http://www.automotiveillustrations.com/tutorials/drawing-3-point-perspective.html)
+
+
+[^fig-layout-and-terms]: ![A basic layout for creating a perspective drawing](./perspective/The_terms.jpg) *A basic layout for creating a perspective drawing with all of the terms in use*
