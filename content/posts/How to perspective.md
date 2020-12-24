@@ -1,14 +1,14 @@
 ---
-title: How to perspective
+title: How to Perspective
 author_name: Yonatan Ben Knnan
-urlname: how-to-perspective
+urlname: perspective-101
 date: 2020-12-16
 updated: 2020-12-16
 published: true
 tags: ['Creative']
 cover_image: ./perspective/Тетрис-Cover.png
 cover_caption: Le Corbusier's Modulor in different scales over the over 
-description: How to create, edit or remove shortcuts for a macOS
+description: The terms, tools and techniques of perspective drawing
 canonical_url: false
 series: false
 ---
@@ -18,63 +18,33 @@ import LShape from '~/components/forPosts/LShape.vue'
 
 ## Why do perspective
 
-My big brother studied some kind of engineering thingies when he was at Secondary school, and as a kid I've used to observe while he did this isometric tricks — drawing 3d objects from plans and using simple tools like a sheet of paper, pencils and some rules. Him creating these shapes looked like magic — and me, as a good monkey, immediately started to imamate — the amazing thing was that I was able the recreate the magic — and it felt awesome!
-
-In this tutorial we'll draw a simple shape using the laws of perspective. The **Law** in the of laws of perspective means that you'll be able to precisely reproduce the same view by using the same parameters — set your own view by demand, to accurately compose a perspective and to create plans for other to read and use. BTW, ever wondered what's the difference between *accuracy* and *precision*? Then check out [this video by Matt Anticole](https://youtu.be/hRAFPdDppzs)
-
+As a young kis my big brother studied engineering thingies when he was at Secondary school – his homework was to draw 3 dimensional shapes out of plans, and I used to observe him amazed while he did this isometric tricks – drawing 3d objects from plans by using simple tools; some rules, pencils and a sheet of paper. Him creating these shapes looked like magic – and as a good monkey I've immediately started to imamate – the amazing thing was that I was able the recreate the magic and it felt awesome!
 
 ![Old school drawing tools](./perspective/Screen_Shot_2020-08-03_at_7.24.57_PM.png)
 *My old school drawing tools*
 
+Along the years I've studied a *Practical Engineer Degree* in architecture and have fiddled around with 3D computer graphics – so I've homed my skills a bit tougher. But that was a long time ago and my 3D days are but faded memory – or was it?! 
+
+I've taken out my tools and started drawing – I failed miserably 😞 So I've DuckDuckWent it and a few days later I've had a proper drawing done – and in order to not forget it I had this article done!
+
+So, in this article we'll draw a simple shape using the laws of perspective. The **Law** in the of laws of perspective means that there's a way to *precisely* reproduce the same view by using the same parameters – for you to set your oun views by demand, to *accurately* compose a perspective and to create plans for other to read and use. If by this article you'll know how to do these perspective drawing manually with physical tools or digitally, like in this case, with *Affinity Designer* – it will be a great success!
+
+> Ever wondered what's the difference between *accuracy* and *precision*? Then check out [this video by Matt Anticole](https://youtu.be/hRAFPdDppzs)
+
 ## Overview
 
-You should know that these perspective can be done manually with physical tools or digitally, like I do, in this case, with *Affinity Designer*. You can also do it freehand - and though the precision levels will drop it will still be accurate.
-
-Before we get started let's see how a finalized layout looks like, so you get a better idea of the project's scope - check it out here [^fig-layout-and-terms]. I'll also be referring to some terms we'll be working with so I've listed them and added an image to show them in context.
-
-### **List of Terms**
-
-#### The 2D world
-
-- Plan view
-- Elevation view
-  
-    - Height Helpers
-
-- Ground plane
-- Horizon plane
-
-#### The 3D world
-
-- Picture plane
-- Station Point
-- Vanishing Points
-  
-    - VP Helper
-    - VP Crossing
-
-- Projection Lines
-  
-    - PL crossing
-
-- True Height
-  
-    - TH origin
-### **The example**
-
-For this example let's choose a simple shape we probably all know from the game of Tetris - which I've spent too much time playing as a kind - one of the seven tetriminos will do.
-
-![./perspective/The_seven_tetriminos.jpg](./perspective/The_seven_tetriminos.jpg)
-*The Seven Tetriminos*
-
-# The 2D world
-
-When modeling 3D objects like house or a chair — designers and engineers use 2d drawings for simplicity sake, to visually communicate how things function or constructed — these drawings are called a blueprints or floor plans, and they can have many views.For this article we'll use the **top** & **bottom** view *(Plans)* and the **side/rear/front** and **other side** views *(Elevations)*. 
-
-The object I'll use will be the `L` tetrimino — In the image below we can see all of the shape's views *(blueprint)* + an isometric view to explain the views with ease.  
+For this example let's choose a simple shape we probably all know from the game of *Tetris* (which I've spent too much time playing as a kid). I'll use will be the `L` tetrimino – In the image below we can see all of the shape's views *(blueprint)* + an isometric view to explain the views with ease.  
 
 ![The block view](./perspective/L_block_views.png)
 *The L Block Tetrimino Views*
+
+Before we get started – in the image below you can see how a finalized layout looks like, so you get a better idea of the project's scope. I've also marked the terms we'll be working and have listed them below the image – dividing into to *2D* and *3D* worlds.
+
+![A basic layout for creating a perspective drawing](./perspective/The_terms.jpg) *A basic layout for creating a perspective drawing with all of the terms in use*
+
+# The 2D world
+
+When modeling 3D objects like house or a chair – designers and engineers use 2d drawings for simplicity sake, to visually communicate how things function or constructed – these drawings are called a blueprints or floor plans, and they can have many views.For this article we'll use the **top** & **bottom** view *(Plans)* and the **side/rear/front** and **other side** views *(Elevations)*. 
 
 ## A basic layout
 
@@ -122,6 +92,38 @@ The station point is the distance of the viewer from the object. The closer the 
 # Links
 
 [3 point perspective tutorial.](http://www.automotiveillustrations.com/tutorials/drawing-3-point-perspective.html)
+  
 
+---
+---
+---
+---
 
-[^fig-layout-and-terms]: ![A basic layout for creating a perspective drawing](./perspective/The_terms.jpg) *A basic layout for creating a perspective drawing with all of the terms in use*
+For you to make it freehand - and though the precision levels will drop it will still be accurate.
+
+#### The 2D world
+
+- Plan view
+- Elevation view
+  
+    - Height Helpers
+
+- Ground plane
+- Horizon plane
+
+#### The 3D world
+
+- Picture plane
+- Station Point
+- Vanishing Points
+  
+    - VP Helper
+    - VP Crossing
+
+- Projection Lines
+  
+    - PL crossing
+
+- True Height
+  
+    - TH origin
