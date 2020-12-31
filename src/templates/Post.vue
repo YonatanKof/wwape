@@ -113,7 +113,6 @@ query Post ($id: ID!) {
     }
 
     &__content {
-        // @include content-box-padding;
         padding: var(--space-4xl);
         padding-top: var(--space-2xl);
         @include mQ-max($display-size-sm) {
@@ -194,34 +193,52 @@ noscript + em {
 }
 p img {
     transform: translateY(var(--space-sm));
+    @include mQ-max($display-size-sm) {
+        margin-inline-start: calc(var(--content-space) * -1);
+        margin-inline-end: calc(var(--content-space) * -1);
+        max-width: unset;
+        width: calc(100% + 4rem);
+    }
 }
 
 .footnotes {
     padding: 0;
     line-height: 1.5em;
+    @include mQ-max($display-size-sm) {
+        margin-inline-start: calc(var(--content-space) * -1);
+        margin-inline-end: calc(var(--content-space) * -1);
+        max-width: unset;
+        width: calc(100% + 4rem);
+    }
     hr {
         margin-bottom: var(--space-lg);
+        @include mQ-max($display-size-sm) {
+            margin-inline-start: var(--space-2xl);
+            margin-inline-end: var(--space-2xl);
+        }
     }
     ol {
         list-style-type: none;
         margin: 0;
     }
-    li:only-of-type {
-        margin-bottom: 0;
-    }
     li {
-        // margin-bottom: var(--space-2xl);
         background-color: var(--bg-pre);
         padding: var(--space-lg);
         border-radius: var(--radius);
+        margin-bottom: var(--space-md);
+        &:last-child,
+        &:only-of-type {
+            margin-bottom: 0;
+        }
+        @include mQ-max($display-size-sm) {
+            border-radius: 0;
+            padding: var(--space-2xl);
+        }
     }
     img {
         margin-top: var(--spacem-sm);
         max-height: calc(16 * var(--space-4xl));
         width: auto;
-        // For images w/ caption
-        // transform: translateY(3.5rem) rotate(-1deg);
-        // And add z-index to the following <em>
     }
     a {
         font-size: var(--font-size-sm);
