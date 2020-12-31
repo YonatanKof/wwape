@@ -65,11 +65,6 @@ query {
 @import "../assets/fonts/Inknut-Antiqua/InknutAntiqua.css";
 @import "../assets/fonts/DM_Mono/DM_Mono.css";
 
-@mixin main-padding {
-    padding-left: calc(max(2rem, env(safe-area-inset-left)));
-    padding-right: calc(max(2rem, env(safe-area-inset-right)));
-}
-
 .wrapper {
     display: grid;
     grid-template-rows: auto 1fr auto;
