@@ -1,38 +1,42 @@
 <template>
     <div class="three-d-group">
-        <div
-            class="l-shape"
-            v-bind:style="[
-                {
-                    transform:
-                        'scale(' +
-                        compScale +
-                        ') perspective(' +
-                        compPres +
-                        'em) translateY(' +
-                        compAxleY +
-                        'em) rotateY(' +
-                        compRotY +
-                        'deg) translateX(-2em)',
-                },
-            ]"
-        >
-            <div class="face-me side side-1a">Side</div>
-            <div class="face-me side side-1b"></div>
-            <div class="face-me front front-1">Front</div>
-            <div class="face-me front front-2">Front</div>
-            <div class="face-me side side-2a">Other Side</div>
-            <div class="face-me side side-2b"></div>
-            <div class="face-me rear">Rear</div>
-            <div class="face-me plane plane-top-1">Plane Top</div>
-            <div class="face-me plane plane-top-2">Plane Top</div>
-            <div class="face-me plane plane-bottom">Plane Bottom</div>
-            <div class="face-me plane plane-bottom shadow"></div>
+        <div class="l-shape-cont">
+            <div
+                class="l-shape"
+                v-bind:style="[
+                    {
+                        transform:
+                            'scale(' +
+                            compScale +
+                            ') perspective(' +
+                            compPres +
+                            'em) translateY(' +
+                            compAxleY +
+                            'em) rotateY(' +
+                            compRotY +
+                            'deg) translateX(-8em)',
+                    },
+                ]"
+            >
+                <div class="face-me side side-1a">Side</div>
+                <div class="face-me side side-1b"></div>
+                <div class="face-me front front-1">Front</div>
+                <div class="face-me front front-2">Front</div>
+                <div class="face-me side side-2a">Other Side</div>
+                <div class="face-me side side-2b"></div>
+                <div class="face-me rear">Rear</div>
+                <div class="face-me plane plane-top-1">Plane Top</div>
+                <div class="face-me plane plane-top-2">Plane Top</div>
+                <div class="face-me plane plane-bottom">Plane Bottom</div>
+                <div class="face-me plane plane-bottom shadow"></div>
+            </div>
         </div>
         <fieldset class="pers-form">
-            <label class="pers-form__label" for="perspective"
+            <label
+                v-if="showCompPres"
+                class="pers-form__label"
+                for="perspective"
                 >Perspective
-                <!-- <span>Narrow</span> -->
                 <input
                     class="pers-form__input"
                     id="perspective"
@@ -42,10 +46,9 @@
                     v-bind:value="compPres"
                     v-on:input="onCompPres"
                 />
-                <!-- <span>Wide</span> -->
             </label>
 
-            <label class="pers-form__label" for="scale"
+            <label v-if="showCompScale" class="pers-form__label" for="scale"
                 >Distance
                 <input
                     class="pers-form__input"
@@ -58,7 +61,7 @@
                     v-on:input="onCompScale"
                 />
             </label>
-            <label class="pers-form__label" for="rot-y"
+            <label v-if="showCompRotY" class="pers-form__label" for="rot-y"
                 >Rotate Y
                 <input
                     class="pers-form__input"
@@ -70,7 +73,7 @@
                     v-on:input="onCompRotY"
                 />
             </label>
-            <label class="pers-form__label" for="axel-y"
+            <label v-if="showCompAxleY" class="pers-form__label" for="axel-y"
                 >Height
                 <input
                     class="pers-form__input"
@@ -88,6 +91,7 @@
 
 <script>
 export default {
+    props: ["showCompPres", "showCompScale", "showCompRotY", "showCompAxleY"],
     data() {
         return {
             compPres: 40,
@@ -118,19 +122,6 @@ export default {
 
 $color-l-shape: hsl(35, 85%, 55%);
 
-.pers-form {
-    z-index: 100;
-    display: flex;
-    flex-direction: column;
-    &__label {
-        padding: 1rem 0;
-        text-align: start;
-        display: inline-block;
-    }
-    &__input {
-        padding: 1rem 0;
-    }
-}
 .three-d-group {
     z-index: 0;
     width: 100%;
@@ -139,6 +130,11 @@ $color-l-shape: hsl(35, 85%, 55%);
     overflow: hidden;
     border-radius: var(--radius);
     display: flex;
+}
+.l-shape-cont{
+    width: 50%;
+    padding: 2rem;
+    padding-inline-end: 1rem;
 }
 .l-shape {
     font-size: 12px;
@@ -271,9 +267,26 @@ $color-l-shape: hsl(35, 85%, 55%);
 .shadow {
     width: 20em;
     height: 10em;
-    transform: translateX(10em) translateY(20.5em) rotateX(-90deg) translateZ(5em);
+    transform: translateX(10em) translateY(20.5em) rotateX(-90deg)
+        translateZ(5em);
     background-color: rgba(black, 0.5);
     border-radius: 10em;
     filter: blur(4em);
+}
+.pers-form {
+    width: 50%;
+    z-index: 100;
+    padding: 2rem;
+    padding-inline-start: 1rem;
+    display: flex;
+    flex-direction: column;
+    &__label {
+        padding: 1rem 0;
+        text-align: start;
+        display: inline-block;
+    }
+    &__input {
+        padding: 1rem 0;
+    }
 }
 </style>

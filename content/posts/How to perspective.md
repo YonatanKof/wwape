@@ -14,11 +14,14 @@ series: false
 ---
 import LShape from '~/components/forPosts/LShape.vue'
 
-<LShape/>
+<LShape :show-comp-pres="true" />
 
 ## Why do perspective
 
 As a young kis my big brother studied engineering thingies when he was at Secondary school – his homework was to draw 3 dimensional shapes out of plans, and I used to observe him amazed while he did this isometric tricks – drawing 3d objects from plans by using simple tools; some rules, pencils and a sheet of paper. Him creating these shapes looked like magic – and as a good monkey I've immediately started to imamate – the amazing thing was that I was able the recreate the magic and it felt awesome!
+
+
+<LShape :show-comp-scale="true" />
 
 ![Old school drawing tools](./perspective/Screen_Shot_2020-08-03_at_7.24.57_PM.png)
 *My old school drawing tools*
@@ -30,6 +33,9 @@ I've taken out my tools and started drawing – I failed miserably 😞 So I've 
 So, in this article we'll draw a simple shape using the laws of perspective. The **Law** in the of laws of perspective means that there's a way to *precisely* reproduce the same view by using the same parameters – for you to set your oun views by demand, to *accurately* compose a perspective and to create plans for other to read and use. If by this article you'll know how to do these perspective drawing manually with physical tools or digitally, like in this case, with *Affinity Designer* – it will be a great success!
 
 > Ever wondered what's the difference between *accuracy* and *precision*? Then check out [this video by Matt Anticole](https://youtu.be/hRAFPdDppzs)
+
+
+<LShape :show-comp-rot-y="true" />
 
 ## Overview
 
@@ -80,6 +86,8 @@ Line crossing the picture plane will be used to measure the true height
 ### Viewing height
 
 Will start wh
+
+<LShape :show-comp-axle-y="true" />
 
 ### Station point - Distance, width and position
 
