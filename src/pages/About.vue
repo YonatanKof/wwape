@@ -140,7 +140,7 @@ export default {
         font-size: var(--font-size-2xl);
         #cv-text {
             font-size: initial;
-            opacity: 0.7;
+            opacity: 0.9;
             margin-top: var(--space-2xl);
         }
         @include mQ-max($display-size-sm) {
