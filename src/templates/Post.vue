@@ -198,6 +198,7 @@ p img {
         margin-inline-end: calc(var(--content-space) * -1);
         max-width: unset;
         width: calc(100% + 4rem);
+        border-radius: 0 !important;
     }
 }
 
