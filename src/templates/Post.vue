@@ -186,9 +186,11 @@ blockquote {
 // Gridsome adds the noscript tag, if it didn't then -> img + em
 // Read more here - https://thesynack.com/posts/markdown-captions/
 
+strong em {
+    font-weight: var(--font-wight--black);
+}
 noscript + em {
     font-size: var(--font-size-3xl);
-    font-weight: 400;
     line-height: 2em;
 }
 p img {
