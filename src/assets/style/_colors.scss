@@ -47,6 +47,7 @@ body {
     --bg-color-invert: #{$color-dark-O80};
     --bg-content: #{$color-bright-light};
     --bg-code: #{$color-dark-O20};
+    --bg-code-invert: #{$color-bright-O40};
     --bg-pre: #{$color-dark-O10};
     --bg-caution: hsl(10, 100%, 50%, 0.2);
     --bg-caution-HL: hsl(10, 100%, 50%, 1);
@@ -71,6 +72,7 @@ body[data-theme="dark"] {
     --bg-color-invert: #{$color-bright-O75};
     --bg-content: #{$color-dark-base};
     --bg-code: #{$color-bright-O20};
+    --bg-code-invert: #{$color-dark-O60};
     --bg-pre: #{$color-bright-O10};
     --bg-primary: #{$color-primary-O20};
     --bg-primary-HL: #{$color-primary-light};
