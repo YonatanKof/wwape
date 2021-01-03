@@ -14,13 +14,6 @@ series: false
 ---
 import LShape from '~/components/forPosts/LShape.vue'
 
-<LShape 
-:show-comp-scale="true" 
-:show-comp-pres="true"
-:show-comp-rot-y="true"
-:show-comp-axle-y="true"
-/>
-
 ## Why do perspective
 
 As a young kis my big brother studied engineering thingies at Secondary school – his homework was to draw 3 dimensional shapes out of plans, and I used to observe him amazed while he did this isometric tricks – drawing 3d objects from plans by using simple tools; some rules, pencils and a sheet of paper. Him creating these shapes looked like magic – and as a good monkey I've immediately started to imamate – the amazing thing was that I was able the recreate the magic and it felt awesome!
@@ -38,57 +31,38 @@ What's a boy to do? I've *DuckDuckWent* it and a few days later I've had a prope
 
 ## Overview
 
+When modeling 3D objects like house or a chair – designers and engineers use 2d drawings for simplicity sake, to visually communicate how things function or constructed – these drawings are called a blueprints or floor plans, and they can have many views.For this article we'll use the **top** & **bottom** view *(Plans)* and the **side/rear/front** and **other side** views *(Elevations)*. 
+
 For this example let's choose a simple shape we probably all know from the game of *Tetris* (which I've spent too much time playing as a kid). I'll use will be the `L` tetrimino – In the image below we can see all of the shape's views *(blueprint)* + an isometric view to explain the views with ease.  
 
 ![The block view](./perspective/L_block_views.png)
 *The L Block Tetrimino Views*
 
-Before we get started – in the image below you can see how a finalized layout looks like, so you get a better idea of the project's scope. I've also marked the terms we'll be working and have listed them below the image – dividing into to *2D* and *3D* worlds.
+Before we get started – in the image below you can see how a finalized layout looks like, so you get a better idea of the project's scope. I've also marked the terms we'll be working and have listed them in the footnotes [^detailed-list].
 
-![A basic layout for creating a perspective drawing](./perspective/The_terms.jpg) *A basic layout for creating a perspective drawing with all of the terms in use*
+![An end result perspective drawing](./perspective/End_result_drawing.png) *An end result perspective drawing*
 
-#### The 2D world
+## Let's Start
 
-- ***Plan View*** – View from top or bottom
-- ***Elevation View*** – View from whichever side
-- ***Height Helpers*** – You'll draw them from the Elevation and they set the height of the element
-- ***Ground Plane*** – It is what it is, the object cat elevate above the ground and below it the viewer probably won't see it
-- ***Horizon Plane*** – The viewer height – How tall the viewer is in relation the the object – BTW, it can be below the *Ground plane*
+To get our perspective drawing going we'll need 2 views – a *Plan*[^1] and an *Elevation*[^2]. The elevation view will help us find the heights of an object and the plan view will help us with everything else. 
 
-#### The 3D world
+- The *Elevation view* goes on the *Ground Plane* [^3] – Choose a view the holds most of the information in the clearest way
+- This is the time to place the *Horizon Plane* [^4] – that is the viewer height. In this drawing, the object is roughly 3 times the size of the viewer. 
+> Changing the viewer height will not change the output size, but the viewing angel. To change the output size you'll to use need smaller views.
+- Form the *Elevation view* you can pull out the *Height Helpers* [^5]
+- The Plan view goes on the top of the layout, adjacent to the *Picture Plane* [^6]. 
+  - Make sure to leave enough space for the next step
+  - Rotating the plan view will result with a rotated 3d view
+- Now let's place the *Station Point* [^7]. I'll place it smack in the middle for a mild perspective with a slight pan to left. 
+- I'll keep the *Plan* view edge tangent to the *Picture Plane*, this point will 
 
-- ***Picture Plane*** – This is where the magic happens – where we flip the 2D and the 3D worlds 😲 My recommendations; place it in the front or middle of the shape – meddling with it will produce undesirable outputs 
-- ***Station Point*** – This will produce the perspective affect – like camera lenses; *Wide* if close, *Narrow* if further away 
-- ***Vanishing Points*** – This points will derive form your setup – You'll figure them up by using the *VP Helpers* and *VP Crossing*
-
-- Projection Lines
-  
-    - PL crossing
-
-- True Height
-  
-    - TH origin
-# The 2D world
-
-When modeling 3D objects like house or a chair – designers and engineers use 2d drawings for simplicity sake, to visually communicate how things function or constructed – these drawings are called a blueprints or floor plans, and they can have many views.For this article we'll use the **top** & **bottom** view *(Plans)* and the **side/rear/front** and **other side** views *(Elevations)*. 
-
-## A basic layout
-
-Let's review a basic layout to get a perspective drawing going -  To make a perspective we'll need 2 views - a ***Plan*** and an ***Elevation***. The elevation view will help us find the true heights of an object, the plan view will help us with everything else.
-
-Rotating the plan view will result with a rotated 3d view 😉
-
-![The Basic layout](./perspective/Basic_layout.jpg)
+![The Basic layout](./perspective/Basic_layout.png)
 *The Basic layout*
-
-Use the views the holds most of the information in the clearer way - For the simple shape it doesn't really matter - As long as we use a ***Plan*** and an ***Elevation***
 
 ## The viewing planes - Height planes
 
 These plans are using the elevation views
 
-- **Ground plane** - As the name suggest, this is the ground and the base of the drawing
-- **Horizon plane** - This is the viewer's eye level - In a counter intuitive kinda way, if you'de like to draw a **smaller** object then place the Horizon plane **higher** then the elevation view, and the other way around to draw a bigger object. The following fig *(Viewing planes, by object)* shows it nicely
 
 ![Viewing planes by viewer](./perspective/Viewing_planes_by_viewer.jpg)
 *Viewing planes by viewer*
@@ -121,9 +95,37 @@ The station point is the distance of the viewer from the object. The closer the 
 [3 point perspective tutorial.](http://www.automotiveillustrations.com/tutorials/drawing-3-point-perspective.html)
   
 
----
----
----
+<LShape 
+:show-comp-scale="true" 
+:show-comp-pres="true"
+:show-comp-rot-y="true"
+:show-comp-axle-y="true"
+/>
+
 ---
 
+
+[^detailed-list]: Our perspective drawing with all of the terms in use ![A perspective drawing with all of the terms in use](./perspective/The_terms.jpg)
+
+[^1]: ***Plan View*** – View from top or bottom
+
+[^2]: ***Elevation View*** – View from whichever side
+
+[^3]: ***Ground Plane*** – As the name suggest, this is the ground and the base of the drawing. The object can elevate above the ground and below it the viewer probably won't see it
+
+[^4]: ***Horizon Plane*** – This is the viewer's eye level – How tall the viewer is in relation the the object – BTW, it can be below the *Ground plane*
+
+[^5]: ***Height Helpers*** – You'll draw them from the Elevation and they set the height of the element
+
+[^6]: ***Picture Plane*** – This is where the magic happens – where we flip the 2D and the 3D worlds 😲 My recommendations; place it in the front or middle of the shape – meddling with it will produce undesirable outputs 
+
+[^7]: ***Station Point*** – This will produce the perspective affect and they panning left or right. In a counter intuitive kinda way, having this point closer or further away will not make the object bigger or smaller – but like a camera lens – it will make the view *Wider* or *Narrower*.  
+- ***Vanishing Points*** – This points will derive form your setup – You'll figure them up by using the *VP Helpers* and *VP Crossing*
+- ***Picture Lines*** – Lines you'll draw from the *Station Point* to the object's edges, their crossing (***Picture Plane Crossing***) with the *Picture Plane* will produce the *Projection Lines* and the *True Height Origin*
+- ***Projection Lines*** – Parallel lines you'll draw from the *Picture Plane Crossing* to the *Ground Plane*.  
+- ***True Height Origin & Line*** - This is just another *Projection Line* that its origin is tangent to the *Picture Plane* – The line itself is used to measure an object true height using the *Elevation View* and the *Height Helpers*
+
+
 For you to make it freehand - and though the precision levels will drop it will still be accurate.
+
+!> Use the views the holds most of the information in the clearer way - For the simple shape it doesn't really matter - As long as we use a ***Plan*** and an ***Elevation***
