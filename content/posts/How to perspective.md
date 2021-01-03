@@ -44,17 +44,17 @@ Before we get started – in the image below you can see how a finalized layout 
 
 ## Let's Start
 
-To get our perspective drawing going we'll need 2 views – a *Plan*[^1] and an *Elevation*[^2]. The elevation view will help us find the heights of an object and the plan view will help us with everything else. 
+To get our perspective drawing going we'll need to set object location and orientation + the viewers height and viewing angle. We'll do that using 2 views – a *Plan View*[^1] and an *Elevation View*[^2]. The elevation view will help us find the heights of an object and the plan view will help us with everything else. We'll position them at 2 sides of the drawing layout and in the middle we'll draw our perspective.
 
-- The *Elevation view* goes on the *Ground Plane* [^3] – Choose a view the holds most of the information in the clearest way
-- This is the time to place the *Horizon Plane* [^4] – that is the viewer height. In this drawing, the object is roughly 3 times the size of the viewer. 
+1. The *Elevation view* goes on the *Ground Plane* [^3] – Choose a view the holds most of the information in the clearest way
+2. This is the time to place the *Horizon Plane* [^4] – that is the viewer height. In this drawing, the object is roughly 3 times the size of the viewer. 
 > Changing the viewer height will not change the output size, but the viewing angel. To change the output size you'll to use need smaller views.
-- Form the *Elevation view* you can pull out the *Height Helpers* [^5]
-- The Plan view goes on the top of the layout, adjacent to the *Picture Plane* [^6]. 
-  - Make sure to leave enough space for the next step
-  - Rotating the plan view will result with a rotated 3d view
-- Now let's place the *Station Point* [^7]. I'll place it smack in the middle for a mild perspective with a slight pan to left. 
-- I'll keep the *Plan* view edge tangent to the *Picture Plane*, this point will 
+3. Form the *Elevation view* you can pull out the *Height Helpers* [^5]
+4. The *Plan View* goes on the top of the layout, adjacent to the *Picture Plane* [^6]. Two things to keep in mind:
+    - Make sure to leave enough space for the next step
+    - Rotating the plan view will result with a rotated 3d view
+5. Now let's place the *Station Point* [^7]. I'll place it smack in the middle for a mild perspective with a slight pan to left. 
+6. I'll keep the *Plan View* edge tangent to the *Picture Plane*, this point will crossing is the *True Height Origin* and will produce the *True Height Line*, that in conjunction with the *Height Helpers* will allow us to build the object precisely.
 
 ![The Basic layout](./perspective/Basic_layout.png)
 *The Basic layout*
@@ -119,7 +119,8 @@ The station point is the distance of the viewer from the object. The closer the 
 
 [^6]: ***Picture Plane*** – This is where the magic happens – where we flip the 2D and the 3D worlds 😲 My recommendations; place it in the front or middle of the shape – meddling with it will produce undesirable outputs 
 
-[^7]: ***Station Point*** – This will produce the perspective affect and they panning left or right. In a counter intuitive kinda way, having this point closer or further away will not make the object bigger or smaller – but like a camera lens – it will make the view *Wider* or *Narrower*.  
+[^7]: ***Station Point*** – This will produce the perspective affect and they panning left or right. In a counter intuitive kinda way, having this point closer or further away will not make the object bigger or smaller – but like a camera lens – it will make the view *Wider* or *Narrower*. ![Station Point](./perspective/Station_Point.png)
+
 - ***Vanishing Points*** – This points will derive form your setup – You'll figure them up by using the *VP Helpers* and *VP Crossing*
 - ***Picture Lines*** – Lines you'll draw from the *Station Point* to the object's edges, their crossing (***Picture Plane Crossing***) with the *Picture Plane* will produce the *Projection Lines* and the *True Height Origin*
 - ***Projection Lines*** – Parallel lines you'll draw from the *Picture Plane Crossing* to the *Ground Plane*.  
