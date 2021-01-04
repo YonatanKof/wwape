@@ -31,7 +31,7 @@ What's a boy to do? I've *DuckDuckWent* it and a few days later I've had a prope
 
 ## Overview
 
-When modeling 3D objects like house or a chair – designers and engineers use 2d drawings for simplicity sake, to visually communicate how things function or constructed – these drawings are called a blueprints or floor plans, and they can have many views.For this article we'll use the **top** & **bottom** view *(Plans)* and the **side/rear/front** and **other side** views *(Elevations)*. 
+When modeling 3D objects like house or a chair – designers and engineers use 2d drawings for simplicity sake – to visually communicate how things function or constructed – these drawings are called a blueprints or floor plans, and they can have many views. In this article we'll use the **top** & **bottom** views (hereby *Plans)* and the **side/rear/front** and **other side** views (hereby *Elevations)*. 
 
 For this example let's choose a simple shape we probably all know from the game of *Tetris* (which I've spent too much time playing as a kid). I'll use will be the `L` tetrimino – In the image below we can see all of the shape's views *(blueprint)* + an isometric view to explain the views with ease.  
 
@@ -44,12 +44,12 @@ Before we get started – in the image below you can see how a finalized layout 
 
 ## Let's Start
 
-To get our perspective drawing going we'll need to set object location and orientation + the viewers height and viewing angle. We'll do that using 2 views – a *Plan View*[^1] and an *Elevation View*[^2]. The elevation view will help us find the heights of an object and the plan view will help us with everything else. We'll position them at 2 sides of the drawing layout and in the middle we'll draw our perspective.
+To get our perspective drawing going we'll need to set the object location and orientation + the viewer's height and viewing angle. We'll do that using 2 of the object's views – a *Plan View*[^1] and an *Elevation View*[^2]. The elevation view will help us find the heights of an object and the plan view will help us with everything else. We'll position them at 2 sides of the drawing layout and in the middle we'll draw our perspective.
 
 1. The *Elevation view* goes on the *Ground Plane* [^3] – Choose a view the holds most of the information in the clearest way
-2. This is the time to place the *Horizon Plane* [^4] – that is the viewer height. In this drawing, the object is roughly 3 times the size of the viewer. 
+2. This is the time to place the *Horizon Plane* [^4] – that is the viewer height. In this drawing, the object is roughly 3 times the size of the viewer but we can have it which height we like. 
 > Changing the viewer height will not change the output size, but the viewing angel. To change the output size you'll to use need smaller views.
-3. Form the *Elevation view* you can pull out the *Height Helpers* [^5]
+3. Form the *Elevation view* you can pull out the *Height Helpers* [^5] 
 4. The *Plan View* goes on the top of the layout, adjacent to the *Picture Plane* [^6]. Two things to keep in mind:
     - Make sure to leave enough space for the next step
     - Rotating the plan view will result with a rotated 3d view
@@ -111,9 +111,10 @@ The station point is the distance of the viewer from the object. The closer the 
 
 [^2]: ***Elevation View*** – View from whichever side
 
-[^3]: ***Ground Plane*** – As the name suggest, this is the ground and the base of the drawing. The object can elevate above the ground and below it the viewer probably won't see it
+[^3]: ***Ground Plane*** – As the name suggest, this is the ground and the base of the drawing. 
 
-[^4]: ***Horizon Plane*** – This is the viewer's eye level – How tall the viewer is in relation the the object – BTW, it can be below the *Ground plane*
+[^4]: ***Horizon Plane*** – This is the viewer's eye level. The higher it is the taller the viewer is in relation the the object and vice versa. **BTW**, it can be below the *Ground plane* but it's probably won't produce a desirable output ![Changing the viewer's height](./perspective/viewer_height.png)
+
 
 [^5]: ***Height Helpers*** – You'll draw them from the Elevation and they set the height of the element
 
