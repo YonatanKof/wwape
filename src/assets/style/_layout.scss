@@ -7,7 +7,8 @@ $display-size-xs: 480px;
 
 // Width mixins
 @mixin main-padding {
-    padding-inline: calc(max(2rem, env(safe-area-inset-left)));
+    padding-inline-start: calc(max(2rem, env(safe-area-inset-left)));
+    padding-inline-end: calc(max(2rem, env(safe-area-inset-left)));
 }
 
 // When smaller
