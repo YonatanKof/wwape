@@ -85,9 +85,10 @@ Information from the *Plan View* will help us with getting all of the object's d
 
 ### Set the 3D view ‼️
 
-1. Draw the *Picture Lines* [^10] from the Station Point to the objects edges in (the Plan View)
-2. The intersection of the Picture Lines are with the Picture Plane 
-3. I'll keep the *Plan View* edge tangent to the *Picture Plane*, this point will crossing is the *True Height Origin* and will produce the *True Height Line*, that in conjunction with the *Height Helpers* will allow us to build the object precisely.
+1. The Plan View tangent point with the Picture Plane (from earlier), this point will crossing is the *True Height Origin* and will produce the *True Height Line*, that in conjunction with the *Height Helpers* will allow us to build the object precisely. 
+2. Draw the *Picture Lines* [^10] from the Station Point to the objects edges in (the Plan View)
+3. The intersection of the Picture Lines with the Picture Plane are the *Projection Lines* [^11] 
+4. The intersection of the Projection Lines with the 
 
 
 # Links
@@ -124,11 +125,12 @@ Information from the *Plan View* will help us with getting all of the object's d
 
 [^8]: ***Vanishing Points*** – This points will derive form your setup – You'll figure them up by using the *VP Helpers* and *VP Crossing*
 
-[^9]: ***True Height Origin & Line*** - This is just another *Projection Line* that its origin is tangent to the *Picture Plane* – The line itself is used to measure an object true height using the *Elevation View* and the *Height Helpers*
 
 [^10]: ***Picture Lines*** – Lines you'll draw from the *Station Point* to the object's edges, their crossing (***Picture Plane Crossing***) with the *Picture Plane* will produce the *Projection Lines* and the *True Height Origin*
 
 [^11]: ***Projection Lines*** – Parallel lines you'll draw from the *Picture Plane Crossing* to the *Ground Plane*.  
+
+[^9]: ***True Height Origin & Line*** - This is just another *Projection Line* that its origin is tangent to the *Picture Plane* – The line itself is used to measure an object true height using the *Elevation View* and the *Height Helpers*
 
 
 For you to make it freehand - and though the precision levels will drop it will still be accurate.
