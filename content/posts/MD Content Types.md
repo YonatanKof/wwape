@@ -81,6 +81,8 @@ This is a paragraph -> The time has come for you to destroy Mephisto's Soulstone
 1. Ordered list item
 2. Another ordered list item
    1. Indented item
+      - The First 
+      - The Second 
    2. Another indented item.
    
     Additional text for indented item
@@ -98,7 +100,8 @@ This is a paragraph -> The time has come for you to destroy Mephisto's Soulstone
   - Indented item.
 
     - Another indent
-    
+        1. The First 
+        2. The Second 
     - Another item in that indent
 
   - Another indented item.
