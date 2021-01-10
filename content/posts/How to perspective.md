@@ -1,6 +1,6 @@
 ---
 title: How to Perspective
-author_name: Yonatan Ben Knnan
+author_name: Yonatan Ben Knaan
 urlname: perspective-101
 date: 2020-12-16
 updated: 2020-12-16

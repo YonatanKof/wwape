@@ -1,6 +1,6 @@
 ---
 title: MD Content Types
-author_name: Yonatan Ben Knnan
+author_name: Yonatan Ben Knaan
 urlname: md-content-types
 date: 2020-11-12
 updated: 

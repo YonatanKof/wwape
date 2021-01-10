@@ -1,6 +1,6 @@
 ---
 title: Shortcuts for macOS
-author_name: Yonatan Ben Knnan
+author_name: Yonatan Ben Knaan
 urlname: shortcuts-for-macos
 date: 2020-09-20
 updated: 2020-11-19
