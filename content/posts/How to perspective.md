@@ -91,10 +91,15 @@ Information from the *Plan View* will help us with getting all of the object's d
 4. The intersection of the Projection Lines with the 
 
 
-# Links
+## To fixxxx
 
-[3 point perspective tutorial.](http://www.automotiveillustrations.com/tutorials/drawing-3-point-perspective.html)
+For you to make it freehand - and though the precision levels will drop it will still be accurate.
+
+!> Use the views the holds most of the information in the clearer way - For the simple shape it doesn't really matter - As long as we use a ***Plan*** and an ***Elevation***
+
+!> Check out the [3 point perspective tutorial.](http://www.automotiveillustrations.com/tutorials/drawing-3-point-perspective.html)
   
+## Example
 
 <LShape 
 :show-comp-scale="true" 
@@ -103,8 +108,7 @@ Information from the *Plan View* will help us with getting all of the object's d
 :show-comp-axle-y="true"
 />
 
----
-
+## Footnotes
 
 [^detailed-list]: Our perspective drawing with all of the terms in use ![A perspective drawing with all of the terms in use](./perspective/The_terms.jpg)
 
@@ -131,8 +135,3 @@ Information from the *Plan View* will help us with getting all of the object's d
 [^11]: ***Projection Lines*** – Parallel lines you'll draw from the *Picture Plane Crossing* to the *Ground Plane*.  
 
 [^9]: ***True Height Origin & Line*** - This is just another *Projection Line* that its origin is tangent to the *Picture Plane* – The line itself is used to measure an object true height using the *Elevation View* and the *Height Helpers*
-
-
-For you to make it freehand - and though the precision levels will drop it will still be accurate.
-
-!> Use the views the holds most of the information in the clearer way - For the simple shape it doesn't really matter - As long as we use a ***Plan*** and an ***Elevation***
