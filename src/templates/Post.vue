@@ -191,7 +191,6 @@ strong em {
 }
 noscript + em {
     font-size: var(--font-size-3xl);
-    line-height: 2em;
 }
 p img {
     transform: translateY(var(--space-sm));
