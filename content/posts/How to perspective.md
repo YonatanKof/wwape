@@ -29,11 +29,13 @@ What's a boy to do? I've *DuckDuckWent* it and a few days later I've had a prope
 
 > BTW, ever wondered what's the difference between *accuracy* and *precision*? Then check out [this video by Matt Anticole](https://youtu.be/hRAFPdDppzs)
 
-## Overview
+## The Setup
 
 When modeling 3D objects like house or a chair – designers and engineers use 2d drawings for simplicity sake – to visually communicate how things function or constructed – these drawings are called a blueprints or floor plans, and they can have many views. In this article we'll use the **top** & **bottom** views (hereby *Plans)* and the **side/rear/front** and **other side** views (hereby *Elevations)*. 
 
 For this example let's choose a simple shape we probably all know from the game of *Tetris* (which I've spent too much time playing as a kid). I'll use will be the `L` tetrimino – In the image below we can see all of the shape's views *(blueprint)* + an isometric view to explain the views with ease.  
+
+!> In this article we'll be drawing a *Two-Point Perspective*. Another popular drawing is the *One-Point Perspective* while a more realistic depiction of real life is the *Three-Point Perspective*. 
 
 ![The block view](./perspective/L_block_views.png)
 *The L Block Tetrimino Views*
@@ -42,53 +44,51 @@ Before we get started – in the image below you can see how a finalized layout 
 
 ![An end result perspective drawing](./perspective/End_result_drawing.png) *An end result perspective drawing*
 
-## Let's Start
+## Draw a Two-Point Perspective!
 
-To get our perspective drawing going we'll need to set the object location and orientation + the viewer's height and viewing angle. We'll do that using 2 of the object's views – a *Plan View*[^1] and an *Elevation View*[^2]. The elevation view will help us find the heights of an object and the plan view will help us with everything else. We'll position them at 2 sides of the drawing layout and in the middle we'll draw our perspective.
+To get our perspective drawing going we'll need to set the object location and orientation + the viewer's height and viewing angle. We'll do that using 2 of the object's views – a *Plan View*[^1] and an *Elevation View*[^2]. Position the Elevation on the side and the Plan at the Top and in the middle we'll draw our perspective as seen in the image below (fig.layout-all).
 
-1. The *Elevation view* goes on the *Ground Plane* [^3] – Choose a view the holds most of the information in the clearest way
-2. This is the time to place the *Horizon Plane* [^4] – that is the viewer height. In this drawing, the object is roughly 3 times the size of the viewer but we can have it which height we like. 
+![A basic layout](./perspective/basic-layout-all.png) *fig.layout-all*
+### Set the Side View (Elevation):
+
+The *Elevation View* will help us find the object's heights
+
+1. Draw the the *Ground Plane* [^3]
+2. Place the *Elevation View* [^2] on it  
+   > Choose a view the holds most of the information in the clearest way
+3. Choose the viewer height by placing the *Horizon Plane* [^4]. In this drawing, the object is roughly 3 times the size of the viewer but we can have it which height we like. 
 > Changing the viewer height will not change the output size, but the viewing angel. To change the output size you'll to use need smaller views.
-3. Form the *Elevation view* you can pull out the *Height Helpers* [^5] 
-4. The *Plan View* goes on the top of the layout, adjacent to the *Picture Plane* [^6]. Two things to keep in mind:
-    - Make sure to leave enough space for the next step
-    - Rotating the plan view will result with a rotated 3d view
-5. Now let's place the *Station Point* [^7]. I'll place it smack in the middle for a mild perspective with a slight pan to left. 
-6. I'll keep the *Plan View* edge tangent to the *Picture Plane*, this point will crossing is the *True Height Origin* and will produce the *True Height Line*, that in conjunction with the *Height Helpers* will allow us to build the object precisely.
+3. Pull out the *Height Helpers* [^5] form the *Elevation View*. Draw them from the objects geometry
 
-![The Basic layout](./perspective/Basic_layout.png)
+![A basic layout showing the elevation side](./perspective/basic-layout-elevation.png) *A basic layout showing the elevation side with the viewer height*
+
+### Set the Top View (Plan):
+
+Information from the *Plan View* will help us with getting all of the object's data:
+
+1. The *Plan View* goes on the top of the layout, adjacent to the *Picture Plane* [^6]. Two things to keep in mind:
+    - Make sure to leave enough space from the Elevation for the next step
+    - For a *Two-Point Perspective* you'll need to rotate the Plan 
+    - For a good looking and easy to draw result, rotate the Plan somewhere between 30° to 45°
+    
+        > Regular rules use these angles 📐 
+
+    - Rotating the plan view will result with a rotated 3d view
+    - Keep the Plan's outmost edge as the rotation point and tangent to the *Picture Plane*
+
+2. Now let's place the *Station Point* [^7]. I'll place it smack in the middle for a mild perspective with a slight pan to left. 
+3. To find the *Vanishing Points* [^8] scale and send parallel lines from the Plan view to up until the Station Point – The intersection of these lines with the Picture Plane are the *Vanishing Points Origin*.
+4. Draw perpendicular lines form the Vanishing Points Origin to the Horizon Plane – The intersection of these lines are the *Vanishing Points*
+
+![The Basic layout](./perspective/basic-layout-plan.png)
 *The Basic layout*
 
-## The viewing planes - Height planes
+### Set the 3D view ‼️
 
-These plans are using the elevation views
+1. Draw the *Picture Lines* [^10] from the Station Point to the objects edges in (the Plan View)
+2. The intersection of the Picture Lines are with the Picture Plane 
+3. I'll keep the *Plan View* edge tangent to the *Picture Plane*, this point will crossing is the *True Height Origin* and will produce the *True Height Line*, that in conjunction with the *Height Helpers* will allow us to build the object precisely.
 
-
-![Viewing planes by viewer](./perspective/Viewing_planes_by_viewer.jpg)
-*Viewing planes by viewer*
-
-# The 3D world
-
-This is where the flat views, the *plan* and the *elevation*, meet each other to create the 3d view. 
-
-What is we'd like to draw the object large or small, see it through a wide or narrow lens This planes with 
-
-### Picture plane
-
-Line crossing the picture plane will be used to measure the true height
-
-### Viewing height
-
-Will start wh
-
-
-### Station point - Distance, width and position
-
-Is up to you where to place the Station point 
-
-The station point is the distance of the viewer from the object. The closer the Station point to the object is the wider the image will be, and the other way around - the further away - the narrower it will turn out.
-
-### Positioning
 
 # Links
 
@@ -122,10 +122,13 @@ The station point is the distance of the viewer from the object. The closer the 
 
 [^7]: ***Station Point*** – This will produce the perspective affect and they panning left or right. In a counter intuitive kinda way, having this point closer or further away will not make the object bigger or smaller – but like a camera lens – it will make the view *Wider* or *Narrower*. ![Station Point](./perspective/Station_Point.png)
 
-- ***Vanishing Points*** – This points will derive form your setup – You'll figure them up by using the *VP Helpers* and *VP Crossing*
-- ***Picture Lines*** – Lines you'll draw from the *Station Point* to the object's edges, their crossing (***Picture Plane Crossing***) with the *Picture Plane* will produce the *Projection Lines* and the *True Height Origin*
-- ***Projection Lines*** – Parallel lines you'll draw from the *Picture Plane Crossing* to the *Ground Plane*.  
-- ***True Height Origin & Line*** - This is just another *Projection Line* that its origin is tangent to the *Picture Plane* – The line itself is used to measure an object true height using the *Elevation View* and the *Height Helpers*
+[^8]: ***Vanishing Points*** – This points will derive form your setup – You'll figure them up by using the *VP Helpers* and *VP Crossing*
+
+[^9]: ***True Height Origin & Line*** - This is just another *Projection Line* that its origin is tangent to the *Picture Plane* – The line itself is used to measure an object true height using the *Elevation View* and the *Height Helpers*
+
+[^10]: ***Picture Lines*** – Lines you'll draw from the *Station Point* to the object's edges, their crossing (***Picture Plane Crossing***) with the *Picture Plane* will produce the *Projection Lines* and the *True Height Origin*
+
+[^11]: ***Projection Lines*** – Parallel lines you'll draw from the *Picture Plane Crossing* to the *Ground Plane*.  
 
 
 For you to make it freehand - and though the precision levels will drop it will still be accurate.
