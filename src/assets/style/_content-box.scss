@@ -17,11 +17,14 @@
 
 @mixin content-box-image($collapse-size) {
     overflow: hidden;
-        border-radius: var(--radius) var(--radius) 0 0;
-        &:empty {
-            display: none;
-        }
-        @include mQ-max($collapse-size) {
-            border-radius: 0;
-        }
+    img {
+        background-color: var(--bg-color);
+    }
+    border-radius: var(--radius) var(--radius) 0 0;
+    &:empty {
+        display: none;
+    }
+    @include mQ-max($collapse-size) {
+        border-radius: 0;
+    }
 }
