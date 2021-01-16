@@ -6,9 +6,9 @@ date: 2020-11-12
 updated: 
 published: true
 tags: ['Development']
-cover_image: ./macOS/Comma_plugin.png
-cover_caption: Polls on the beach
-description: Markdown content types in use at this gridsome site
+cover_image:
+cover_caption: 
+description: Markdown content types used in this gridsome site
 canonical_url: false
 series: false
 ---
