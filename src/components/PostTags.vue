@@ -27,7 +27,7 @@ export default {
         margin-inline-end: var(--space-sm);
         margin-block-start: var(--space-sm);
         font-size: var(--font-size-sm);
-        background-color: var(--bg-code);
+        background-color: var(--bg-color);
         padding: var(--spacem-sm) var(--spacem-lg);
         border-radius: var(--radius);
     }
