@@ -70,11 +70,19 @@ query {
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     min-height: -webkit-fill-available; // mobile viewport hidden footer fix
-    background-image: linear-gradient(
-        to bottom,
-        var(--bg-color),
-        var(--bg-color-HL)
-    );
+    &::before {
+        content: "";
+        height: calc(var(--space-7xl) * 8);
+        background-image: linear-gradient(
+            to bottom,
+            var(--bg-color-HL),
+            var(--bg-color)
+        );
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 }
 
 .header {
@@ -110,7 +118,7 @@ query {
 .main {
     @include main-padding;
     margin: 0 auto;
-    // padding: 0;
+    z-index: 100;
 }
 
 .footer {
