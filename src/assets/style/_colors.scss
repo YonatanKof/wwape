@@ -43,8 +43,8 @@ body {
     --bg-primary: #{$color-primary-O10};
     --bg-primary-HL: #{$color-primary-base};
     --border-color: #{$color-dark-O40};
-    --shadow-soft: rgba(0, 0, 0, 0.06);
-    --shadow-medium: rgba(0, 0, 0, 0.08);
+    --shadow-soft: rgba(0, 0, 0, 0.02);
+    --shadow-medium: rgba(0, 0, 0, 0.04);
     
     // Typography
     --title-color: #{$color-dark-light};
