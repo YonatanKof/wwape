@@ -39,6 +39,7 @@ export default {
 
 <style lang="scss">
 @import "../assets/style/_content-box.scss";
+@import "../assets/style/_shadow.scss";
 
 .post-card {
     @include content-box($display-size-xs);
@@ -52,7 +53,7 @@ export default {
     }
     &:hover {
         transform: translateY(calc(var(--space-3xs) * -1));
-        box-shadow: var(--shadow-md);
+        box-shadow: $shadow-md;
     }
     &__header {
         @include content-box-image($display-size-xs);

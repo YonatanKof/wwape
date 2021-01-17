@@ -33,7 +33,7 @@
                         <g-link
                             to="https://www.notion.so/yonatankof/Yonatan-Ben-Knaan-CV-615078174644460db169c928cd409f9e"
                         >
-                            my full CV on Notion</g-link
+                            my full CV here</g-link
                         >.
                     </p>
                     <Hr
@@ -140,7 +140,7 @@ export default {
         font-size: var(--font-size-2xl);
         #cv-text {
             font-size: initial;
-            opacity: 0.7;
+            opacity: 0.9;
             margin-top: var(--space-2xl);
         }
         @include mQ-max($display-size-sm) {
@@ -186,14 +186,13 @@ export default {
     #my-name {
         font-family: var(--font-family--hand);
         line-height: 1.1em;
-        // @include dimmed;
-        opacity: 0.7;
+        opacity: 0.8;
         transform: rotateZ(-12deg);
         width: max-content;
         position: relative;
-        left: calc(var(--space-md) * -1);
-        top: var(--space-sm);
-        // z-index: -10;
+        left: calc(var(--space-lg) * -1);
+        top: var(--space-md);
+        font-weight: 600;
     }
 }
 </style>

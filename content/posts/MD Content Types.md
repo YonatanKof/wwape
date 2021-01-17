@@ -1,14 +1,14 @@
 ---
 title: MD Content Types
-author_name: Yonatan Ben Knnan
+author_name: Yonatan Ben Knaan
 urlname: md-content-types
 date: 2020-11-12
 updated: 
 published: true
 tags: ['Development']
-cover_image: ./macOS/Comma_plugin.png
-cover_caption: Polls on the beach
-description: Markdown content types in use at this gridsome site
+cover_image:
+cover_caption: 
+description: Markdown content types used in this gridsome site
 canonical_url: false
 series: false
 ---
@@ -81,6 +81,8 @@ This is a paragraph -> The time has come for you to destroy Mephisto's Soulstone
 1. Ordered list item
 2. Another ordered list item
    1. Indented item
+      - The First 
+      - The Second 
    2. Another indented item.
    
     Additional text for indented item
@@ -98,7 +100,8 @@ This is a paragraph -> The time has come for you to destroy Mephisto's Soulstone
   - Indented item.
 
     - Another indent
-    
+        1. The First 
+        2. The Second 
     - Another item in that indent
 
   - Another indented item.
@@ -159,8 +162,9 @@ export default {
 };
 ```
 ![image](~/assets/images/Yonatan_Ben-Knaan-Squere.jpg)
+*Now that's one good looking Kof*
 
-``Use `code` in your Markdown file.``
+`Use code in your Markdown file.`
 
 Visit my website [Yonatan Kof](https://yonatankof.com "The best designer in Israel").
 
@@ -186,13 +190,6 @@ Sandy hole with nothing in it to sit down on or to eat: it was a [hobbit-hole][1
 | :---        |    :----:   |          ---: |
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
-
-First Term
-: This is the definition of the first term.
-
-Second Term
-: This is one definition of the second term.
-: This is another definition of the second term.
 
 ### Footnotes 
 

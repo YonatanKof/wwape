@@ -1,5 +1,5 @@
 // Because of Webpack font import are at Default.vue
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap");
 
 @import "./layout";
 
@@ -10,13 +10,13 @@
 :root {
     //! Families
     --font-family--body: "Inter var", -apple-system, system-ui,
-    BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     --font-family--title: "Inknut Antiqua", Georgia, serif;
     --font-family--code: "DM Mono", Consolas, Monaco, "Andale Mono",
-    "Ubuntu Mono", monospace;
-    --font-family--hand: "Permanent Marker", "Marker Felt", "Comic Sans MS",
-    cursive, sans-serif;
-    
+        "Ubuntu Mono", monospace;
+    --font-family--hand: "Caveat", "Marker Felt", "Comic Sans MS", cursive,
+        sans-serif;
+
     --font-wight--light: 200;
     --font-wight--regular: 400;
     --font-wight--bold: 500;
@@ -67,7 +67,6 @@ body {
     font-weight: var(--font-wight--regular);
     font-size: var(--font-size--regular);
     font-kerning: normal;
-    // word-spacing: 0.025em;
     letter-spacing: -0.005em;
     font-feature-settings: "kern" 1, "frac" 1, "ss01" 1, "cv08" 1;
 }
@@ -84,13 +83,11 @@ a {
 a {
     color: var(--link-color);
     font-variation-settings: "wght" var(--font-wight--bold);
-    // font-weight: var(--font-wight--bold);
     text-decoration: none;
     text-decoration-skip-ink: auto;
     transition: all 0.35s ease-in;
     border-bottom: 1px solid rgba(0, 0, 0, 0);
     &:hover {
-        // font-weight: var(--font-wight--bolder);
         letter-spacing: calc(var(--spacem-2xs) * -0.05);
         font-variation-settings: "wght" var(--font-wight--bolder);
         border-bottom: 1px solid var(--link-color);
@@ -149,9 +146,10 @@ i {
 }
 em {
     font-family: var(--font-family--hand);
-    letter-spacing: 0.02em;
-    font-size: 97%;
+    letter-spacing: -0.01em;
+    font-size: 1.375em;
     line-height: 1;
+    margin-inline-end: var(--spacem-3xs);
 }
 
 strong {
@@ -160,12 +158,12 @@ strong {
 
 ul {
     list-style-type: disc;
-    margin-left: var(--space-3xl);
+    margin-inline-start: var(--space-3xl);
     margin-bottom: var(--space-2xl);
 }
 ol {
     list-style-type: decimal;
-    margin-left: var(--space-3xl);
+    margin-inline-start: var(--space-3xl);
     margin-bottom: var(--space-2xl);
 }
 li {
@@ -178,6 +176,16 @@ li p {
 li ol,
 li ul {
     margin-bottom: var(--space-md);
+}
+
+ol ol {
+    margin-top: var(--space-xs);
+}
+ul ol {
+    margin-top: var(--space-xs);
+}
+ol ul {
+    margin-top: var(--space-xs);
 }
 
 // Text state

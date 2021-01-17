@@ -1,6 +1,6 @@
 ---
 title: Shortcuts for Sketch App
-author_name: Yonatan Ben Knnan
+author_name: Yonatan Ben Knaan
 urlname: shortcuts-for-sketch
 date: 2020-07-12
 updated: 2019-02-06
