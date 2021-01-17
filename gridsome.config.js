@@ -7,13 +7,8 @@
 module.exports = {
     siteName: "World Wide Ape",
     siteDescription:
-<<<<<<< HEAD
-        "Yonatan Ben Knaan - A design system manager, a mismatched persona and an alright dude.",
-    siteUrl: "https://wwape.app/",
-=======
         "WWApe is Yonatan Ben Knaan – A mismatched persona, a design system manager and an alright dude.",
     siteUrl: "https://kofrus-dev.netlify.app/",
->>>>>>> epic--better-data
     icon: {
         favicon: "./src/assets/images/kof-logo.png",
         touchicon: "./src/assets/images/kof-logo-full.png.png",
