@@ -106,7 +106,7 @@ h6 {
     font-weight: var(--font-wight--bolder);
     margin-bottom: var(--spacem-2xs);
     line-height: 1.25em;
-    font-feature-settings: "frac" 0;
+    font-feature-settings: "kern" 1, "liga" 1, "ss01" 1, "ss02" 1;
 }
 
 h1 {
