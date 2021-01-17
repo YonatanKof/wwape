@@ -5,9 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-    siteName: "Kof'R'Us",
+    siteName: "World Wide Ape",
     siteDescription:
-        "Yonatan Ben Knaan - A design system manager, a mismatched persona and an alright dude.",
+        "WWApe is Yonatan Ben Knaan – A mismatched persona, a design system manager and an alright dude.",
     siteUrl: "https://kofrus-dev.netlify.app/",
     icon: {
         favicon: "./src/assets/images/kof-logo.png",
@@ -58,7 +58,7 @@ module.exports = {
     ],
     transformers: {
         //Add markdown support to all file-system sources
-        remark: {
+        vueRemark: {
             externalLinksTarget: "_blank",
             externalLinksRel: ["nofollow", "noopener", "noreferrer"],
             anchorClassName: "icon icon-link",
