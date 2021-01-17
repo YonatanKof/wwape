@@ -12,23 +12,50 @@ description: Markdown content types used in this gridsome site
 canonical_url: false
 series: false
 ---
-# Main Title
+import LShape from '~/components/forPosts/LShape.vue'
 
-## Secondary Title
+Hi all 👋  
+Let's see what we have here
 
-### Tertiary Title
+# Boring H1 Title
 
-#### Heading 4
+This post ain't interesting at all 🤷  
+It's just a showcase of *Markdown* styles for this *Gridsome* website.
 
-##### Heading 5
+!> BTW, I'm using [vue-remark](https://www.npmjs.com/package/@gridsome/vue-remark) to transform MD  
 
-###### Heading 6
+## Humdrum H2 Title
+
+I'm using my own design system, it's a great way to manage design and theming, and doing it with SCSS is easy and fun – relative to a tool like Sketch – which is awesome but tedious. 
+
+Please keep an eye over [Kof Design System](https://share.goabstract.com/03c7ec17-6183-4b14-9528-59e90014e79e)
+
+### Dull H3 Title
+
+Because of vue-remark I can add Vue components into my markdown. Like this 3D viewer/controller from an article about Perspective I'm writing:
+
+<LShape 
+:show-comp-scale="true" 
+:show-comp-pres="true"
+:show-comp-rot-y="true"
+:show-comp-axle-y="true"
+/>
+
+#### Monotonous H4 Title
+
+##### Stale H5 Title
+
+###### Tiresome H6 Title
 
 This text is **Strong Text**
 
 This text is *Emphasized Text*
 
 This text is ~~Strikethrough *Text* Text **Text**~~
+
+## Blockquotes 
+
+### Regular stuff
 
 > This is *Blockquote*. Write `>` to use
 > 
@@ -38,43 +65,24 @@ This text is ~~Strikethrough *Text* Text **Text**~~
 >> 
 >>> Another nested blockquote
 >
-> #### The quarterly results look great!
+> #### Welcome to the desert of the real 🏖
 >
-> - Revenue was off the chart.
-> - Profits were higher than ever.
->
->  *Everything* is going according to **plan**.
+> - Quickly in and quickly out is all the advice I can give you.
+> - I believe that stopping the siege on Harrogath is the only way for you to earn the trust of these people.  
 
-```
-This is a *Preformatted* tag (pre). Warp with ``` to use
-```
+>  Very nice – *Everything* is going according to **plan**.
 
-    Or just use a tab indent
+## And with three types of *hints* 
 
-<!-- You acn use a comment markup to separate elements -->
-    <html>
-        <body>
-            <h1>You acn use a comment markup to separate elements</h1>
-        </body>
-    </html>  
+!> **Tip** Blockquote, generates class `hint` & `tip`. Write `!>` to use
 
-- Yo
-  - [x] Write the press release
-  - [ ] Me not done
+?> **Attention** Blockquote, generates class `hint` & `waring`. Write `?>` to use
 
-
-- [ ] Update the website
-- [ ] Contact the media
-
-### Three types of *hint* blockquote
-
-!> Tip Blockquote, generates class `hint` & `tip`. Write `!>` to use
-
-?> Attention Blockquote, generates class `hint` & `waring`. Write `?>` to use
-
-x> Error Blockquote, generates class `hint` & `error`. Write `x>` to use
+x> **Error** Blockquote, generates class `hint` & `error`. Write `x>` to use
 
 This is a paragraph -> The time has come for you to destroy Mephisto's Soulstone! Take the Stone to the Hellforge. Place it upon the forge and strike it soundly with the Hammer. Only by doing this can you prevent Mephisto from manifesting in this world ever again. 1/6 3/4 3/4
+
+## Lists
 
 ### Ordered List
 
@@ -116,10 +124,23 @@ This is a paragraph -> The time has come for you to destroy Mephisto's Soulstone
 
    !> Blockquote in a list
 
----
+
+## Preformatted tag
+
+```
+This is a Preformatted tag (pre). Warp with ``` to use
+```
+
+    Or just use a tab indent
+
+<!-- You acn use a comment markup to separate elements -->
+    <html>
+        <body>
+            <h1>You acn use a comment markup to separate elements</h1>
+        </body>
+    </html>  
 
 
----
 ## Code Snippets
 
 ### HTML
@@ -179,18 +200,28 @@ Sandy hole with nothing in it to sit down on or to eat: it was a [hobbit-hole][1
 [1]: <https://en.wikipedia.org/wiki/Hobbit#Lifestyle> "Hobbit lifestyles"
 [mywebsite]: <https://yonatankof.com> "The best designer in Israel"
 
-### Using Tables
+## Tables
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| Syntax    | Description |
+| --------- | ----------- |
+| Header    | Title       |
+| Paragraph | Text        |
 
-| Syntax      | Description | Test Text     |
-| :---        |    :----:   |          ---: |
-| Header      | Title       | Here's this   |
-| Paragraph   | Text        | And more      |
+| Syntax    | Description |   Test Text |
+| :-------- | :---------: | ----------: |
+| Header    |    Title    | Here's this |
+| Paragraph |    Text     |    And more |
 
-### Footnotes 
+## Checkbox – MIA
+
+Missing in Action is design for the Checkbox  
+It looks bad and right now I don't really know how to manipulate its CSS
+
+  - [x] ~~Write the press release~~
+  - [ ] Me not done
+- [ ] Update the website
+- [ ] Contact the media
+
+## Footnotes 
 
 [^footnote]: I'm a footnote!
