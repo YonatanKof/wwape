@@ -98,7 +98,7 @@ query Post ($id: ID!) {
     }
 
     h1 {
-        font-size: var(--font-size-6xl);
+        font-size: var(--font-size-7xl);
     }
 
     h2 {
@@ -106,7 +106,7 @@ query Post ($id: ID!) {
     }
 
     h3 {
-        font-size: var(--font-size-4xl);
+        font-size: var(--font-size-3xl);
     }
     &__header {
         @include content-box-image($display-size-sm);
