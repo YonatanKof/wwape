@@ -122,6 +122,7 @@ query {
 }
 
 .footer {
+    z-index: 110;
     display: flex;
     flex-direction: column;
     align-items: center;
