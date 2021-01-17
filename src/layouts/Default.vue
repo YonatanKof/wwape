@@ -39,6 +39,17 @@ import Logo from "~/components/Logo.vue";
 import ToggleTheme from "~/components/ToggleTheme.vue";
 
 export default {
+    // metaInfo: {
+    //     link: [
+    //         {
+    //             rel: "preload",
+    //             href: "~/assets/fonts/Inter/Inter.var.woff2",
+    //             as: "font",
+    //             type: "font/woff2",
+    //             crossorigin: true,
+    //         },
+    //     ],
+    // },
     props: {
         showLogo: { default: true },
         isSelected: { default: false },
