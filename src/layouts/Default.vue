@@ -95,6 +95,9 @@ query {
     @include mQ-max($display-size-xs) {
         font-size: 0.9em;
     }
+    .active--exact {
+        border-bottom: 1px solid var(--link-color);
+    }
     &__start {
         a {
             margin: 0;
