@@ -8,7 +8,7 @@ module.exports = {
     siteName: "World Wide Ape",
     siteDescription:
         "WWApe is Yonatan Ben Knaan – A mismatched persona, a design system manager and an alright dude.",
-    siteUrl: "https://kofrus-dev.netlify.app/",
+    siteUrl: "https://wwape.com/",
     icon: {
         favicon: "./src/assets/images/kof-logo.png",
         touchicon: "./src/assets/images/kof-logo-full.png.png",
