@@ -7,6 +7,7 @@ updated: 2020-11-19
 published: true
 tags: ['macOS', 'Shortcuts', 'Sketch', 'Productivity']
 cover_image: ./macOS/Cover-Shortcuts.svg
+social_image: ./macOS/Social-Shortcuts.png
 cover_caption: Screen shot of Mac keyboard shortcuts page on Apple support
 description: How to create, edit or remove shortcuts for a macOS
 canonical_url: false
