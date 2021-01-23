@@ -74,7 +74,8 @@ export default {
             return coverImage;
         },
         getBaseUrl() {
-            return process.env.GRIDSOME_BASE_URL;
+            // return process.env.GRIDSOME_BASE_URL;
+            return $static.metadata.siteUrl;
         },
     },
 };
@@ -83,8 +84,6 @@ export default {
 <static-query>
 query {
   metadata {
-    siteName,
-    siteDescription,
     siteUrl
   }
 }
