@@ -57,13 +57,38 @@ export default {
                 },
                 { name: "twitter:title", content: this.$page.post.title },
                 { name: "twitter:site", content: "@yonatankof" },
-                // { name: "twitter:image", content: this.getCoverImage },
+                { name: "twitter:image", content: this.getCoverImage },
                 { name: "twitter:creator", content: "@yonatankof" },
             ],
         };
     },
+    computed: {
+        getCoverImage() {
+            let coverImage = "";
+            const cover = this.$page.post.social_image;
+            if (cover != null) {
+                coverImage = `${this.getBaseUrl}${
+                    this.$page.post.social_image.src
+                }`;
+            }
+            return coverImage;
+        },
+        getBaseUrl() {
+            return process.env.GRIDSOME_BASE_URL;
+        },
+    },
 };
 </script>
+
+<static-query>
+query {
+  metadata {
+    siteName,
+    siteDescription,
+    siteUrl
+  }
+}
+</static-query>
 
 <page-query>
 query Post ($id: ID!) {
@@ -80,6 +105,7 @@ query Post ($id: ID!) {
     description
     content
     cover_image (width: 860, blur: 10)
+    social_image
     cover_caption
   }
 }
