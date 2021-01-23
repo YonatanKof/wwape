@@ -74,7 +74,7 @@ export default {
             return coverImage;
         },
         getBaseUrl() {
-            return process.env.GRIDSOME_BASE_URL;
+            return "https://wwape.com"
         },
     },
 };
