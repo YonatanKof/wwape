@@ -74,20 +74,11 @@ export default {
             return coverImage;
         },
         getBaseUrl() {
-            // return process.env.GRIDSOME_BASE_URL;
-            return $static.metadata.siteUrl;
+            return process.env.GRIDSOME_BASE_URL;
         },
     },
 };
 </script>
-
-<static-query>
-query {
-  metadata {
-    siteUrl
-  }
-}
-</static-query>
 
 <page-query>
 query Post ($id: ID!) {
