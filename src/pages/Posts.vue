@@ -60,7 +60,7 @@ export default {
         KofIcon,
     },
     metaInfo: {
-        title: "Posts by Yonatan Ben Knaan",
+        title: "Posts from the World Wide Ape",
     },
 };
 </script>

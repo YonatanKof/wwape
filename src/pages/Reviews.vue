@@ -15,7 +15,7 @@ export default {
         ReviewCard,
     },
     metaInfo: {
-        title: "Review",
+        title: "Reviews from the World Wide Ape",
     },
 };
 </script>

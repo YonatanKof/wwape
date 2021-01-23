@@ -28,7 +28,7 @@ export default {
         Author,
     },
     metaInfo: {
-        title: "Yonatan Ben Knaan",
+        title: "World Wide Ape by Yonatan Ben Knaan",
     },
 };
 </script>

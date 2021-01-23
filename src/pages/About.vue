@@ -62,7 +62,7 @@ export default {
         Hr,
     },
     metaInfo: {
-        title: "About Yonatan Ben Knaan",
+        title: "About Yonatan Ben Knaan of the World Wide Ape",
     },
     data() {
         return {
