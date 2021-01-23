@@ -74,7 +74,7 @@ export default {
             return coverImage;
         },
         getBaseUrl() {
-            return "https://wwape.com"
+            return "https://wwape.com";
         },
     },
 };
