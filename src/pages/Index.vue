@@ -14,7 +14,8 @@
 query {
   metadata {
     siteName,
-    siteDescription
+    siteDescription,
+    siteUrl
   }
 }
 </static-query>
@@ -26,12 +27,24 @@ export default {
     components: {
         Author,
     },
-    // metaInfo: {
-    //     title: "Yonatan Ben Knaan",
-    // },
     metaInfo() {
         return {
-            title: "Yonatan Ben Knaan",
+            title: "Yonatan Ben KKKnaan",
+            meta: [
+                {
+                    name: "description",
+                    content: this.$static.metadata.siteDescription,
+                },
+                { name: "twitter:card", content: "summary_large_image" },
+                {
+                    name: "twitter:description",
+                    content: this.$static.metadata.siteDescription,
+                },
+                { name: "twitter:title", content: this.$static.metadata.siteName},
+                { name: "twitter:site", content: "@yonatankof" },
+                { name: "twitter:image", content: this.$static.metadata.siteUrl  + "static/social-cover-main.jpg" },
+                { name: "twitter:creator", content: "@yonatankof" },
+            ],
         };
     },
 };
