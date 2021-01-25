@@ -52,6 +52,16 @@
     </Layout>
 </template>
 
+<static-query>
+query {
+  metadata {
+    siteName,
+    siteDescription,
+    siteUrl
+  }
+}
+</static-query>
+
 <script>
 import Author from "~/components/Author.vue";
 import Hr from "~/components/Hr.vue";
@@ -61,8 +71,25 @@ export default {
         Author,
         Hr,
     },
-    metaInfo: {
-        title: "About Yonatan Ben Knaan of the World Wide Ape",
+    metaInfo() {
+        return {
+            title: "About page of Yonatan Ben Knaan's website",
+            meta: [
+                {
+                    name: "description",
+                    content: this.$static.metadata.siteDescription,
+                },
+                { name: "twitter:card", content: "summary_large_image" },
+                {
+                    name: "twitter:description",
+                    content: this.$static.metadata.siteDescription,
+                },
+                { name: "twitter:title", content: this.$static.metadata.siteName},
+                { name: "twitter:site", content: "@yonatankof" },
+                { name: "twitter:image", content: "~/assets/images/social-cover-main.png" },
+                { name: "twitter:creator", content: "@yonatankof" },
+            ],
+        };
     },
     data() {
         return {

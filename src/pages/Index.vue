@@ -29,7 +29,7 @@ export default {
     },
     metaInfo() {
         return {
-            title: "Yonatan Ben KKKnaan",
+            title: "Index page of Yonatan Ben Knaan's website",
             meta: [
                 {
                     name: "description",
@@ -42,7 +42,7 @@ export default {
                 },
                 { name: "twitter:title", content: this.$static.metadata.siteName},
                 { name: "twitter:site", content: "@yonatankof" },
-                { name: "twitter:image", content: this.$static.metadata.siteUrl  + "static/social-cover-main.jpg" },
+                { name: "twitter:image", content: this.$static.metadata.siteUrl  + "assets/static/social-cover-main.jpg" },
                 { name: "twitter:creator", content: "@yonatankof" },
             ],
         };
