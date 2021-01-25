@@ -5,8 +5,7 @@
             :show-title="true"
             :author-title="$static.metadata.siteName"
             :show-bio-text="true"
-            author-bio="I help individuals &amp; organizations get 💩 done while keeping it agile &amp; keeping it real. I love creating things from nothing, concepts form conversetions &amp; products from ideas"
-            
+            author-bio='🚨 UNDER CONSTRUCTION 🚨 I help individuals &amp; organizations get 💩 done while keeping it agile &amp; keeping it real. I love creating things from nothing, concepts form conversetions &amp; products from ideas'
         />
     </Layout>
 </template>
@@ -27,8 +26,13 @@ export default {
     components: {
         Author,
     },
-    metaInfo: {
-        title: "Yonatan Ben Knaan",
+    // metaInfo: {
+    //     title: "Yonatan Ben Knaan",
+    // },
+    metaInfo() {
+        return {
+            title: "Yonatan Ben Knaan",
+        };
     },
 };
 </script>
