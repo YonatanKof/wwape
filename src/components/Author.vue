@@ -12,15 +12,6 @@
     </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName,
-    siteDescription
-  }
-}
-</static-query>
-
 <script>
 import IconBase from "~/components/IconBase.vue";
 import KofIcon from "~/components/icons/KofIcon.vue";
