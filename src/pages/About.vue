@@ -86,7 +86,7 @@ export default {
                 },
                 { name: "twitter:title", content: this.$static.metadata.siteName},
                 { name: "twitter:site", content: "@yonatankof" },
-                { name: "twitter:image", content: "../assets/images/social-cover-main.png" },
+                { name: "twitter:image", content: "https://wwape.com/social-cover-main.jpg" },
                 { name: "twitter:creator", content: "@yonatankof" },
             ],
         };
