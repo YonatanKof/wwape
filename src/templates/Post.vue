@@ -75,27 +75,27 @@ export default {
                     content: "@yonatankof",
                 },
                 {
-                    name: "og:url",
+                    property: "og:url",
                     content: this.getPostURL,
                 },
                 {
-                    name: "og:type",
+                    property: "og:type",
                     content: "article",
                 },
                 {
-                    name: "og:title",
+                    property: "og:title",
                     content: this.$page.post.title,
                 },
                 {
-                    name: "og:description",
+                    property: "og:description",
                     content: this.$page.post.description,
                 },
                 {
-                    name: "og:image",
+                    property: "og:image",
                     content: this.getCoverImage,
                 },
                 {
-                    name: "og:image:height",
+                    property: "og:image:height",
                     content: 300,
                 },
             ],
