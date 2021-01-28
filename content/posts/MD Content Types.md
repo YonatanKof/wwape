@@ -1,7 +1,7 @@
 ---
 title: MD Content Types
 author_name: Yonatan Ben Knaan
-urlname: md-content-types
+urlname: markdown-types
 date: 2020-11-12
 updated: 
 published: true
