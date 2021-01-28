@@ -38,8 +38,9 @@ module.exports = {
             options: {
                 typeName: "Post", // Required
                 baseDir: "./content/posts", // Where .md files are located
-                pathPrefix: "/post", // Add route prefix. Optional
+                // pathPrefix: "/post", // Add route prefix. Optional
                 template: "./src/templates/Post.vue", // Optional
+                route: "/post/:urlname", // Using the "urlname" value in greymatter instead of title
                 plugins: [
                     "@gridsome/remark-prismjs",
                     "remark-hint",
