@@ -50,19 +50,59 @@ export default {
                     name: "description",
                     content: this.$page.post.description,
                 },
-                { name: "twitter:card", content: "summary_large_image" },
+                {
+                    name: "twitter:card",
+                    content: "summary_large_image",
+                },
                 {
                     name: "twitter:description",
                     content: this.$page.post.description,
                 },
-                { name: "twitter:title", content: this.$page.post.title },
-                { name: "twitter:site", content: "@yonatankof" },
-                { name: "twitter:image", content: this.getCoverImage },
-                { name: "twitter:creator", content: "@yonatankof" },
+                {
+                    name: "twitter:title",
+                    content: this.$page.post.title,
+                },
+                {
+                    name: "twitter:site",
+                    content: "@yonatankof",
+                },
+                {
+                    name: "twitter:image",
+                    content: this.getCoverImage,
+                },
+                {
+                    name: "twitter:creator",
+                    content: "@yonatankof",
+                },
+                {
+                    name: "og:url",
+                    content: this.getPostURL,
+                },
+                {
+                    name: "og:type",
+                    content: "article",
+                },
+                {
+                    name: "og:title",
+                    content: this.$page.post.title,
+                },
+                {
+                    name: "og:description",
+                    content: this.$page.post.description,
+                },
+                {
+                    name: "og:image",
+                    content: this.getCoverImage,
+                },
+                {
+                    name: "og:image:height",
+                    content: 300,
+                },
             ],
         };
     },
     computed: {
+        // * Build social image URL
         getCoverImage() {
             let coverImage = "";
             const cover = this.$page.post.social_image;
@@ -73,6 +113,15 @@ export default {
             }
             return coverImage;
         },
+        // * Build the post URL
+        // TODO: Find better solution for the "/post/" (what if I change it tomorrow?)
+        getPostURL() {
+            let fullPostURL = `${this.getBaseUrl}/post/${
+                this.$page.post.urlname
+            }`;
+            return fullPostURL;
+        },
+        // TODO: Find better solution - probably .env file
         getBaseUrl() {
             return "https://wwape.com";
         },
@@ -84,7 +133,7 @@ export default {
 query Post ($id: ID!) {
   post: post (id: $id) {
     title
-    path
+    urlname
     author_name
     date (format: "MMM D, YYYY")
     # timeToRead
