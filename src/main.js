@@ -14,7 +14,7 @@ export default function(Vue, { router, head, isClient }) {
         src: "https://cdn.splitbee.io/sb.js",
     });
     head.meta.push(
-        { name: "keywords", content: "Design,Web,UX,Philosophy" },
+        { name: "keywords", content: "Design, Web, UX, Philosophy" },
         { name: "author", content: "Yonatan Ben Knaan" }
     );
 }
