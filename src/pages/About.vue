@@ -73,26 +73,86 @@ export default {
     },
     metaInfo() {
         return {
-            title: "About page of Yonatan Ben Knaan's website",
+            title: `About page for ${this.$static.metadata.siteName}, ${
+                process.env.GRIDSOME_AUTHOR
+            }'s website`,
+            link: [
+                {
+                    rel: "canonical",
+                    href: `${this.$static.metadata.siteUrl}about`,
+                },
+            ],
             meta: [
                 {
                     name: "description",
-                    content: this.$static.metadata.siteDescription,
+                    content: this.$data.about,
                 },
-                { name: "twitter:card", content: "summary_large_image" },
+                {
+                    name: "twitter:card",
+                    content: "summary_large_image",
+                },
                 {
                     name: "twitter:description",
-                    content: this.$static.metadata.siteDescription,
+                    content: this.$data.about,
                 },
-                { name: "twitter:title", content: this.$static.metadata.siteName},
-                { name: "twitter:site", content: "@yonatankof" },
-                { name: "twitter:image", content: "https://wwape.com/social-cover-main.jpg" },
-                { name: "twitter:creator", content: "@yonatankof" },
+                {
+                    name: "twitter:title",
+                    content: this.$static.metadata.siteName,
+                },
+                {
+                    name: "twitter:site",
+                    content: "@yonatankof",
+                },
+                {
+                    name: "twitter:image",
+                    content: `${process.env.GRIDSOME_BASE_URL}social-cover-about.jpg`,
+                },
+                {
+                    name: "twitter:creator",
+                    content: "@yonatankof",
+                },
+                {
+                    property: "og:url",
+                    content: this.$static.metadata.siteUrl + "about",
+                },
+                {
+                    property: "og:type",
+                    content: "website",
+                },
+                {
+                    property: "og:title",
+                    content: this.$static.metadata.siteName,
+                },
+                {
+                    property: "og:description",
+                    content: this.$data.about,
+                },
+                {
+                    property: "og:image",
+                    content: `${process.env.GRIDSOME_BASE_URL}social-cover-about.jpg`,
+                },
+                {
+                    property: "og:image:width",
+                    content: 600,
+                },
+                {
+                    property: "og:image:height",
+                    content: 315,
+                },
+                {
+                    property: "og:image:alt",
+                    content: `Cover image for this About page showing the name (${
+                        this.$static.metadata.siteName
+                    }), author name (About ${
+                        process.env.GRIDSOME_AUTHOR
+                    }) and Kof icon`,
+                },
             ],
         };
     },
     data() {
         return {
+            about: `Wanna get to know ${process.env.GRIDSOME_AUTHOR}? Good, your in the right place! For this is the About page`,
             infos: {
                 Age: 41,
                 Status: "Married +1* + Cat + Dog",

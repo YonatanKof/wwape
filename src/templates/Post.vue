@@ -130,14 +130,13 @@ export default {
         // * Build the post URL
         // TODO: Find better solution for the "/post/" (what if I change it tomorrow?)
         getPostURL() {
-            let fullPostURL = `${this.getBaseUrl}/post/${
+            let fullPostURL = `${this.getBaseUrl}post/${
                 this.$page.post.urlname
             }`;
             return fullPostURL;
         },
-        // TODO: Find better solution - probably .env file
         getBaseUrl() {
-            return "https://wwape.com";
+            return process.env.GRIDSOME_BASE_URL;
         },
     },
 };

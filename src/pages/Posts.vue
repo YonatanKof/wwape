@@ -59,8 +59,92 @@ export default {
         IconBase,
         KofIcon,
     },
-    metaInfo: {
-        title: "Posts from the World Wide Ape",
+    data() {
+        return {
+          about: `I like to write and this is where I do it. In this Posts page you'll be able to see and filter all of my published writings on the ${process.env.GRIDSOME_SITE_NAME}`,
+          postTitle: `Post feed page for ${process.env.GRIDSOME_SITE_NAME}, ${process.env.GRIDSOME_AUTHOR}'s website`
+        };
+    },
+    metaInfo() {
+        return {
+            title: this.$data.postTitle,
+            link: [
+                {
+                    rel: "canonical",
+                    href: `${process.env.GRIDSOME_BASE_URL}posts`,
+                },
+            ],
+            meta: [
+                {
+                    name: "description",
+                    content: this.$data.about,
+                },
+                {
+                    name: "twitter:card",
+                    content: "summary_large_image",
+                },
+                {
+                    name: "twitter:description",
+                    content: this.$data.about,
+                },
+                {
+                    name: "twitter:title",
+                    content: this.$data.postTitle,
+                },
+                {
+                    name: "twitter:site",
+                    content: "@yonatankof",
+                },
+                {
+                    name: "twitter:image",
+                    content: `${
+                        process.env.GRIDSOME_BASE_URL
+                    }social-cover-posts.jpg`,
+                },
+                {
+                    name: "twitter:creator",
+                    content: "@yonatankof",
+                },
+                {
+                    property: "og:url",
+                    content: process.env.GRIDSOME_BASE_URL + "about",
+                },
+                {
+                    property: "og:type",
+                    content: "website",
+                },
+                {
+                    property: "og:title",
+                    content: this.$data.postTitle,
+                },
+                {
+                    property: "og:description",
+                    content: this.$data.about,
+                },
+                {
+                    property: "og:image",
+                    content: `${
+                        process.env.GRIDSOME_BASE_URL
+                    }social-cover-about.jpg`,
+                },
+                {
+                    property: "og:image:width",
+                    content: 600,
+                },
+                {
+                    property: "og:image:height",
+                    content: 315,
+                },
+                {
+                    property: "og:image:alt",
+                    content: `Cover image for this Posts page showing the name (${
+                        process.env.GRIDSOME_SITE_NAME
+                    }), author name (Posts By ${
+                        process.env.GRIDSOME_AUTHOR
+                    }) and Kof icon`,
+                },
+            ],
+        };
     },
 };
 </script>
