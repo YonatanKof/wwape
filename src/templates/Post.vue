@@ -45,6 +45,12 @@ export default {
     metaInfo() {
         return {
             title: this.$page.post.title + " by " + this.$page.post.author_name,
+            link: [
+                {
+                    rel: "canonical",
+                    href: this.getPostURL,
+                },
+            ],
             meta: [
                 {
                     name: "description",
@@ -95,8 +101,16 @@ export default {
                     content: this.getCoverImage,
                 },
                 {
+                    property: "og:image:width",
+                    content: 600,
+                },
+                {
                     property: "og:image:height",
-                    content: 300,
+                    content: 315,
+                },
+                {
+                    property: "og:image:alt",
+                    content: this.$page.post.cover_caption,
                 },
             ],
         };
