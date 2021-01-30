@@ -1,5 +1,5 @@
 ---
-title: Shortcuts for Sketch App
+title: Plugin Shortcuts for Sketch App
 author_name: Yonatan Ben Knaan
 urlname: shortcuts-for-sketch
 date: 2020-07-12
@@ -7,9 +7,9 @@ updated: 2019-02-06
 published: true
 tags: ['Sketch','Productivity', 'Shortcuts']
 cover_image: ./sketchSC/Cover-sketchSC.svg
-cover_caption: Rectangles moving in an orderly fashion affecting one another
-canonical_url: false
-description: How to create, edit or remove shortcuts for a Sketch plugins
+cover_caption: A long and short way to reach from point A to B
+canonical_url: true
+description: Better Sketch App workflow with shortcuts – How to create, edit or remove shortcuts for Sketch plugins using JSON file
 ---
 
 There's a thing you're doing all day long - moving your hands and cursor to control your apps - When you add up all these small movements you'll quickly end up whit a big wasteful repetition. You might have missed it because it's small. You might haven't deal with it because you don't know how - Whatever the reason you've let it slide, it's a wast of your time and **this post is for you!** 
