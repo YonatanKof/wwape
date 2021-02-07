@@ -79,7 +79,7 @@ export default {
             link: [
                 {
                     rel: "canonical",
-                    href: `${this.$static.metadata.siteUrl}about`,
+                    href: process.env.GRIDSOME_BASE_URL,
                 },
             ],
             meta: [
@@ -141,11 +141,11 @@ export default {
                 },
                 {
                     property: "og:image:alt",
-                    content: `Cover image for this About page showing the name (${
-                        this.$static.metadata.siteName
-                    }), author name (About ${
+                    content: `Cover image for this About page showing the Website name (${
+                        process.env.GRIDSOME_SITE_NAME
+                    }), the page name (About ${
                         process.env.GRIDSOME_AUTHOR
-                    }) and Kof icon`,
+                    }) and the Kof icon`,
                 },
             ],
         };

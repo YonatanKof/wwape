@@ -95,11 +95,11 @@ export default {
                 },
                 {
                     property: "og:image:alt",
-                    content: `Cover image for this website showing the name (${
-                        this.$static.metadata.siteName
+                    content: `Cover image for this website showing the Website name (${
+                        process.env.GRIDSOME_SITE_NAME
                     }), author name (${
                         process.env.GRIDSOME_AUTHOR
-                    }) and icon`,
+                    }) and the Kof icon`,
                 },
             ],
         };

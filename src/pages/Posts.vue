@@ -71,7 +71,7 @@ export default {
             link: [
                 {
                     rel: "canonical",
-                    href: `${process.env.GRIDSOME_BASE_URL}posts`,
+                    href: process.env.GRIDSOME_BASE_URL,
                 },
             ],
             meta: [
@@ -137,11 +137,11 @@ export default {
                 },
                 {
                     property: "og:image:alt",
-                    content: `Cover image for this Posts page showing the name (${
+                    content: `Cover image for this Posts page showing the Website name (${
                         process.env.GRIDSOME_SITE_NAME
-                    }), author name (Posts By ${
+                    }), the page name (Posts By ${
                         process.env.GRIDSOME_AUTHOR
-                    }) and Kof icon`,
+                    }) and the Kof icon`,
                 },
             ],
         };
