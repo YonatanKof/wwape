@@ -44,6 +44,7 @@ export default {
     },
     metaInfo() {
         return {
+            keywords: this.$page.post.tags,
             title: this.$page.post.title + " by " + this.$page.post.author_name,
             link: [
                 {
@@ -138,6 +139,17 @@ export default {
         getBaseUrl() {
             return process.env.GRIDSOME_BASE_URL;
         },
+        // TODO: get keywords form Tags in page-query
+        // Something like this
+        // { name: "keywords", content: "Design, Web, UX, Philosophy" }
+        // To something like that
+        // <g-link
+        //     v-for="tag in $page.post.tags"
+        //     :key="tag.id"
+        //     :to="tag.path"
+        // >
+        //     # {{ tag.id }}
+        // </g-link>
     },
 };
 </script>
