@@ -27,6 +27,19 @@ module.exports = {
         {
             use: "@gridsome/vue-remark",
             options: {
+                typeName: "Design", // Required
+                baseDir: "./content/designs", // Where .md files are located
+                pathPrefix: "/design", // Add route prefix. Optional
+                template: "./src/templates/Design.vue", // Optional
+                plugins: [],
+                refs: {
+                    tags: "Tag",
+                },
+            },
+        },
+        {
+            use: "@gridsome/vue-remark",
+            options: {
                 typeName: "Tag",
                 baseDir: "./content/tags",
                 pathPrefix: "/tag",
