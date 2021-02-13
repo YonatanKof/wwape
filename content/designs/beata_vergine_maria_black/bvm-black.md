@@ -2,13 +2,14 @@
 title: Nera Beata Vergine Maria
 author_name: Yonatan Ben Knaan
 urlname: bvm-nera
-date: 2020-12-16
-updated: 2020-12-16
+date: 2018-07-18
+updated: 2018-07-18
 published: true
 tags: ['Creative']
 cover_image: ./BVM-her-hands-and-man.jpg
-cover_caption: Some text here
-description: Some text here
+social_image: ./BVM-her-hands-and-man.jpg
+cover_caption: The hands of BVM holding the father
+description: Sweet Mary, black fragments made the world
 canonical_url: false
 series: false
 ---
