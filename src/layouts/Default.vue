@@ -7,6 +7,7 @@
             <div class="header__end">
                 <g-link class="nav__link" to="/about/">About</g-link>
                 <g-link class="nav__link" to="/posts/">Posts</g-link>
+                <g-link class="nav__link" to="/designs/">Designs</g-link>
                 <!-- <g-link class="nav__link" to="/reviews/">Reviews</g-link> -->
             </div>
         </header>

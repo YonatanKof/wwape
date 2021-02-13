@@ -29,8 +29,8 @@ module.exports = {
             options: {
                 typeName: "Design", // Required
                 baseDir: "./content/designs", // Where .md files are located
-                pathPrefix: "/design", // Add route prefix. Optional
                 template: "./src/templates/Design.vue", // Optional
+                route: "/design/:urlname", // Using the "urlname" value in greymatter instead of title
                 plugins: [],
                 refs: {
                     tags: "Tag",
