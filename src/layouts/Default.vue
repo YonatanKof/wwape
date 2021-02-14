@@ -15,12 +15,28 @@
         </main>
         <footer class="footer">
             <p class="footer__links">
-                <a href="//twitter.com/yonatankof" target="_blank">Twitter</a>
-                <a href="//github.com/yonatankof" target="_blank">GitHub</a>
-                <a href="//linkedin.com/in/yonatankof/" target="_blank"
+                <a
+                    href="//twitter.com/yonatankof"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    >Twitter</a
+                >
+                <a
+                    href="//github.com/yonatankof"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    >GitHub</a
+                >
+                <a
+                    href="//linkedin.com/in/yonatankof/"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
                     >Linkedin</a
                 >
-                <a href="//dribbble.com/yonatan_kof" target="_blank"
+                <a
+                    href="//dribbble.com/yonatan_kof"
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
                     >Dribbble</a
                 >
                 <ToggleTheme />
