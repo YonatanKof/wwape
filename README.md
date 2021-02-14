@@ -1,6 +1,6 @@
 # wwpae 🦧
 
-A site build with **gridsome** and **vue-remark**
+A site build with **gridsome** and **vue-remark**  
 Use `gridsome develop` to start `⊂(◉‿◉)つ`
 
 > Try the live site on the [World Wide Ape](https://wwape.com/)
