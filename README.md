@@ -1,13 +1,8 @@
-# Kof'R'us 🦧
+# wwpae 🦧
 
-A site build with **gridsome** and **vue-remark**.  
-Use `gridsome develop` to start.
+A site build with **gridsome** and **vue-remark**
+Use `gridsome develop` to start `⊂(◉‿◉)つ`
 
-> Try it on [kofrus-dev.netlify.app](https://kofrus-dev.netlify.app/)
+> Try the live site on the [World Wide Ape](https://wwape.com/)
 
-```
-  /~\    כשהקוף
- C oo    טוב
- _( ^)   הכל
- / ~~ \  טוב
-```
+> Or in dev environment at [kofrus-dev.netlify.app](https://wwape-dev.netlify.app/)
