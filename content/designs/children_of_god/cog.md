@@ -6,7 +6,7 @@ date: 2007-10-03
 updated: 2013-05-13
 published: true
 tags: ['Creative']
-cover_image: ./COG.jpg
+cover_image: ./COG-long.jpg
 social_image: ./COG.jpg
 cover_caption: Arabic lettering saying "We are all children of god"
 description: We are all children of god
