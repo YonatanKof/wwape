@@ -1,27 +1,25 @@
 <template>
     <div
-        class="post-card"
+        class="content-box post-card"
         :class="{ 'post-card--has-poster': postdata.poster }"
     >
-        <div class="post-card__header">
-            <g-image
-                alt="Cover image"
-                v-if="postdata.cover_image"
-                class="-content-box-image"
-                :src="postdata.cover_image"
-            />
-        </div>
-        <div class="post-card__content">
-            <h3 class="post-card__title" v-html="postdata.title" />
-            <p class="post-card__description" v-html="postdata.description" />
-            <PostMeta class="post-card__meta" :postmeta="postdata" />
+        <g-image
+            alt="Cover image"
+            v-if="postdata.cover_image"
+            class="-image"
+            :src="postdata.cover_image"
+        />
+        <div class="-content">
+            <h3 class="-title" v-html="postdata.title" />
+            <p class="-description" v-html="postdata.description" />
+            <PostMeta class="-meta" :postmeta="postdata" />
             <PostTags
                 v-if="postdata.tags"
-                class="post-card__tags"
+                class="-tags"
                 :posttags="postdata"
             />
         </div>
-        <g-link class="post-card__link" :to="postdata.path"></g-link>
+        <g-link class="-link" :to="postdata.path"></g-link>
     </div>
 </template>
 
@@ -43,8 +41,7 @@ export default {
 
 .post-card {
     @include content-box($display-size-xs);
-    @include content-box-hover;
-    
+    @include content-box-Hover;
     margin-bottom: var(--content-space);
     &:last-child {
         margin-bottom: 0;
@@ -52,20 +49,17 @@ export default {
     p {
         line-height: 1.5em;
     }
-    &__header {
-        @include content-box-image($display-size-xs);
+    > .-link {
+        /* @include content-box-Link; */
     }
-    &__title {
+    > .-title {
         margin-top: 0;
     }
-    &__tags {
+    > .-tags {
         z-index: 1;
         position: relative;
     }
-    &__link {
-        @include content-box-Link;
-    }
-    &__content {
+    > .-content {
         padding: var(--space-lg);
     }
 }
