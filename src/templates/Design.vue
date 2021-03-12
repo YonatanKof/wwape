@@ -25,10 +25,7 @@ export default {
 query Design ($id: ID!) {
   design: design (id: $id) {
     title
-    urlname
-    author_name
-    cover_image (width: 800, blur: 10)
-    cover_caption
+    description
   }
 }
 </page-query>

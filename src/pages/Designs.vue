@@ -6,11 +6,13 @@
             :show-bio-text="true"
             author-bio="Some designs by the kof himself"
         />
-        <DesignCard
-            v-for="edge in $page.designs.edges"
-            :key="edge.node.id"
-            :designData="edge.node"
-        />
+        <div class="design-grid">
+            <DesignCard
+                v-for="edge in $page.designs.edges"
+                :key="edge.node.id"
+                :designData="edge.node"
+            />
+        </div>
     </Layout>
 </template>
 
@@ -22,8 +24,7 @@ query {
         id
         title
         path
-        author_name
-        cover_image (width: 800, blur: 10)
+        cover_image (width: 900, quality: 90, blur: 10, background: "#999")
         cover_caption
       }
     }
@@ -42,3 +43,20 @@ export default {
     },
 };
 </script>
+
+<style lang="scss">
+@import "../assets/style/_layout.scss";
+
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    max-width: var(--content-width-md);
+    @include mQ-max($display-size-sm) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include mQ-max($display-size-xs) {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
