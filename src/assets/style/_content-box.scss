@@ -8,20 +8,21 @@
     margin: 0 auto;
     border-radius: var(--radius);
     box-shadow: $shadow-sm;
-    transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.25s;
+    overflow: hidden;
     @include mQ-max($collapse-size) {
         margin-inline-start: calc(var(--content-space) * -1);
         margin-inline-end: calc(var(--content-space) * -1);
         border-radius: 0;
     }
-}
-
-@mixin content-box-image($collapse-size) {
-    overflow: hidden;
-    img {
+    .-content-box-image { 
         background-color: var(--bg-color);
         min-width: 100%;
+        display: flow-root;
     }
+}
+
+// This one is for "post-card__header"
+@mixin content-box-image($collapse-size) {
     border-radius: var(--radius) var(--radius) 0 0;
     &:empty {
         display: none;
@@ -29,4 +30,12 @@
     @include mQ-max($collapse-size) {
         border-radius: 0;
     }
+}
+
+@mixin content-box-hover {
+    transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.25s;
+    &:hover {
+        transform: translateY(calc(var(--space-3xs) * -1));
+        box-shadow: $shadow-md;
+    }   
 }
