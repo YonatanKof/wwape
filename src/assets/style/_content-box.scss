@@ -5,23 +5,26 @@
 @mixin content-box($collapse-size) {
     background-color: var(--bg-content);
     max-width: var(--content-width-sm);
+    height: max-content;
     margin: 0 auto;
     border-radius: var(--radius);
     box-shadow: $shadow-sm;
     overflow: hidden;
+    position: relative;
     @include mQ-max($collapse-size) {
         margin-inline-start: calc(var(--content-space) * -1);
         margin-inline-end: calc(var(--content-space) * -1);
         border-radius: 0;
     }
-    .-content-box-image { 
+    // Add this class to the IMG tag
+    .-content-box-image {
         background-color: var(--bg-color);
         min-width: 100%;
         display: flow-root;
     }
 }
 
-// This one is for "post-card__header"
+// This one is for "post-card__header", if any
 @mixin content-box-image($collapse-size) {
     border-radius: var(--radius) var(--radius) 0 0;
     &:empty {
@@ -32,10 +35,22 @@
     }
 }
 
+// When used for clickable cards
 @mixin content-box-hover {
     transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.25s;
     &:hover {
         transform: translateY(calc(var(--space-3xs) * -1));
         box-shadow: $shadow-md;
-    }   
+    }
+}
+@mixin content-box-Link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    z-index: 0;
 }
