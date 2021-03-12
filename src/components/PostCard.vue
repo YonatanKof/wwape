@@ -7,7 +7,7 @@
             <g-image
                 alt="Cover image"
                 v-if="postdata.cover_image"
-                class="post-card__image"
+                class="-content-box-image"
                 :src="postdata.cover_image"
             />
         </div>
@@ -43,23 +43,17 @@ export default {
 
 .post-card {
     @include content-box($display-size-xs);
-    position: relative;
-    margin-bottom: var(--content-space);
+    @include content-box-hover;
+    
+    margin-bottom: var(--wcontent-space);
     &:last-child {
         margin-bottom: 0;
     }
     p {
         line-height: 1.5em;
     }
-    &:hover {
-        transform: translateY(calc(var(--space-3xs) * -1));
-        box-shadow: $shadow-md;
-    }
     &__header {
         @include content-box-image($display-size-xs);
-    }
-    &__image {
-        min-width: 100%;
     }
     &__title {
         margin-top: 0;
@@ -69,15 +63,7 @@ export default {
         position: relative;
     }
     &__link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        overflow: hidden;
-        text-indent: -9999px;
-        z-index: 0;
+        @include content-box-Link;
     }
     &__content {
         padding: var(--space-lg);

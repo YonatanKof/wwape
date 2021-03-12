@@ -12,7 +12,7 @@
         </div>
         <div class="post">
             <div class="post__header">
-                <g-image
+                <g-image class="-content-box-image"
                     v-if="$page.post.cover_image"
                     :src="$page.post.cover_image"
                     :alt="$page.post.cover_caption"
