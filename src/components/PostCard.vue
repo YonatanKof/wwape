@@ -45,7 +45,7 @@ export default {
     @include content-box($display-size-xs);
     @include content-box-hover;
     
-    margin-bottom: var(--wcontent-space);
+    margin-bottom: var(--content-space);
     &:last-child {
         margin-bottom: 0;
     }
