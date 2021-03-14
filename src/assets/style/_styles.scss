@@ -33,14 +33,6 @@ body {
     --spacem-6xl: calc(4 * var(--spacem-base)); // 64px;
     --spacem-7xl: calc(5 * var(--spacem-base)); // 80px;
     --spacem-8xl: calc(6 * var(--spacem-base)); // 96px
-
-    // Sizes
-    --space: var(--space-2xl); // to dapracate!
-    --content-width-sm: 768px;
-    --content-width-md: 860px;
-    --content-space: var(--space-2xl);
-    --header-height: var(--space-7xl);
-    --radius: .3em;
 }
 
 body {

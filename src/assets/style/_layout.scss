@@ -5,6 +5,16 @@ $display-size-md: 960px;
 $display-size-sm: 720px;
 $display-size-xs: 480px;
 
+body {
+    --space: var(--space-2xl); // to dapracate!
+    --content-width-sm: 768px;
+    --content-width-md: 880px;
+    --content-width-lg: 1120px;
+    --content-space: var(--space-2xl);
+    --header-height: var(--space-7xl);
+    --radius: 0.3em;
+}
+
 // Width mixins
 @mixin main-padding {
     padding-inline-start: calc(max(2rem, env(safe-area-inset-left)));
