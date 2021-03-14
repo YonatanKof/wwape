@@ -14,11 +14,15 @@ canonical_url: false
 series: false
 ---
 
-Man made tale – Man is male
 
 ![bvm](./BVM-her-face.jpg)
+*A Man Made Tale*
+
 ![bvm](./BVM-her-flower.jpg)
+*Man is Male*
+
 ![bvm](./BVM-her-hands-and-man.jpg)
+*Hand Made*
 
 
 

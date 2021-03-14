@@ -15,4 +15,8 @@ series: false
 ---
 
 ![Fishbone](./1-Fishbone.svg)
+*A bony fish*
+
 ![Fishbone](./2-Fishbone.svg)
+*Like a [Drawer Tower](https://archiveofaffinities.tumblr.com/post/633871984288235520/moshe-lufenfeld-and-giora-gammerman-the-drawer) by Moshe Lupenfeld and Giora Gamerman*
+
