@@ -30,7 +30,8 @@ export default {
     @include content-box-Hover;
     > .-title {
         text-align: center;
-        margin: var(--space-sm);
+        margin: var(--space-md);
+        margin-top: var(--space-xl);
         font-size: var(--font-size-lg);
     }
 }

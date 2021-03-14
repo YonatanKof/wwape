@@ -6,7 +6,11 @@
             :show-bio-text="true"
             v-bind:author-bio="$page.design.description"
         />
-        <VueRemarkContent />
+        <main class="design-body">
+            <section class="-content">
+                <VueRemarkContent />
+            </section>
+        </main>
     </Layout>
 </template>
 
@@ -17,7 +21,6 @@ export default {
     components: {
         Author,
     },
-  
 };
 </script>
 
@@ -29,3 +32,14 @@ query Design ($id: ID!) {
   }
 }
 </page-query>
+
+<style lang="scss">
+@import "../assets/style/_content-box.scss";
+@import "../assets/style/_content-main.scss";
+@import "../assets/style/_layout.scss";
+.design-body {
+    @include content-box($display-size-sm);
+    @include content-main;
+    max-width: $display-size-md;
+}
+</style>
