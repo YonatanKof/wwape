@@ -41,6 +41,95 @@ export default {
         Author,
         DesignCard,
     },
+
+    data() {
+        return {
+          about: `I like to illustarte and to design, and here is where its at. In this Desisgns page you'll be able to see stuff I'm uploading to the ${process.env.GRIDSOME_SITE_NAME}`,
+          postTitle: `Illustations and designs by ${process.env.GRIDSOME_AUTHOR}`,
+          pageName: 'designs',
+        };
+    },
+    metaInfo() {
+        return {
+            title: this.$data.postTitle,
+            link: [
+                {
+                    rel: "canonical",
+                    href: process.env.GRIDSOME_BASE_URL,
+                },
+            ],
+            meta: [
+                {
+                    name: "description",
+                    content: this.$data.about,
+                },
+                {
+                    name: "twitter:card",
+                    content: "summary_large_image",
+                },
+                {
+                    name: "twitter:description",
+                    content: this.$data.about,
+                },
+                {
+                    name: "twitter:title",
+                    content: this.$data.postTitle,
+                },
+                {
+                    name: "twitter:site",
+                    content: "@yonatankof",
+                },
+                {
+                    name: "twitter:image",
+                    content: `${
+                        process.env.GRIDSOME_BASE_URL
+                    }social-cover-${this.$data.pageName}.jpg`,
+                },
+                {
+                    name: "twitter:creator",
+                    content: "@yonatankof",
+                },
+                {
+                    property: "og:url",
+                    content: process.env.GRIDSOME_BASE_URL + this.$data.pageName,
+                },
+                {
+                    property: "og:type",
+                    content: "website",
+                },
+                {
+                    property: "og:title",
+                    content: this.$data.postTitle,
+                },
+                {
+                    property: "og:description",
+                    content: this.$data.about,
+                },
+                {
+                    property: "og:image",
+                    content: `${
+                        process.env.GRIDSOME_BASE_URL
+                    }social-cover-${this.$data.pageName}.jpg`,
+                },
+                {
+                    property: "og:image:width",
+                    content: 600,
+                },
+                {
+                    property: "og:image:height",
+                    content: 315,
+                },
+                {
+                    property: "og:image:alt",
+                    content: `Cover image for this ${this.$data.pageName} page showing the Website name (${
+                        process.env.GRIDSOME_SITE_NAME
+                    }), page name (${this.$data.pageName} By ${
+                        process.env.GRIDSOME_AUTHOR
+                    }) and the Kof icon`,
+                },
+            ],
+        };
+    },
 };
 </script>
 
