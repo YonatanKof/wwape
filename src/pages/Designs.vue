@@ -109,7 +109,7 @@ export default {
                     property: "og:image",
                     content: `${
                         process.env.GRIDSOME_BASE_URL
-                    }social-cover-${this.$data.pageName}.jpg`,
+                    }/social-cover-${this.$data.pageName}.jpg`,
                 },
                 {
                     property: "og:image:width",

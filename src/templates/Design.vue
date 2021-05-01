@@ -27,7 +27,7 @@ export default {
             link: [
                 {
                     rel: "canonical",
-                    href: process.env.GRIDSOME_BASE_URL + "design/" + this.$page.design.urlname,
+                    href: process.env.GRIDSOME_BASE_URL + "/design/" + this.$page.design.urlname,
                 },
             ],
             meta: [
@@ -61,7 +61,7 @@ export default {
                 },
                 {
                     property: "og:url",
-                    content: process.env.GRIDSOME_BASE_URL + "design/" + this.$page.design.urlname,
+                    content: process.env.GRIDSOME_BASE_URL + "/design/" + this.$page.design.urlname,
                 },
                 {
                     property: "og:type",
