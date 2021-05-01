@@ -73,8 +73,8 @@ export default {
 				},
 				{
 					name: "twitter:image",
-					content: this.getPostCoverImage,
-					// content: process.env.GRsIDSOME_BASE_URL + this.$page.post.social_image?.src,
+					// content: this.getPostCoverImage,
+					content: process.env.GRIDSOME_BASE_URL + this.$page.post.social_image.src,
 				},
 				{
 					name: "twitter:creator",
@@ -98,7 +98,8 @@ export default {
 				},
 				{
 					property: "og:image",
-					content: this.getPostCoverImage,
+					content: process.env.GRIDSOME_BASE_URL + this.$page.post.social_image.src,
+					
 				},
 				{
 					property: "og:image:width",
@@ -114,26 +115,6 @@ export default {
 				},
 			],
 		};
-	},
-	computed: {
-		// * Build social image URL
-		getPostCoverImage() {
-            let coverImage = "";
-            const cover = this.$page.post.social_image;
-            if (cover != null) {
-                coverImage = `${this.getBaseUrl}${this.$page.post.social_image.src}`;
-            }
-            return coverImage;
-        },
-        // * Build the post URL
-        // TODO: Find better solution for the "/post/" (what if I change it tomorrow?)
-        getPostURL() {
-            let fullPostURL = `${this.getBaseUrl}post/${this.$page.post.urlname}`;
-            return fullPostURL;
-        },
-        getBaseUrl() {
-            return process.env.GRIDSOME_BASE_URL;
-        },
 	},
 };
 </script>
