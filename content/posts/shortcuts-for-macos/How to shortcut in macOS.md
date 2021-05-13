@@ -6,8 +6,8 @@ date: 2020-09-20
 updated: 2020-11-19
 published: true
 tags: ['macOS', 'Shortcuts', 'Sketch', 'Productivity']
-cover_image: ./shortcuts-for-macos/Cover-Shortcuts.svg
-social_image: ./shortcuts-for-macos/Social-Shortcuts.png
+cover_image: ./Cover-Shortcuts.svg
+social_image: ./social-cover-shortcuts-for-macos.jpg
 cover_caption: Screen shot of Mac keyboard shortcuts page on Apple support
 description: How to create, edit or remove shortcuts for a macOS
 canonical_url: false
@@ -127,40 +127,40 @@ Well, that's all for today. See you in the next post when we'll deal with the Sk
 
 ## This blogs images 
 
-[^fig-merge-windows]: Scattered finder windows (top left) merged into one ![An example of scattered finder windows](./shortcuts-for-macos/Merge_All_Windows.png)
+[^fig-merge-windows]: Scattered finder windows (top left) merged into one ![An example of scattered finder windows](./Merge_All_Windows.png)
  
 
-[^fig-spot]: macOS Spotlight Search ![macOS Spotlight Search](./shortcuts-for-macos/Extra-Spotlight_Search.png)
+[^fig-spot]: macOS Spotlight Search ![macOS Spotlight Search](./Extra-Spotlight_Search.png)
  
 
-[^fig-apple_menu]: The Apple menu - You can fine the preferences menu here ![The Apple menu - You can fine the preferences menu here](./shortcuts-for-macos/Extra-Apple_Menu.png)
+[^fig-apple_menu]: The Apple menu - You can fine the preferences menu here ![The Apple menu - You can fine the preferences menu here](./Extra-Apple_Menu.png)
 
 
-[^fig-keyOS]: macOS Keyboard Shortcut Manager ![macOS Keyboard Shortcut Manager](./shortcuts-for-macos/MasOS-Shortcut_Manager.png)
+[^fig-keyOS]: macOS Keyboard Shortcut Manager ![macOS Keyboard Shortcut Manager](./MasOS-Shortcut_Manager.png)
 
 
-[^fig-prompt]: A prompt widow to add command to an app ![A prompt widow to add command to an app](./shortcuts-for-macos/MasOS-Add_Shortcut_Prompt.png)
+[^fig-prompt]: A prompt widow to add command to an app ![A prompt widow to add command to an app](./MasOS-Add_Shortcut_Prompt.png)
 
 
-[^fig-filled-prompt]: Added the command name and shortcut in the prompt ![Added the command name and shortcut in the prompt](./shortcuts-for-macos/MasOS-Filled_Prompt.png)
+[^fig-filled-prompt]: Added the command name and shortcut in the prompt ![Added the command name and shortcut in the prompt](./MasOS-Filled_Prompt.png)
 
 
-[^fig-pick-app]: Make the shortcut specific by selecting an app ![Make the shortcut specific by selecting an app](./shortcuts-for-macos/MasOS-Shortcut_Pick_App.png)
+[^fig-pick-app]: Make the shortcut specific by selecting an app ![Make the shortcut specific by selecting an app](./MasOS-Shortcut_Pick_App.png)
 
 
-[^fig-unique]: An example of a unique command using a the command’s path ![An example of a unique command using a the command’s path](./shortcuts-for-macos/MasOS-Shortcut_Manager_Full.png)
+[^fig-unique]: An example of a unique command using a the command’s path ![An example of a unique command using a the command’s path](./MasOS-Shortcut_Manager_Full.png)
 
 
-[^fig-comma]: Comma plugin banner taken form their Github Page ![Comma plugin banner taken form their Github Page](./shortcuts-for-macos/Comma_plugin.png)
+[^fig-comma]: Comma plugin banner taken form their Github Page ![Comma plugin banner taken form their Github Page](./Comma_plugin.png)
 
 
-[^fig-Menu_left]: The two Left commands ![The two Left commands](./shortcuts-for-macos/Sketch_Menu_Left.png)
+[^fig-Menu_left]: The two Left commands ![The two Left commands](./Sketch_Menu_Left.png)
 
 
-[^fig-Karabiner]: The Karabiner app on the Complex modification tab - An Empty state ![The Karabiner app on the Complex modification tab - An Empty state](./shortcuts-for-macos/Karabiner_Elements-01-Complex_modification_tab.png)
+[^fig-Karabiner]: The Karabiner app on the Complex modification tab - An Empty state ![The Karabiner app on the Complex modification tab - An Empty state](./Karabiner_Elements-01-Complex_modification_tab.png)
 
 
-[^fig-Karabiner_prompt]: A prompt window to enable the command+control+option+shift as *Caps lock* on Karabiner ![A prompt window to enable the command+control+option+shift as Caps lock on Karabiner](./shortcuts-for-macos/Karabiner_Elements-02-Add_rule.png)
+[^fig-Karabiner_prompt]: A prompt window to enable the command+control+option+shift as *Caps lock* on Karabiner ![A prompt window to enable the command+control+option+shift as Caps lock on Karabiner](./Karabiner_Elements-02-Add_rule.png)
 
 
-[^fig-runner]: This is the Sketch Runner modal window to Run commands ![This is the Sketch Runner modal window to Run commands](./shortcuts-for-macos/SketchRunner.png)
+[^fig-runner]: This is the Sketch Runner modal window to Run commands ![This is the Sketch Runner modal window to Run commands](./SketchRunner.png)

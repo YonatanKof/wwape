@@ -6,7 +6,8 @@ date: 2020-07-12
 updated: 2019-02-06
 published: true
 tags: ['Sketch','Productivity', 'Shortcuts']
-cover_image: ./sketchSC/Cover-sketchSC.svg
+cover_image: ./Cover-sketchSC.svg
+social_image: ./social-cover-shortcuts-for-sketch-app.jpg
 cover_caption: A long and short way to reach from point A to B
 canonical_url: true
 description: Better Sketch App workflow with shortcuts – How to create, edit or remove shortcuts for Sketch plugins using JSON file
@@ -17,7 +18,7 @@ There's a thing you're doing all day long - moving your hands and cursor to cont
 # The painful movement of the hand
 Seeing top notch developers working without lifting their hands form the keyboard made me think _is there a way for me to work that way?_ So elegant, so efficient, keeping your hands from a wrist infection. At around 2015 the answer was a **soft no** - I've customized every possible shortcut in _Illustrator_. The nicest thing about Illustrator shortcuts was the ease of creating and managing shortcuts with the `Keyboard Shortcuts` panel _(Fig.Ill)_. but some basic functionalities like resizing a shape wasn't available to begin with, so no shortcut could be assigned.
 
-![Fig.Ill - Illustrator Keyboard Shortcut panel](./sketchSC/Extra-Illustrator_Shortcuts.png)
+![Fig.Ill - Illustrator Keyboard Shortcut panel](./Extra-Illustrator_Shortcuts.png)
 
 That same year it looked like *Sketch* was stable enough for production. One of the first things I've noticed that blow my mind when I've stated using it was the ability to resize shapes with stroke of some keys. **Amazing!** It made me feel that this product was build by my kind of people - at least, we share the same OCD. But unfortunately, there there was no easy way to manage keyboard shortcut in *Sketch*. Managing shortcuts on macOS *(fig.keyOS)* ain't a breeze too - beside being cumbersome it's unaware of existing Plugin shortcuts but even worst it doesn't allow you the select nested Plugin commands.
 
@@ -46,7 +47,7 @@ macOS shortcuts works only for installed apps. Plugins are installed in the app,
 
    There are two Comma shortcuts I'd like to keep while using a different key combo.
 
-![fig.comma - Comma plugin banner taken form their Github Page](./sketchSC/Comma_plugin.png)
+![fig.comma - Comma plugin banner taken form their Github Page](./Comma_plugin.png)
 
 ---
 
@@ -84,15 +85,15 @@ So how do we do it?
 
 5. Save the file and enjoy it in *Sketch*
 
-![fig.preferences panel - The preferences panel showing the Plugin tab](./sketchSC/Plugins-Select_and_reveal_the_plugin_in_Finder.png) *fig.preferences panel*
+![fig.preferences panel - The preferences panel showing the Plugin tab](./Plugins-Select_and_reveal_the_plugin_in_Finder.png) *fig.preferences panel*
 
-![fig.plugin folder - The folder containing all of the plugins ](./sketchSC/Plugins-Folder.png) *fig.plugin folder*
+![fig.plugin folder - The folder containing all of the plugins ](./Plugins-Folder.png) *fig.plugin folder*
 
-![fig.manifest - The location of the manifest file in the plugin package contents folder](./sketchSC/Plugins-Find_and_open_manifest.js_in_an_editor.png) *fig.manifest*
+![fig.manifest - The location of the manifest file in the plugin package contents folder](./Plugins-Find_and_open_manifest.js_in_an_editor.png) *fig.manifest*
 
-![fig.empty shortcut - The color checker manifest file open in VS code with no shortcut](./sketchSC/Plugins-Find_the_relevant_command.png) *fig.empty shortcut*
+![fig.empty shortcut - The color checker manifest file open in VS code with no shortcut](./Plugins-Find_the_relevant_command.png) *fig.empty shortcut*
 
-![fig.with shortcut - The color checker manifest file open in VS code with a shortcut](./sketchSC/Plugins-Add_shortcut_string_and_save_file.png) *fig.with shortcut*
+![fig.with shortcut - The color checker manifest file open in VS code with a shortcut](./Plugins-Add_shortcut_string_and_save_file.png) *fig.with shortcut*
 
 ---
 

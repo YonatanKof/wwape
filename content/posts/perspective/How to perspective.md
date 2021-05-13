@@ -7,7 +7,7 @@ updated: 2020-12-16
 published: true
 tags: ['Creative']
 cover_image: ./Тетрис-Cover.png
-social_image: ./Тетрис-Cover.jpg
+social_image: ./social-cover-tетрис.jpg
 cover_caption: Le Corbusier's Modulor in different scales over the over 
 description: The terms, tools and techniques of perspective drawing
 canonical_url: false
