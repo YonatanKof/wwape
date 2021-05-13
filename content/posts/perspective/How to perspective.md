@@ -6,7 +6,8 @@ date: 2020-12-16
 updated: 2020-12-16
 published: true
 tags: ['Creative']
-cover_image: ./perspective/Тетрис-Cover.png
+cover_image: ./Тетрис-Cover.png
+social_image: ./Тетрис-Cover.jpg
 cover_caption: Le Corbusier's Modulor in different scales over the over 
 description: The terms, tools and techniques of perspective drawing
 canonical_url: false
@@ -18,7 +19,7 @@ import LShape from '~/components/forPosts/LShape.vue'
 
 As a young kis my big brother studied engineering thingies at Secondary school – his homework was to draw 3 dimensional shapes out of plans, and I used to observe him amazed while he did this isometric tricks – drawing 3d objects from plans by using simple tools; some rules, pencils and a sheet of paper. Him creating these shapes looked like magic – and as a good monkey I've immediately started to imamate – the amazing thing was that I was able the recreate the magic and it felt awesome!
 
-![Old school drawing tools](./perspective/Screen_Shot_2020-08-03_at_7.24.57_PM.png)
+![Old school drawing tools](./tools-of-the-trade.png)
 *My old school drawing tools*
 
 Along the years I've studied a *Practical Engineer Degree* in architecture and have fiddled around with 3D computer graphics – so I've homed my skills a bit further. But that was a long time ago and my 3D days are but a faded memory – or are they?! So I took out my drawing tools and started at it and failed miserably 😞 
@@ -37,18 +38,18 @@ For this example let's choose a simple shape we probably all know from the game 
 
 !> In this article we'll be drawing a *Two-Point Perspective*. Another popular drawing is the *One-Point Perspective* while a more realistic depiction of real life is the *Three-Point Perspective*. 
 
-![The block view](./perspective/L_block_views.png)
+![The block view](./L_block_views.png)
 *The L Block Tetrimino Views*
 
 Before we get started – in the image below you can see how a finalized layout looks like, so you get a better idea of the project's scope. I've also marked the terms we'll be working and have listed them in the footnotes [^detailed-list].
 
-![An end result perspective drawing](./perspective/End_result_drawing.png) *An end result perspective drawing*
+![An end result perspective drawing](./End_result_drawing.png) *An end result perspective drawing*
 
 ## Draw a Two-Point Perspective!
 
 To get our perspective drawing going we'll need to set the object location and orientation + the viewer's height and viewing angle. We'll do that using 2 of the object's views – a *Plan View*[^1] and an *Elevation View*[^2]. Position the Elevation on the side and the Plan at the Top and in the middle we'll draw our perspective as seen in the image below (fig.layout-all).
 
-![A basic layout](./perspective/basic-layout-all.png) *fig.layout-all*
+![A basic layout](./basic-layout-all.png) *fig.layout-all*
 ### Set the Side View (Elevation):
 
 The *Elevation View* will help us find the object's heights
@@ -60,7 +61,7 @@ The *Elevation View* will help us find the object's heights
 > Changing the viewer height will not change the output size, but the viewing angel. To change the output size you'll to use need smaller views.
 3. Pull out the *Height Helpers* [^5] form the *Elevation View*. Draw them from the objects geometry
 
-![A basic layout showing the elevation side](./perspective/basic-layout-elevation.png) *A basic layout showing the elevation side with the viewer height*
+![A basic layout showing the elevation side](./basic-layout-elevation.png) *A basic layout showing the elevation side with the viewer height*
 
 ### Set the Top View (Plan):
 
@@ -80,7 +81,7 @@ Information from the *Plan View* will help us with getting all of the object's d
 3. To find the *Vanishing Points* [^8] scale and send parallel lines from the Plan view to up until the Station Point – The intersection of these lines with the Picture Plane are the *Vanishing Points Origin*.
 4. Draw perpendicular lines form the Vanishing Points Origin to the Horizon Plane – The intersection of these lines are the *Vanishing Points*
 
-![The Basic layout](./perspective/basic-layout-plan.png)
+![The Basic layout](./basic-layout-plan.png)
 *The Basic layout*
 
 ### Set the 3D view ‼️
@@ -110,7 +111,7 @@ For you to make it freehand - and though the precision levels will drop it will 
 
 ## Footnotes
 
-[^detailed-list]: Our perspective drawing with all of the terms in use ![A perspective drawing with all of the terms in use](./perspective/The_terms.jpg)
+[^detailed-list]: Our perspective drawing with all of the terms in use ![A perspective drawing with all of the terms in use](./The_terms.jpg)
 
 [^1]: ***Plan View*** – View from top or bottom
 
@@ -118,14 +119,14 @@ For you to make it freehand - and though the precision levels will drop it will 
 
 [^3]: ***Ground Plane*** – As the name suggest, this is the ground and the base of the drawing. 
 
-[^4]: ***Horizon Plane*** – This is the viewer's eye level. The higher it is the taller the viewer is in relation the the object and vice versa. **BTW**, it can be below the *Ground plane* but it's probably won't produce a desirable output ![Changing the viewer's height](./perspective/viewer_height.png)
+[^4]: ***Horizon Plane*** – This is the viewer's eye level. The higher it is the taller the viewer is in relation the the object and vice versa. **BTW**, it can be below the *Ground plane* but it's probably won't produce a desirable output ![Changing the viewer's height](./viewer_height.png)
 
 
 [^5]: ***Height Helpers*** – You'll draw them from the Elevation and they set the height of the element
 
 [^6]: ***Picture Plane*** – This is where the magic happens – where we flip the 2D and the 3D worlds 😲 My recommendations; place it in the front or middle of the shape – meddling with it will produce undesirable outputs 
 
-[^7]: ***Station Point*** – This will produce the perspective affect and they panning left or right. In a counter intuitive kinda way, having this point closer or further away will not make the object bigger or smaller – but like a camera lens – it will make the view *Wider* or *Narrower*. ![Station Point](./perspective/Station_Point.png)
+[^7]: ***Station Point*** – This will produce the perspective affect and they panning left or right. In a counter intuitive kinda way, having this point closer or further away will not make the object bigger or smaller – but like a camera lens – it will make the view *Wider* or *Narrower*. ![Station Point](./Station_Point.png)
 
 [^8]: ***Vanishing Points*** – This points will derive form your setup – You'll figure them up by using the *VP Helpers* and *VP Crossing*
 
