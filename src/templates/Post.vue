@@ -73,7 +73,10 @@ export default {
 				},
 				{
 					name: "twitter:image",
-					// content: this.getPostCoverImage,
+					content: process.env.GRIDSOME_BASE_URL + this.$page.post.social_image.src,
+				},
+				{
+					name: "twitter:image:alt",
 					content: process.env.GRIDSOME_BASE_URL + this.$page.post.social_image.src,
 				},
 				{
@@ -103,11 +106,11 @@ export default {
 				},
 				{
 					property: "og:image:width",
-					content: 600,
+					content: 1200,
 				},
 				{
 					property: "og:image:height",
-					content: 315,
+					content: 630,
 				},
 				{
 					property: "og:image:alt",
@@ -134,7 +137,7 @@ query Post ($id: ID!) {
     description
     content
     cover_image (width: 860, blur: 10)
-    social_image (width: 600, quality: 90, background: "#999")
+    social_image (width: 1200, height: 630, quality: 90, background: "#999")
     cover_caption
   }
 }
