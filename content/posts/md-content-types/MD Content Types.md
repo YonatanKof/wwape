@@ -7,7 +7,8 @@ updated:
 published: true
 tags: ['Development']
 cover_image:
-cover_caption: 
+social_image: ./md-content-types-Cover.jpg
+cover_caption: Two identical text groups, the first as plain text with Markdown syntax, the second formatted and styled
 description: Markdown content types used in this gridsome site
 canonical_url: false
 series: false
