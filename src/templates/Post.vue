@@ -77,7 +77,7 @@ export default {
 				},
 				{
 					name: "twitter:image:alt",
-					content: process.env.GRIDSOME_BASE_URL + this.$page.post.social_image.src,
+					content: this.$page.post.cover_caption,
 				},
 				{
 					name: "twitter:creator",
