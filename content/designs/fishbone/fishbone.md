@@ -7,7 +7,7 @@ updated: 2021-01-03
 published: true
 tags: ['Creative']
 cover_image: ./1-Fishbone.jpg
-social_image: ./1-Fishbone.jpg
+social_image: ./social-cover-Fishbone.jpg
 cover_caption: Step into the fishbone
 description: A shape I shaped
 canonical_url: false

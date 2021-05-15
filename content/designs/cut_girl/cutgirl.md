@@ -7,7 +7,7 @@ updated: 2021-03-11
 published: true
 tags: ['Creative']
 cover_image: ./cut-girl_preview.jpg
-social_image: ./cut-girl_preview.jpg
+social_image: ./social-cover-cut-girl.jpg
 cover_caption: A composition showing a girl being cut by forces greater then us
 description: We are all a girl being cut
 canonical_url: false

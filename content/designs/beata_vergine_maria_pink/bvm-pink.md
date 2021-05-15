@@ -7,7 +7,7 @@ updated: 2010-02-16
 published: true
 tags: ['Creative']
 cover_image: ./BVM-detail.png
-social_image: ./BMV.jpg
+social_image: ./social-cover-BVM.jpg
 cover_caption: A close up of the heavenly source
 description: Born out of love
 canonical_url: false

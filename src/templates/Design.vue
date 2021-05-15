@@ -51,10 +51,10 @@ export default {
 					name: "twitter:site",
 					content: "@yonatankof",
 				},
-				// {
-				// 	name: "twitter:image",
-				// 	content: process.env.GRIDSOME_BASE_URL + this.$page.design.social_image.src,
-				// },
+				{
+					name: "twitter:image",
+					content: process.env.GRIDSOME_BASE_URL + this.$page.design.social_image.src,
+				},
 				{
 					name: "twitter:image:alt",
 					content: this.$page.design.cover_caption,
@@ -79,10 +79,10 @@ export default {
 					property: "og:description",
 					content: this.$page.design.description,
 				},
-				// {
-				// 	property: "og:image",
-				// 	content: process.env.GRIDSOME_BASE_URL + this.$page.design.social_image.src,
-				// },
+				{
+					property: "og:image",
+					content: process.env.GRIDSOME_BASE_URL + this.$page.design.social_image.src,
+				},
 				{
 					property: "og:image:width",
 					content: 1200,

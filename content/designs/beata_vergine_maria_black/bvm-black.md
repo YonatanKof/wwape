@@ -7,7 +7,7 @@ updated: 2018-07-18
 published: true
 tags: ['Creative']
 cover_image: ./BVM-her-hands-and-man.jpg
-social_image: ./BVM-her-hands-and-man.jpg
+social_image: ./social-cover-BVM-her-hands-and-man.jpg
 cover_caption: The hands of BVM holding the father
 description: Sweet Mary, black fragments made the world
 canonical_url: false
