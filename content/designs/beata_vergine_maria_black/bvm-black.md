@@ -1,5 +1,5 @@
 ---
-title: Nera Beata Vergine Maria
+title: Nera BVM
 author_name: Yonatan Ben Knaan
 urlname: bvm-nera
 date: 2018-07-18
@@ -13,6 +13,7 @@ description: Sweet Mary, black fragments made the world
 canonical_url: false
 series: false
 ---
+## Beata Vergine Maria <> Black Version
 
 She had hard life told by men what to do
 

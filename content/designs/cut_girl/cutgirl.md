@@ -6,7 +6,7 @@ date: 2007-04-25
 updated: 2021-03-11
 published: true
 tags: ['Creative']
-cover_image: ./cut-girl_preview.jpg
+cover_image: ./cut-girl_ShoppingHandsOfTheElectricCockroach.jpg
 social_image: ./social-cover-cut-girl.jpg
 cover_caption: A composition showing a girl being cut by forces greater then us
 description: We are all a girl being cut
