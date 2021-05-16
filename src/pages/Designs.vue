@@ -113,11 +113,11 @@ export default {
                 },
                 {
                     property: "og:image:width",
-                    content: 600,
+                    content: 1200,
                 },
                 {
                     property: "og:image:height",
-                    content: 315,
+                    content: 630,
                 },
                 {
                     property: "og:image:alt",
