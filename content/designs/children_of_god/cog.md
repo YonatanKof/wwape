@@ -16,5 +16,5 @@ series: false
 
 Are we all children of god?
 
-![Children of God](./COG-long.jpg)
 ![Children of God](./COG.jpg)
+*We are all children of god*

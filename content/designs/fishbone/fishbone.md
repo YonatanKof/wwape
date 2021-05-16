@@ -1,5 +1,5 @@
 ---
-title: 🐠 Fishbone 🦴
+title: Fishbone
 author_name: Yonatan Ben Knaan
 urlname: fishbone
 date: 2021-01-03

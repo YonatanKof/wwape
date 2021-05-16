@@ -14,6 +14,8 @@ canonical_url: false
 series: false
 ---
 
+#### A manly tale of a godly birth by an excluded woman  
+
 ![bvm](./BVM.jpg)
 
 

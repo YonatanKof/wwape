@@ -14,12 +14,13 @@ canonical_url: false
 series: false
 ---
 
+She had hard life told by men what to do
 
 ![bvm](./BVM-her-face.jpg)
-*A Man Made Tale*
+*Women take over a man made tale*
 
 ![bvm](./BVM-her-flower.jpg)
-*Man is Male*
+*A Flower of Romance*
 
 ![bvm](./BVM-her-hands-and-man.jpg)
 *Hand Made*
