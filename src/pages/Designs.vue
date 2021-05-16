@@ -17,8 +17,16 @@
 </template>
 
 <page-query>
-query {
-  designs: allDesign {
+query ($page: Int) {
+  designs: allDesign(
+        perPage: 3, page: $page
+        filter: { published: { eq: true }} 
+        sortBy: "date", order: DESC
+    ) @paginate {   
+    pageInfo {
+      totalPages
+      currentPage
+    }
     edges {
       node {
         id
