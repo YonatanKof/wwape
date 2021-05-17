@@ -1,5 +1,5 @@
 <template>
-	<Pager firstLabel="⇐" prevLabel="←" nextLabel="→" lastLabel="⇒" class="pagination" :info="paginationInfo" />
+	<Pager firstLabel="⇐" prevLabel="←" nextLabel="→" lastLabel="⇒" class="pagination" linkClass="page-it" :info="paginationInfo" />
 	<!-- See more Pager options here -> https://gridsome.org/docs/pagination/ -->
 </template>
 
@@ -15,34 +15,39 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/style/_utils.scss";
+
 .pagination {
 	text-align: center;
 	margin-block-start: var(--space-2xl);
-	a {
-		font-size: var(--font-size-xl);
+	.page-it {
 		display: inline-flex;
 		margin: 0;
-		margin-inline-end: 0.625rem;
+		margin-inline-end: var(--space-xs);
 		width: var(--space-4xl);
 		height: var(--space-4xl);
 		justify-content: center;
 		align-items: center;
 		text-decoration: none;
 		background-color: var(--bg-primary);
-		border: 1px solid var(--bg-primary);
-		border-radius: 3px;
+		border-bottom: unset;
+		@include inline(var(--bg-primary));
+		border-radius: var(--radius-sm);
 		&:last-child {
 			margin-inline-end: 0;
 		}
 		&:hover {
-			border: 1px solid var(--bg-primary-HL);
+			border-bottom: unset;
+			@include inline(var(--bg-primary-HL));
 			box-shadow: var(--shadow-md);
 		}
 	}
 	.active--exact {
-		border: 1px solid var(--bg-primary-HL);
+		@include inline(var(--bg-primary-HL));
 		box-shadow: var(--shadow-sm);
-		// background-color: var(--bg-primary-HL);
+		&:hover {
+			pointer-events: none;
+		}
 	}
 }
 </style>
