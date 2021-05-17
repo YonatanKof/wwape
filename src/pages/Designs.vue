@@ -141,15 +141,17 @@ export default {
 @import "../assets/style/_layout.scss";
 
 .design-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: var(--space-lg);
-	max-width: var(--content-width-md);
-	@include mQ-max($display-size-sm) {
-		grid-template-columns: repeat(2, 1fr);
+    display: block;
+	-webkit-column-width: auto;
+	column-width: auto;
+	column-gap: var(--content-space);
+	column-count: 3;
+	max-width: var(--content-width-lg);
+	@include mQ-max($display-size-md) {
+		column-count: 2;
 	}
 	@include mQ-max($display-size-xs) {
-		grid-template-columns: 1fr;
+		column-count: 1;
 	}
 }
 </style>
