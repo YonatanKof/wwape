@@ -9,7 +9,7 @@
 		<div class="design-grid">
 			<DesignCard v-for="edge in $page.designs.edges" :key="edge.node.id" :designData="edge.node" />
 		</div>
-		<Pager :info="$page.designs.pageInfo" />
+		<Pagination :paginationInfo="$page.designs.pageInfo" />
 	</Layout>
 </template>
 
@@ -40,13 +40,14 @@ query ($page: Int) {
 <script>
 import Author from "~/components/Author.vue";
 import DesignCard from "~/components/DesignCard.vue";
-import { Pager } from "gridsome";
+import Pagination from "~/components/Pagination.vue";
 
 export default {
 	components: {
 		Author,
 		DesignCard,
-		Pager,
+		// Pager,
+		Pagination,
 	},
 
 	data() {
