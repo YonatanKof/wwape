@@ -38,17 +38,17 @@
 // When used for clickable cards
 @mixin content-box-Hover {
     // position: relative;
-    transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.25s;
-    &:hover {
-        transform: translateY(calc(var(--space-3xs) * -1));
-        box-shadow: var(--shadow-md);
-    }
-    // top: 0;
-    // transition: top 0.35s, box-shadow ease-in-out 0.35s;
+    // transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.25s;
     // &:hover {
-    //     top: calc(var(--space-2xs) * -1);
+    //     transform: translateY(calc(var(--space-3xs) * -1));
     //     box-shadow: var(--shadow-md);
     // }
+    top: 0;
+    transition: top 0.35s, box-shadow ease-in-out 0.35s;
+    &:hover {
+        top: calc(var(--space-3xs) * -1);
+        box-shadow: var(--shadow-md);
+    }
     > .-link {
         position: absolute;
         top: 0;
