@@ -142,8 +142,7 @@ export default {
 
 .design-grid {
     display: block;
-	-webkit-column-width: auto;
-	column-width: auto;
+	columns: auto;
 	column-gap: var(--content-space);
 	column-count: 3;
 	max-width: var(--content-width-lg);
