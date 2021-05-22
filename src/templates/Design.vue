@@ -8,7 +8,7 @@
 		/>
 		<div class="post-title">
 			<!-- <h2 class="post-title__text">{{ $page.post.title }}</h2> -->
-			<PostMeta :postmeta="$page.design" />
+			<DesignMeta :designmeta="$page.design" />
 		</div>
 		<main class="design-body">
 			<section class="-content">
@@ -20,13 +20,13 @@
 
 <script>
 import Author from "~/components/Author.vue";
-import PostMeta from "~/components/PostMeta";
+import DesignMeta from "~/components/DesignMeta";
 
 
 export default {
 	components: {
 		Author,
-		PostMeta,
+		DesignMeta,
 	},
 	metaInfo() {
 		return {
@@ -114,6 +114,7 @@ query Design ($id: ID!) {
     cover_caption
 	author_name
 	date (format: "MMM D, YYYY")
+	updated (format: "MMM D, YYYY")
   }
 }
 </page-query>
