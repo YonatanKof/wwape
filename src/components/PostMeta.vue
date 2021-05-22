@@ -1,7 +1,7 @@
 <template>
     <div class="post-meta">
         <p>
-            Written by <em>{{ postmeta.author_name }}</em>
+            By <em>{{ postmeta.author_name }}</em>
              • {{ postmeta.date }}
             <template v-if="postmeta.timeToRead">
                 <em> • {{ postmeta.timeToRead }} min read</em>

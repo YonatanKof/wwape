@@ -6,6 +6,10 @@
 			:show-bio-text="true"
 			v-bind:author-bio="$page.design.description"
 		/>
+		<div class="post-title">
+			<!-- <h2 class="post-title__text">{{ $page.post.title }}</h2> -->
+			<PostMeta :postmeta="$page.design" />
+		</div>
 		<main class="design-body">
 			<section class="-content">
 				<VueRemarkContent />
@@ -16,10 +20,13 @@
 
 <script>
 import Author from "~/components/Author.vue";
+import PostMeta from "~/components/PostMeta";
+
 
 export default {
 	components: {
 		Author,
+		PostMeta,
 	},
 	metaInfo() {
 		return {
@@ -105,6 +112,8 @@ query Design ($id: ID!) {
     urlname
     social_image (width: 1200, height: 630, quality: 90, background: "#999")
     cover_caption
+	author_name
+	date (format: "MMM D, YYYY")
   }
 }
 </page-query>
@@ -117,5 +126,9 @@ query Design ($id: ID!) {
 	@include content-box($display-size-sm);
 	@include content-main;
 	max-width: $display-size-md;
+}
+.post-title {
+	padding-bottom: var(--space-xl);
+	text-align: center;
 }
 </style>
