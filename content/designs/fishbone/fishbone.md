@@ -3,7 +3,7 @@ title: Fishbone
 author_name: Yonatan Ben Knaan
 urlname: fishbone
 date: 2021-01-03
-updated: 2021-01-03
+updated:
 published: true
 tags: ['Creative']
 cover_image: ./1-Fishbone.jpg

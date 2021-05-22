@@ -3,7 +3,7 @@ title: Falling Man
 author_name: Yonatan Ben Knaan
 urlname: falling-man
 date: 2008-11-28
-updated: 2008-11-28
+updated: 
 published: true
 tags: ['Creative']
 cover_image: ./home-killer.jpg

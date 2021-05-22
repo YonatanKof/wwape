@@ -9,7 +9,7 @@ tags: ['Creative']
 cover_image: ./facing-me.jpg
 social_image: ./social-cover-facing-me.jpg
 cover_caption: The missing gun is facing me
-description: Even if I don't see it, the missing gun is facing me
+description: I don't see the missing gun facing me
 canonical_url: false
 series: false
 ---

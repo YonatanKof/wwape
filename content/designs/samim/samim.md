@@ -3,7 +3,7 @@ title: Samim
 author_name: Yonatan Ben Knaan
 urlname: samim
 date: 2002-02-28
-updated: 2003-04-04
+updated: 
 published: true
 tags: ['Creative']
 cover_image: ./SamimSF.jpg

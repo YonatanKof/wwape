@@ -3,7 +3,7 @@ title: Nera BVM
 author_name: Yonatan Ben Knaan
 urlname: bvm-nera
 date: 2018-07-18
-updated: 2018-07-18
+updated:
 published: true
 tags: ['Creative']
 cover_image: ./BVM-her-hands-and-man.jpg

@@ -3,7 +3,7 @@ title: Cut Girl
 author_name: Yonatan Ben Knaan
 urlname: cut-girl
 date: 2007-04-25
-updated: 2021-03-11
+updated:
 published: true
 tags: ['Creative']
 cover_image: ./cut-girl_ShoppingHandsOfTheElectricCockroach.jpg

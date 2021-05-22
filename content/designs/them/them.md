@@ -14,7 +14,7 @@ canonical_url: false
 series: false
 ---
 
-Based on an [*Aboriginal* rock engraving](https://commons.wikimedia.org/wiki/File:N%27Dhala_Gorge005a.jpg#/media/File:N'Dhala_Gorge005a.jpg), form [*N'Dhala Gorge*](https://en.wikipedia.org/wiki/N%27Dhala_Gorge_Nature_Park), that is based on a [drawing by Franz Gnaedinger](http://www.seshat.ch/home/ndhala.GIF) – showing two figures wearing a **rayed headdresses**. 
+Based on an [*Aboriginal* rock engraving](https://commons.wikimedia.org/wiki/File:N%27Dhala_Gorge005a.jpg#/media/File:N'Dhala_Gorge005a.jpg), form [*N'Dhala Gorge*](https://en.wikipedia.org/wiki/N%27Dhala_Gorge_Nature_Park)w, that is based on a [drawing by Franz Gnaedinger](http://www.seshat.ch/home/ndhala.GIF) – showing two figures wearing a **rayed headdresses**. 
 
 This is a [very early calendar](http://www.seshat.ch/home/calendar.htm) where every ray of the headdresses represent a fortnight (14 days).
 
