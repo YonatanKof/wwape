@@ -41,7 +41,7 @@
         @include mQ-max($display-size-sm) {
             padding: var(--space-2xl);
         }
-        img {
+        img, svg {
             border-radius: var(--radius);
         }
     }
@@ -85,10 +85,10 @@
     strong em {
         font-weight: var(--font-wight--black);
     }
-    noscript + em {
+    svg + em, noscript + em {
         font-size: var(--font-size-3xl);
     }
-    p img {
+    p img, svg {
         transform: translateY(var(--space-sm));
         @include mQ-max($display-size-sm) {
             margin-inline-start: calc(var(--content-space) * -1);
