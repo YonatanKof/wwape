@@ -14,6 +14,8 @@ canonical_url: false
 series: false
 ---
 import LShape from '~/components/forPosts/LShape.vue'
+    
+import YouTubePlayer from '~/components/YouTubePlayer.vue'
 
 Hi all 👋  
 Let's see what we have here
@@ -222,6 +224,16 @@ It looks bad and right now I don't really know how to manipulate its CSS
   - [ ] Me not done
 - [ ] Update the website
 - [ ] Contact the media
+
+### Add a Youtube Embed
+
+!> Don't forget to add `import YouTubePlayer from '~/components/YouTubePlayer.vue` at the top for the `md` file
+
+<YouTubePlayer
+    videoId="E86gWQs-ios"
+    title="Kill All Hippies"
+    >
+</YouTubePlayer>
 
 ## Footnotes 
 
