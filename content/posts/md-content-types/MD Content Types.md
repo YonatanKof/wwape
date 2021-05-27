@@ -13,8 +13,7 @@ description: Markdown content types used in this gridsome site
 canonical_url: false
 series: false
 ---
-import LShape from '~/components/forPosts/LShape.vue'
-    
+import LShape from '~/components/forPosts/LShape.vue'    
 import YouTubePlayer from '~/components/YouTubePlayer.vue'
 
 Hi all 👋  
