@@ -2,8 +2,8 @@
 	<Layout :show-logo="true">
 		<main class="main-page">
 			<IntroForPage
-				:intro-script="$data.scriptTitle"
-				:intro-title="$static.metadata.siteName"
+				intro-script="Hi There 👋 <br /> Welcome To The"
+				intro-title='World <span style="white-space: nowrap;">Wide Ape</span>'
 				:intro-subtitle="$static.metadata.siteDescription"
 			/>
 		</main>
@@ -26,12 +26,6 @@ import IntroForPage from "~/components/IntroForPage.vue";
 export default {
 	components: {
 		IntroForPage,
-	},
-	data() {
-		return {
-			// scriptTitle: `A Website By <br /> ${process.env.GRIDSOME_AUTHOR}`,
-			scriptTitle: "Hi There 👋 <br /> Welcome To The",
-		};
 	},
 	metaInfo() {
 		return {

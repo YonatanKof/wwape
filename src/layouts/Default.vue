@@ -130,7 +130,7 @@ query {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding-top: var(--spacem-md);
+	padding-top: var(--spacem-6xl);
 	@include main-padding;
 	padding-bottom: calc(max(var(--space-xl), env(safe-area-inset-bottom)));
 	text-align: center;

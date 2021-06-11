@@ -21,8 +21,11 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/style/_layout.scss";
 .page-intro {
-	margin-top: var(--spacem-6xl);
+	margin-top: var(--spacem-8xl);
     position: relative;
+	@include mQ-max($display-size-sm) {
+		margin-top: var(--spacem-7xl);
+	}
 }
 
 .title {
