@@ -1,14 +1,16 @@
 <template>
 	<div id="app" class="wrapper">
 		<header class="header">
-			<div class="header__start">
-				<Logo v-if="showLogo" />
-			</div>
-			<div class="header__end">
-				<g-link class="nav__link" to="/about/">About</g-link>
-				<g-link class="nav__link" to="/posts/">Posts</g-link>
-				<g-link class="nav__link" to="/designs/">Designs</g-link>
-				<!-- <g-link class="nav__link" to="/reviews/">Reviews</g-link> -->
+			<div class="header__content">
+				<div class="header__content__start">
+					<Logo v-if="showLogo" />
+				</div>
+				<div class="header__content__end">
+					<g-link class="nav__link" to="/about/">About</g-link>
+					<g-link class="nav__link" to="/posts/">Posts</g-link>
+					<g-link class="nav__link" to="/designs/">Designs</g-link>
+					<!-- <g-link class="nav__link" to="/reviews/">Reviews</g-link> -->
+				</div>
 			</div>
 		</header>
 		<transition name="fade" appear>
@@ -70,7 +72,7 @@ query {
 	&::before {
 		content: "";
 		height: calc(var(--space-7xl) * 8);
-		background-image: linear-gradient(to bottom, var(--bg-color-HL), var(--bg-color));
+		background-image: linear-gradient(to bottom, var(--bg-color-HL) var(--header-height), var(--bg-color));
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -79,28 +81,33 @@ query {
 }
 
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	min-height: var(--header-height);
-	@include main-padding;
-	z-index: 10;
+	background-color: var(--bg-color-HL);
+	z-index: 1000;
 	@include mQ-max($display-size-xs) {
 		font-size: 0.9em;
 	}
-	.active--exact {
-		border-bottom: 1px solid var(--link-color);
-	}
-	&__start {
-		a {
-			margin: 0;
-			margin-inline-end: var(--space-md);
+	&__content {
+		@include main-padding;
+		max-width: $display-size-lg;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: var(--header-height);
+		margin: 0 auto;
+		&__start {
+			a {
+				margin: 0;
+				margin-inline-end: var(--space-md);
+			}
 		}
-	}
-	&__end {
-		a {
-			margin: 0;
-			margin-inline-start: var(--space-md);
+		&__end {
+			.active--exact {
+				border-bottom: 1px solid var(--link-color);
+			}
+			a {
+				margin: 0;
+				margin-inline-start: var(--space-md);
+			}
 		}
 	}
 	@include mQ-min($display-size-lg) {
@@ -125,7 +132,7 @@ query {
 	justify-content: center;
 	padding-top: var(--spacem-md);
 	@include main-padding;
-	padding-bottom: calc(max(1rem, env(safe-area-inset-bottom)));
+	padding-bottom: calc(max(var(--space-xl), env(safe-area-inset-bottom)));
 	text-align: center;
 	min-height: var(--header-height);
 	@include mQ-max($display-size-sm) {
