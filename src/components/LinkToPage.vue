@@ -2,19 +2,18 @@
 	<g-link class="link-to-page unlink" :to="linkToPage">
 		<h3 class="link-to-page__title">{{ linkTitle }}</h3>
 		<SvgBase width="100%" height="100%" viewBox="0 0 100% 100%" icon-color="red">
-			<GridItem1 />
+			<slot />
 		</SvgBase>
 	</g-link>
 </template>
 
 <script>
 import SvgBase from "~/components/IconBase.vue";
-import GridItem1 from "~/components/icons/GridItem1.vue";
 
 export default {
 	components: {
 		SvgBase,
-		GridItem1,
+		
 	},
 	props: ["linkTitle", "linkToPage"],
 };

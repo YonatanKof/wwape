@@ -7,9 +7,15 @@
 				:intro-subtitle="$static.metadata.siteDescription"
 			/>
 			<section class="links-grid">
-				<LinkToPage link-title="About" link-to-page="/about/"/>
-				<LinkToPage link-title="Posts" link-to-page="/posts/"/>
-				<LinkToPage link-title="Designs" link-to-page="/designs/"/>
+				<LinkToPage link-title="About" link-to-page="/about/">
+					<GridItem1 />
+				</LinkToPage>
+				<LinkToPage link-title="Posts" link-to-page="/posts/">
+					<GridItem2 />
+				</LinkToPage>
+				<LinkToPage link-title="Designs" link-to-page="/designs/">
+					<GridItem3 />
+				</LinkToPage>
 			</section>
 		</main>
 	</Layout>
@@ -28,11 +34,17 @@ query {
 <script>
 import IntroForPage from "~/components/IntroForPage.vue";
 import LinkToPage from "~/components/LinkToPage.vue";
+import GridItem1 from "~/components/icons/GridItem1.vue";
+import GridItem2 from "~/components/icons/GridItem2.vue";
+import GridItem3 from "~/components/icons/GridItem3.vue";
 
 export default {
 	components: {
 		IntroForPage,
 		LinkToPage,
+		GridItem1,
+		GridItem2,
+		GridItem3,
 	},
 	metaInfo() {
 		return {
@@ -118,7 +130,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 }
-.links-grid{
+.links-grid {
 	display: flex;
 	gap: var(--space-lg);
 }
