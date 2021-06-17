@@ -6,6 +6,11 @@
 				intro-title='World <span style="white-space: nowrap;">Wide Ape</span>'
 				:intro-subtitle="$static.metadata.siteDescription"
 			/>
+			<section class="links-grid">
+				<LinkToPage link-title="About" link-to-page="/about/"/>
+				<LinkToPage link-title="Posts" link-to-page="/posts/"/>
+				<LinkToPage link-title="Designs" link-to-page="/designs/"/>
+			</section>
 		</main>
 	</Layout>
 </template>
@@ -22,10 +27,12 @@ query {
 
 <script>
 import IntroForPage from "~/components/IntroForPage.vue";
+import LinkToPage from "~/components/LinkToPage.vue";
 
 export default {
 	components: {
 		IntroForPage,
+		LinkToPage,
 	},
 	metaInfo() {
 		return {
@@ -104,10 +111,15 @@ export default {
 	},
 };
 </script>
+
 <style lang="scss">
 .main-page {
 	max-width: var(--content-width-md);
 	display: flex;
 	flex-direction: column;
+}
+.links-grid{
+	display: flex;
+	gap: var(--space-lg);
 }
 </style>
