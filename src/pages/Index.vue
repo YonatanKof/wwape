@@ -7,7 +7,7 @@
 				:intro-subtitle="$static.metadata.siteDescription"
 			/>
 			<section class="links-grid">
-				<LinkToPage link-title="About" link-to-page="/about/">
+				<!-- <LinkToPage link-title="About" link-to-page="/about/">
 					<GridItem1 />
 				</LinkToPage>
 				<LinkToPage link-title="Posts" link-to-page="/posts/">
@@ -15,7 +15,7 @@
 				</LinkToPage>
 				<LinkToPage link-title="Designs" link-to-page="/designs/">
 					<GridItem3 />
-				</LinkToPage>
+				</LinkToPage> -->
 			</section>
 		</main>
 	</Layout>

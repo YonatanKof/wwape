@@ -1,6 +1,6 @@
 <template>
 	<g-link to="/" class="this-link unlink">
-		<IconBase icon-name="Back to homepage" width="2.5rem" height="2.5rem" viewBox="0 0 298 298">
+		<IconBase icon-name="Back to homepage" width="40" height="40" viewBox="0 0 298 298">
 			<KofIconRotating />
 		</IconBase>
 	</g-link>
