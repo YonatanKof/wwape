@@ -2,7 +2,7 @@
 	<Layout :show-logo="true">
 		<main class="main-page">
 			<IntroForPage
-				intro-script="Hi There 👋 <br /> Welcome To The"
+				intro-script="Hi There 👋 <br /> Welcome To The:"
 				intro-title='World <span style="white-space: nowrap;">Wide Ape</span>'
 				:intro-subtitle="$static.metadata.siteDescription"
 			/>
@@ -125,6 +125,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/style/_layout.scss";
+
 .main-page {
 	max-width: var(--content-width-md);
 	display: flex;
@@ -133,5 +135,8 @@ export default {
 .links-grid {
 	display: flex;
 	gap: var(--space-lg);
+	@include mQ-max($display-size-sm) {
+		flex-direction: column;
+	}
 }
 </style>

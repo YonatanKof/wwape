@@ -25,7 +25,7 @@ export default {
 
 .link-to-page {
 	display: inline-block;
-	@include content-box($display-size-xs);
+	@include content-box(0);
 	@include content-box-Hover;
 	width: 100%;
 	text-align: center;
