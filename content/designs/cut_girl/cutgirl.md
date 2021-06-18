@@ -13,8 +13,9 @@ description: We are all a girl being cut
 canonical_url: false
 series: false
 ---
-Blowing the wind – take your time and you place on the table.  
-It's a honorary one, to be taken with some kine of force.
+The wind is blowing, it's whistling  
+Take your time and place at the table  
+The horned one is to be taken with kind force
 
 ![A girl being cut by a grey wind](./cut-girl_GreyWind.jpg)
 *Version – Grey*

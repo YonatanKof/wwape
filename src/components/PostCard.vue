@@ -1,5 +1,5 @@
 <template>
-    <div
+    <article
         class="content-box post-card"
         :class="{ 'post-card--has-poster': postdata.poster }"
     >
@@ -20,7 +20,7 @@
             />
         </div>
         <g-link class="-link" :to="postdata.path"></g-link>
-    </div>
+    </article>
 </template>
 
 <script>

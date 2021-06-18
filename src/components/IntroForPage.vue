@@ -37,10 +37,11 @@ export default {
 .subtitle {
 	border-left: var(--spacem-xs) double var(--link-color-HL);
 	padding: var(--spacem-2xs) 0 var(--spacem-2xs) var(--spacem-xs);
-	font-weight: var(--font-wight--bold);
+	font-weight: var(--font-wight--regular);
 	font-family: var(--font-family--body);
-	@include mQ-max($display-size-sm) {
 		font-size: var(--font-size-5xl);
+	@include mQ-max($display-size-sm) {
+		font-size: var(--font-size-4xl);
 	}
 }
 
