@@ -1,7 +1,7 @@
 <template>
 	<section class="page-intro">
-		<p class="title-script" v-html="introScript">{{introScript}}</p>
-		<h1 class="title" v-html="introTitle">{{ introTitle }}</h1>
+		<p class="title-script" v-html="introScript"></p>
+		<h1 class="title" v-html="introTitle"></h1>
 		<h2 class="subtitle">{{ introSubtitle }}</h2>
 		<Hr hr-margin-bottom="var(--spacem-2xl)" />
 	</section>
@@ -22,7 +22,7 @@ export default {
 @import "../assets/style/_layout.scss";
 .page-intro {
 	margin-top: var(--spacem-8xl);
-    position: relative;
+	position: relative;
 	@include mQ-max($display-size-sm) {
 		margin-top: var(--spacem-7xl);
 	}
@@ -39,7 +39,7 @@ export default {
 	padding: var(--spacem-2xs) 0 var(--spacem-2xs) var(--spacem-xs);
 	font-weight: var(--font-wight--regular);
 	font-family: var(--font-family--body);
-		font-size: var(--font-size-5xl);
+	font-size: var(--font-size-5xl);
 	@include mQ-max($display-size-sm) {
 		font-size: var(--font-size-4xl);
 	}
@@ -50,7 +50,7 @@ export default {
 	line-height: 1.1em;
 	opacity: 0.8;
 	transform: rotateZ(-12deg);
-    transform-origin: top left;
+	transform-origin: top left;
 	width: max-content;
 	position: absolute;
 	left: calc(var(--space-lg) * -1);
