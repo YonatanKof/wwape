@@ -1,5 +1,5 @@
 <template>
-	<Layout :show-logo="true">
+	<Layout>
 		<main class="main-page">
 			<IntroForPage
 				intro-script="Hi There 👋 <br /> Welcome To The:"
@@ -7,9 +7,9 @@
 				:intro-subtitle="$static.metadata.siteDescription"
 			/>
 			<section class="links-grid">
-				<LinkToPage link-title="About" link-to-page="/about/">
+				<!-- <LinkToPage link-title="About" link-to-page="/about/">
 					<GridItem1 />
-				</LinkToPage>
+				</LinkToPage> -->
 				<LinkToPage link-title="Posts" link-to-page="/posts/">
 					<GridItem2 />
 				</LinkToPage>
