@@ -5,8 +5,8 @@
 				<div class="header__content__start">
 					<Logo v-if="showLogo" />
 				</div>
-				<div class="header__content__end">
-					<g-link class="nav__link" to="/about/">About</g-link>
+				<div class="header__content__end" v-if="showLinks">
+					<!-- <g-link class="nav__link" to="/about/">About</g-link> -->
 					<g-link class="nav__link" to="/posts/">Posts</g-link>
 					<g-link class="nav__link" to="/designs/">Designs</g-link>
 					<!-- <g-link class="nav__link" to="/reviews/">Reviews</g-link> -->
@@ -40,8 +40,7 @@ import ToggleTheme from "~/components/ToggleTheme.vue";
 export default {
 	props: {
 		showLogo: { default: true },
-		isSelected: { default: false },
-		showPosts: { default: true },
+		showLinks: { default: true },
 	},
 	components: {
 		Logo,
