@@ -11,19 +11,112 @@ social_image: ./social-cover-about-my-svgs.jpg
 cover_caption: 
 description: 
 ---
+import IconBase from '~/components/IconBase.vue';    
+import IconSystem from '~/components/IconSystem.vue';    
+import IconFree from '~/components/IconFree.vue';    
+import KofIcon from '~/components/icons/KofIcon.vue';    
+import IconBright from '~/components/icons/IconBright.vue';    
+import MonkeySkull from '~/components/icons/MonkeySkull.vue';    
+import SystemAttach from '~/components/icons-system/system-attach.vue';    
+import Hr from '~/components/Hr.vue';    
 
 ## The problem
 
 - I'd like my SVGs inline so I can CSS them
 - I'd like them out of sight so for a cleaner file
-- I'd like them easley manageable 
+- I'd like them easley manageable and to use CSS variants
+- I'd like to use the power of the framework (in this case Vue and Gridsome)
 
 ## The use cases 
 
-1. For an icon system, where all icons have the same size and we just might change the size or color of an instance 
-2. For general purpose use, where 
+1. For an icon system, where all icons have the same size, color and behavior that I might change at the instance level. The icon is unique in shape and name.
+2. For general purpose use, where the icons showed have nothing in common - they all have different size(*width*, *height*, *viewBox*), color (*fill* or *stroke*)
 
 Two approaches, the first is simple and offer little control, the later is loosely coupled but offers more control when the SVG is used.
+
+### Basic Use
+
+Here are a few icons 
+
+<IconSystem>
+    <SystemAttach />
+</IconSystem>
+
+<IconSystem
+    width="48"
+    height="48"
+    fill="var(--bg-primary-HL)"
+    >
+    <SystemAttach />
+</IconSystem>
+
+<IconSystem
+    width="96"
+    height="96"
+    fill="red"
+    >
+    <SystemAttach />
+</IconSystem>
+
+<IconFree>
+    <MonkeySkull />
+</IconFree>
+
+### Kof Icon
+
+<IconBase>
+    <KofIcon />
+</IconBase>
+
+<IconBase
+    width="64"
+    height="64"
+    fill="var(--bg-primary-HL)"
+    >
+    <KofIcon />
+</IconBase>
+
+<IconBase
+    width="128"
+    height="128"
+    >
+    <KofIcon />
+</IconBase>
+
+<Hr hr-margin-top="var(--spacem-2xl)" />
+
+### Sun Icon
+
+<IconBase
+    icon-name="flip-theme-to-bright"
+    icon-color="none"
+    stroke="var(--system-color)"
+    stroke-width="2">
+    <IconBright />
+</IconBase>
+
+<IconBase
+    icon-name="flip-theme-to-bright"
+    icon-color="none"
+    stroke="var(--bg-caution-HL)"
+    stroke-width="2"
+    width="64"
+    height="64"
+    >
+    <IconBright />
+</IconBase>
+
+<IconBase
+    icon-name="flip-theme-to-bright"
+    icon-color="none"
+    stroke="var(--link-color)"
+    stroke-width="2"
+    width="128"
+    height="128"
+    >
+    <IconBright />
+</IconBase>
+
 
 ### IconBase.vue
 
