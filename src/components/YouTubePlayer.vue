@@ -5,7 +5,7 @@
 			:width="width"
 			:height="height"
 			:videoId="videoId"
-			v-bind:src="'https://www.youtube.com/embed/' + videoId + '?rel=0'"
+			v-bind:src="'https://www.youtube.com/embed/' + videoId"
 			:title="title"
 			frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
