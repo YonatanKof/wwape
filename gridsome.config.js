@@ -7,7 +7,7 @@
 module.exports = {
     siteName: "World Wide Ape",
     siteDescription:
-        "A website by Yonatan Ben Knaan – A mismatched persona, a design system manager and an alright dude. A proud member of the World Wide Ape",
+        "A website by Yonatan Ben Knaan: a family man, mismatched persona, designer, maker and an alright dude",
     siteUrl: "https://wwape.com/",
     icon: {
         favicon: "./src/assets/images/kof-logo.png",
@@ -22,6 +22,19 @@ module.exports = {
                 pathPrefix: "/review", // Add route prefix. Optional
                 template: "./src/templates/Review.vue", // Optional
                 plugins: ["@gridsome/remark-prismjs"],
+            },
+        },
+        {
+            use: "@gridsome/vue-remark",
+            options: {
+                typeName: "Design", // Required
+                baseDir: "./content/designs", // Where .md files are located
+                template: "./src/templates/Design.vue", // Optional
+                route: "/design/:urlname", // Using the "urlname" value in greymatter instead of title
+                plugins: [],
+                refs: {
+                    tags: "Tag",
+                },
             },
         },
         {

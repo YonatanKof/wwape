@@ -5,28 +5,58 @@
 @mixin content-box($collapse-size) {
     background-color: var(--bg-content);
     max-width: var(--content-width-sm);
-    margin: 0 auto;
+    height: max-content;
     border-radius: var(--radius);
-    box-shadow: $shadow-sm;
-    transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.25s;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    position: relative;
     @include mQ-max($collapse-size) {
         margin-inline-start: calc(var(--content-space) * -1);
         margin-inline-end: calc(var(--content-space) * -1);
         border-radius: 0;
     }
-}
-
-@mixin content-box-image($collapse-size) {
-    overflow: hidden;
-    img {
+    // Add this class to the IMG tag if any
+    > .-image {
         background-color: var(--bg-color);
         min-width: 100%;
+        display: flow-root;
     }
-    border-radius: var(--radius) var(--radius) 0 0;
-    &:empty {
-        display: none;
+}
+
+// This one is for "post-card__header", if any
+// @mixin content-box-Header($collapse-size) {
+//     border-radius: var(--radius) var(--radius) 0 0;
+//     &:empty {
+//         display: none;
+//     }
+//     @include mQ-max($collapse-size) {
+//         border-radius: 0;
+//     }
+// }
+
+// When used for clickable cards
+@mixin content-box-Hover {
+    // position: relative;
+    // transition: transform ease-in-out 0.2s, box-shadow ease-in-out 0.25s;
+    // &:hover {
+    //     transform: translateY(calc(var(--space-3xs) * -1));
+    //     box-shadow: var(--shadow-md);
+    // }
+    top: 0;
+    transition: top 0.35s, box-shadow ease-in-out 0.35s;
+    &:hover {
+        top: calc(var(--space-3xs) * -1);
+        box-shadow: var(--shadow-md);
     }
-    @include mQ-max($collapse-size) {
-        border-radius: 0;
+    > .-link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        overflow: hidden;
+        text-indent: -9999px;
+        z-index: 0;
     }
 }

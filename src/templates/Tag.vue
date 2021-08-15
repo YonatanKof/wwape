@@ -62,7 +62,7 @@ export default {
             link: [
                 {
                     rel: "canonical",
-                    href: process.env.GRIDSOME_BASE_URL + "posts",
+                    href: process.env.GRIDSOME_BASE_URL + "/tags",
                 },
             ],
             meta: [
@@ -90,7 +90,7 @@ export default {
                     name: "twitter:image",
                     content: `${
                         process.env.GRIDSOME_BASE_URL
-                    }social-cover-tags.jpg`,
+                    }/social-cover-tags.jpg`,
                 },
                 {
                     name: "twitter:creator",
@@ -98,7 +98,7 @@ export default {
                 },
                 {
                     property: "og:url",
-                    content: process.env.GRIDSOME_BASE_URL + "posts",
+                    content: process.env.GRIDSOME_BASE_URL + "/tags",
                 },
                 {
                     property: "og:type",
@@ -116,7 +116,7 @@ export default {
                     property: "og:image",
                     content: `${
                         process.env.GRIDSOME_BASE_URL
-                    }social-cover-tags.jpg`,
+                    }/social-cover-tags.jpg`,
                 },
                 {
                     property: "og:image:width",

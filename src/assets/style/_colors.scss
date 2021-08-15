@@ -19,6 +19,8 @@ $color-dark-O10: transparentize($color-dark-light, 0.97);
 $color-primary-base: hsl(290, 100%, 38%); // should be darker then
 $color-primary-light: lighten($color-primary-base, 25%);
 $color-primary-dark: darken($color-primary-base, 10%);
+$color-primary-O90: transparentize($color-primary-base, 0.2);
+$color-primary-O75: transparentize($color-primary-base, 0.35);
 $color-primary-O50: transparentize($color-primary-base, 0.5);
 $color-primary-O20: transparentize($color-primary-base, 0.7);
 $color-primary-O10: transparentize($color-primary-base, 0.9);
@@ -49,9 +51,11 @@ body {
     // Typography
     --title-color: #{$color-dark-light};
     --system-color: #{$color-dark-base};
+    --system-dim: #{$color-dark-O60};
     --system-color-HL: #{$color-dark-dark};
     --system-color-invert: #{$color-bright-base};
     --link-color: #{$color-primary-base};
+    --link-dim: #{$color-primary-O75};
     --link-color-HL: #{$color-primary-light};
 }
 
@@ -68,15 +72,16 @@ body[data-theme="dark"] {
     --bg-primary: #{$color-primary-O20};
     --bg-primary-HL: #{$color-primary-light};
     --border-color: #{$color-bright-O20};
-    // --shadow-soft: rgba(251, 251, 2224, 0.02);
     --shadow-soft: rgba(0, 0, 0, 0.07);
-    --shadow-medium: rgba(0, 0, 0, 0.14);
+    --shadow-medium: rgba(0, 0, 0, 0.05);
     
     // Typography
     --title-color: #{$color-bright-base};
     --system-color: #{$color-bright-light};
+    --system-dim: #{$color-bright-O50};
     --system-color-HL: #{$color-bright-base};
     --system-color-invert: #{$color-dark-base};
     --link-color: #{$color-primary-light};
+    --link-dim: #{$color-primary-O90};
     --link-color-HL: #{$color-primary-base};
 }

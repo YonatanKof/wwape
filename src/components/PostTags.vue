@@ -23,6 +23,7 @@ export default {
     flex-wrap: wrap;
     margin-top: var(--space-xs);
     &__link {
+        z-index: 9999;
         margin: 0;
         margin-inline-end: var(--space-sm);
         margin-block-start: var(--space-sm);

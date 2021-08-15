@@ -99,7 +99,7 @@ export default {
                     name: "twitter:image",
                     content: `${
                         process.env.GRIDSOME_BASE_URL
-                    }social-cover-posts.jpg`,
+                    }/social-cover-posts.jpg`,
                 },
                 {
                     name: "twitter:creator",
@@ -107,7 +107,7 @@ export default {
                 },
                 {
                     property: "og:url",
-                    content: process.env.GRIDSOME_BASE_URL + "posts",
+                    content: process.env.GRIDSOME_BASE_URL + "/posts",
                 },
                 {
                     property: "og:type",
@@ -125,7 +125,7 @@ export default {
                     property: "og:image",
                     content: `${
                         process.env.GRIDSOME_BASE_URL
-                    }social-cover-posts.jpg`,
+                    }/social-cover-posts.jpg`,
                 },
                 {
                     property: "og:image:width",

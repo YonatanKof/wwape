@@ -5,11 +5,11 @@
         :height="height"
         :stroke="stroke"
         :stroke-width="strokeWidth"
-        viewBox="0 0 32 32"
+        :viewBox="viewBox"
         :aria-labelledby="iconName"
         role="presentation"
     >
-        <title :id="iconName" lang="en">{{ iconName }} icon</title>
+        <title :id="iconName" lang="en">{{ iconName }}</title>
         <g :fill="iconColor">
             <slot />
         </g>
@@ -21,7 +21,7 @@ export default {
     props: {
         iconName: {
             type: String,
-            default: "box"
+            default: ""
         },
         width: {
             type: [Number, String],
@@ -30,6 +30,10 @@ export default {
         height: {
             type: [Number, String],
             default: 24
+        },
+        viewBox: {
+            type: String,
+            default: "0 0 32 32"
         },
         iconColor: {
             type: String,

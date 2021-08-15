@@ -5,3 +5,21 @@
 .space-bottom {
 	margin-bottom: var(--space);
 }
+
+@mixin inline($color: transparent, $width: 1px, $style: solid) {
+	position: relative;
+	// 👆 Requires parent element to be 'position: relative;'
+	&:after {
+		// z-index: -100;
+		content: "";
+		transition: all 0.25s; // same as 'pep-btn' @mixin
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-radius: inherit;
+		border: $width $style $color;
+	}
+}

@@ -1,11 +1,11 @@
 <template>
-    <div class="post-meta">
+    <div>
         <p>
             Written by <em>{{ postmeta.author_name }}</em>
-             • {{ postmeta.date }}
-            <template v-if="postmeta.timeToRead">
-                <em> • {{ postmeta.timeToRead }} min read</em>
-            </template>
+             ◦ {{ postmeta.date }}
+            <span v-if="postmeta.timeToRead">
+                <i> ◦ {{ postmeta.timeToRead }} min read</i>
+            </span>
         </p>
     </div>
 </template>
@@ -16,12 +16,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.post-meta {
+<style lang="scss" scoped>
+div {
     font-size: 0.8em;
-    opacity: 0.8;
-    em {
-        display: inline-block;
-    }
 }
 </style>

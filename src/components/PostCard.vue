@@ -1,39 +1,25 @@
 <template>
-    <div
-        class="post-card"
-        :class="{ 'post-card--has-poster': postdata.poster }"
-    >
-        <div class="post-card__header">
-            <g-image
-                alt="Cover image"
-                v-if="postdata.cover_image"
-                class="post-card__image"
-                :src="postdata.cover_image"
-            />
-        </div>
-        <div class="post-card__content">
-            <h3 class="post-card__title" v-html="postdata.title" />
-            <p class="post-card__description" v-html="postdata.description" />
-            <PostMeta class="post-card__meta" :postmeta="postdata" />
-            <PostTags
-                v-if="postdata.tags"
-                class="post-card__tags"
-                :posttags="postdata"
-            />
-        </div>
-        <g-link class="post-card__link" :to="postdata.path"></g-link>
-    </div>
+	<article class="content-box post-card" :class="{ 'post-card--has-poster': postdata.poster }">
+		<g-image alt="Cover image" v-if="postdata.cover_image" class="-image" :src="postdata.cover_image" />
+		<div class="-content">
+			<h3 class="-title" v-html="postdata.title" />
+			<p v-html="postdata.description" />
+			<PostMeta :postmeta="postdata" />
+			<PostTags v-if="postdata.tags" class="-tags" :posttags="postdata" />
+		</div>
+		<g-link class="-link" :to="postdata.path"></g-link>
+	</article>
 </template>
 
 <script>
 import PostMeta from "~/components/PostMeta";
 import PostTags from "~/components/PostTags";
 export default {
-    components: {
-        PostMeta,
-        PostTags,
-    },
-    props: ["postdata"],
+	components: {
+		PostMeta,
+		PostTags,
+	},
+	props: ["postdata"],
 };
 </script>
 
@@ -42,45 +28,25 @@ export default {
 @import "../assets/style/_shadow.scss";
 
 .post-card {
-    @include content-box($display-size-xs);
-    position: relative;
-    margin-bottom: var(--content-space);
-    &:last-child {
-        margin-bottom: 0;
-    }
-    p {
-        line-height: 1.5em;
-    }
-    &:hover {
-        transform: translateY(calc(var(--space-3xs) * -1));
-        box-shadow: $shadow-md;
-    }
-    &__header {
-        @include content-box-image($display-size-xs);
-    }
-    &__image {
-        min-width: 100%;
-    }
-    &__title {
-        margin-top: 0;
-    }
-    &__tags {
-        z-index: 1;
-        position: relative;
-    }
-    &__link {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        overflow: hidden;
-        text-indent: -9999px;
-        z-index: 0;
-    }
-    &__content {
+	@include content-box($display-size-xs);
+	@include content-box-Hover;
+	margin-bottom: var(--content-space);
+	&:last-child {
+		margin-bottom: 0;
+	}
+	p {
+		line-height: 1.5em;
+	}
+	> .-content {
         padding: var(--space-lg);
-    }
+        > .-title {
+            margin-top: 0;
+            text-transform: capitalize;
+        }
+        > .-tags {
+            z-index: 1;
+            position: relative;
+        }
+	}
 }
 </style>
