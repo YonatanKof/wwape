@@ -17,45 +17,93 @@ import IconFree from '~/components/IconFree.vue';
 import KofIcon from '~/components/icons/KofIcon.vue';    
 import IconBright from '~/components/icons/IconBright.vue';    
 import MonkeySkull from '~/components/icons/MonkeySkull.vue';    
-import SystemAttach from '~/components/icons-system/system-attach.vue';    
+import IconSystemAttach from '~/components/icons-system/icon-system-attach.vue';    
+import IconSystemDoor from '~/components/icons-system/icon-system-door.vue';    
+import IconSystemImage from '~/components/icons-system/icon-system-image.vue';    
+import IconSystemSettings from '~/components/icons-system/icon-system-settings.vue';    
+import IconSystemOk from '~/components/icons-system/icon-system-ok.vue';    
 import Hr from '~/components/Hr.vue';    
 
-## The problem
-
-- I'd like my SVGs inline so I can CSS them
-- I'd like them out of sight so for a cleaner file
-- I'd like them easley manageable and to use CSS variants
-- I'd like to use the power of the framework (in this case Vue and Gridsome)
-
+SVG's are nice, a framework can make then nicer 
 ## The use cases 
 
-1. For an icon system, where all icons have the same size, color and behavior that I might change at the instance level. The icon is unique in shape and name.
-2. For general purpose use, where the icons showed have nothing in common - they all have different size(*width*, *height*, *viewBox*), color (*fill* or *stroke*)
+There are 2 use cases for my SVG's 
+
+1. As an *Icon System*, where there's a lot of similarly and a few differences – All icons have the same size, color and behavior that I might override at the instance level – The icon is unique in shape and name -> File name `SvgIconSystem.vue`
+2. For general purpose use, where the SVGs shown have nothing in common -> File name `SvgFreeBase.vue`
+
+
+## The need
+
+For both use cases I'd like my SVGs as followed:
+
+- Inline so I can CSS them
+- As a component for a cleaner file
+- With porps like size and color
+- To be able to use CSS or SCSS variants
+
 
 Two approaches, the first is simple and offer little control, the later is loosely coupled but offers more control when the SVG is used.
 
+# Icon System
+Let's review the template
+```html
+<template>
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+		aria-labelledby="title"
+		role="presentation"
+		:width="width"
+		:height="height"
+		:fill="iconColor"
+	>
+		<slot />
+		<rect fill="none" width="100%" height="100%"/>
+	</svg>
+</template>
+```
+
 ### Basic Use
 
-Here are a few icons 
+Here are a few icons of my *Icon System*:
 
 <IconSystem>
-    <SystemAttach />
+    <IconSystemAttach />
 </IconSystem>
+
+<IconSystem>
+    <IconSystemDoor/>
+</IconSystem>
+
+<IconSystem>
+    <IconSystemImage/>
+</IconSystem>
+
+<IconSystem>
+    <IconSystemSettings/>
+</IconSystem>
+
+<IconSystem>
+    <IconSystemOk/>
+</IconSystem>
+
+Let's play around with them:
 
 <IconSystem
     width="48"
     height="48"
     fill="var(--bg-primary-HL)"
     >
-    <SystemAttach />
+    <IconSystemAttach />
 </IconSystem>
 
 <IconSystem
     width="96"
     height="96"
-    fill="red"
+    fill="orange"
     >
-    <SystemAttach />
+    <IconSystemAttach />
 </IconSystem>
 
 <IconFree>
