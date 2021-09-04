@@ -1,15 +1,15 @@
 <template>
 	<svg
 		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+		aria-labelledby="title"
+		role="presentation"
 		:width="width"
 		:height="height"
 		:fill="iconColor"
-		viewBox="0 0 24 24"
-		role="presentation"
 	>
-		<g>
-			<slot />
-		</g>
+		<slot />
+		<rect id="Bounding box" fill="none" width="100%" height="100%"/>
 	</svg>
 </template>
 
@@ -18,11 +18,11 @@ export default {
 	props: {
 		width: {
 			type: [Number, String],
-			default: 24,
+			default: "1.5em",
 		},
 		height: {
 			type: [Number, String],
-			default: 24,
+			default: "1.5em",
 		},
 		iconColor: {
 			type: String,
@@ -34,10 +34,9 @@ export default {
 
 <style lang="scss" scoped>
 svg {
-    opacity: 0.75;
-    transition: opacity 0.35s ease-out;
+	transition: fill 0.35s ease-out;
 	&:hover {
-		opacity: 1;
+		fill: var(--system-color-HL);
 	}
 }
 </style>
