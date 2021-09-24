@@ -90,7 +90,7 @@
     svg + em, noscript + em {
         font-size: var(--font-size-3xl);
     }
-    p img, svg, .youtube-player {
+    p img, p svg, p .youtube-player {
         transform: translateY(var(--space-sm));
         @include mQ-max($display-size-sm) {
             margin-inline-start: calc(var(--content-space) * -1);
