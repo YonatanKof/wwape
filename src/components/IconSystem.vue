@@ -1,6 +1,6 @@
 <template>
 	<svg
-		xmlns="http://www.w3.org/2000/svg"
+		version="1.1"
 		viewBox="0 0 24 24"
 		aria-labelledby="title"
 		role="presentation"
@@ -9,7 +9,7 @@
 		:fill="iconColor"
 	>
 		<slot />
-		<rect id="Bounding box" fill="none" width="100%" height="100%"/>
+		<rect id="bounding-box" fill="none" width="100%" height="100%"/>
 	</svg>
 </template>
 
@@ -26,7 +26,7 @@ export default {
 		},
 		iconColor: {
 			type: String,
-			default: "var(--system-color)",
+			default: "var(--system-dimmed)",
 		},
 	},
 };
@@ -38,5 +38,11 @@ svg {
 	&:hover {
 		fill: var(--system-color-HL);
 	}
+}
+p svg {
+	width: 1.2em;
+	height: 1.2em;
+	vertical-align: top;
+	margin-top: calc(var(--font-size--regular) / -4);
 }
 </style>
