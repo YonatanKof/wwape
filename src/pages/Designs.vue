@@ -142,12 +142,12 @@ export default {
 
 .design-grid {
     display: block;
-	columns: auto;
+	columns: 3;
 	column-gap: var(--content-space);
-	column-count: 3;
 	max-width: var(--content-width-lg);
 	@include mQ-max($display-size-md) {
 		column-count: 2;
+		column-gap: calc(var(--content-space) * 0.75);
 	}
 	@include mQ-max($display-size-xs) {
 		column-count: 1;

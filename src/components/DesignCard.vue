@@ -28,6 +28,7 @@ export default {
 .design-card {
 	@include content-box($display-size-xs);
 	@include content-box-Hover;
+	@import "../assets/style/_layout.scss";
 	margin-block-end: var(--content-space);
 	-webkit-column-break-inside: avoid;
 	break-inside: avoid;
@@ -37,6 +38,9 @@ export default {
 		margin-top: var(--space-xl);
 		font-size: var(--font-size-lg);
 		text-transform: capitalize;
+	}
+	@include mQ-max($display-size-md) {
+		margin-block-end: calc(var(--content-space) * 0.75);
 	}
 }
 </style>
