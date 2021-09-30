@@ -95,7 +95,7 @@
             margin-inline-start: calc(var(--content-space) * -1);
             margin-inline-end: calc(var(--content-space) * -1);
             max-width: unset;
-            width: calc(100% + 4rem);
+            width: calc(100% + calc(var(--content-space) * 2));
             border-radius: 0 !important;
         }
     }
@@ -107,7 +107,7 @@
             margin-inline-start: calc(var(--content-space) * -1);
             margin-inline-end: calc(var(--content-space) * -1);
             max-width: unset;
-            width: calc(100% + 4rem);
+            width: calc(100% + calc(var(--content-space) * 2));
         }
         hr {
             margin-bottom: var(--space-lg);
