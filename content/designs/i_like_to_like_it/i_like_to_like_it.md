@@ -1,7 +1,7 @@
 ---
 title: I Like to Lick it
 author_name: Yonatan Ben Knaan
-urlname: i-like-to-like-it
+urlname: i-like-to-lick-it
 date: 2007-08-07
 updated: 2007-11-27
 published: true
