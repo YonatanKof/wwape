@@ -44,6 +44,8 @@
         img, svg, .youtube-player {
             overflow: hidden;
             border-radius: var(--radius);
+            width: 100%;
+            height: auto;
         }
     }
     pre {
