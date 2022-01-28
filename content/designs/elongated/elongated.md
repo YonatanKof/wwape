@@ -13,8 +13,13 @@ description: Don't stretch it
 canonical_url: false
 series: false
 ---
+import IconBase from '~/components/SVGBase.vue'
+import Elongated from './elongated.vue'
 
-[Let's stretch it](https://www.historicmysteries.com/elongated-skulls-mystery/)
+Don't stretch it *[The Mystery of the Elongated Skulls](https://www.historicmysteries.com/elongated-skulls-mystery/)*
 
-![A glitched elongated human skull](./elongated.svg)
-
+<p>
+    <SVGBase
+        <Elongated />
+    </SVGBase>
+</p>
