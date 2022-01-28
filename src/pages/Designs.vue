@@ -16,7 +16,7 @@
 <page-query>
 query ($page: Int) {
   designs: allDesign(
-        perPage: 9, page: $page
+        perPage: 12, page: $page
         filter: { published: { eq: true }} 
         sortBy: "date", order: DESC
     ) @paginate {   
