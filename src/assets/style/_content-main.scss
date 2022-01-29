@@ -46,6 +46,13 @@
             border-radius: var(--radius);
             width: 100%;
             height: auto;
+            @include mQ-max($display-size-sm) {
+                margin-inline-start: calc(var(--content-space) * -1);
+                margin-inline-end: calc(var(--content-space) * -1);
+                width: unset;
+                width: calc(100% + calc(var(--content-space) * 2));
+                border-radius: 0 !important;
+            }
         }
     }
     pre {
@@ -93,13 +100,6 @@
     }
     p img, svg, .youtube-player {
         transform: translateY(var(--space-sm));
-        @include mQ-max($display-size-sm) {
-            margin-inline-start: calc(var(--content-space) * -1);
-            margin-inline-end: calc(var(--content-space) * -1);
-            max-width: unset;
-            width: calc(100% + calc(var(--content-space) * 2));
-            border-radius: 0 !important;
-        }
     }
 
     .footnotes {
