@@ -39,9 +39,9 @@
         padding: var(--space-4xl);
         padding-top: var(--space-2xl);
         @include mQ-max($display-size-sm) {
-            padding: var(--space-2xl);
+            padding: var(--content-space);
         }
-        img, svg, .youtube-player {
+        p img, svg, .youtube-player {
             overflow: hidden;
             border-radius: var(--radius);
             width: 100%;
@@ -49,7 +49,7 @@
             @include mQ-max($display-size-sm) {
                 margin-inline-start: calc(var(--content-space) * -1);
                 margin-inline-end: calc(var(--content-space) * -1);
-                width: unset;
+                max-width: unset;
                 width: calc(100% + calc(var(--content-space) * 2));
                 border-radius: 0 !important;
             }
