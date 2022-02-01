@@ -5,15 +5,13 @@ urlname: svg-vue-gridsome
 date: 2021-07-09
 updated: 2021-07-09
 published: true
-tags: ['Sketch','Productivity', 'Shortcuts']
+tags: ['SVG', 'Creative', 'Code']
 cover_image: 
 social_image: ./social-cover-about-my-svgs.jpg
 cover_caption: 
 description: 
 ---
-import IconBase from '~/components/IconBase.vue';    
-import IconSystem from '~/components/IconSystem.vue';    
-import IconFree from '~/components/IconFree.vue';    
+import SVGIconBase from '~/components/SVGIconBase.vue';    
 import KofIcon from '~/components/icons/KofIcon.vue';    
 import IconBright from '~/components/icons/IconBright.vue';    
 import MonkeySkull from '~/components/icons/MonkeySkull.vue';    
@@ -23,53 +21,46 @@ import IconSystemImage from '~/components/icons-system/icon-system-image.vue';
 import IconSystemSettings from '~/components/icons-system/icon-system-settings.vue';    
 import IconSystemOk from '~/components/icons-system/icon-system-ok.vue';    
 import Hr from '~/components/Hr.vue';    
+import Example from './example.vue';    
 
-SVGs are nice, inline SVGs are nicer - But wrapping them as components will make the experience much better 👌
+> SVGs are **nice**  
+> Inline SVGs are **nicer**  
+> SVG as components are the **nicest**
+
 # The need
 
 I'd like my SVGs:
 
-- Inline so I can CSS them
-- As a component for a cleaner file
-- With *props* like size and color
-- To be able to use CSS or SCSS variants
-- Available for both systematic and free-form use
-
-# The use cases 
-
-I have 2 of them:
-
-1. As an *Icon System*, where there's a lot of similarly and a few differences. For this case I'll use a component called `SvgIconSystem.vue`
-2. For general purpose, where the SVGs shown have nothing in common. I'll name this component `SvgFreeBase.vue`
+1. As an *Icon System*, where there's a lot of similarly and a few differences. 
+   For this case I'll use a component called `SVGIconBase.vue`
+   - Inline so I can CSS them
+   - As a component for a cleaner file
+   - With *props* like size and color
+   - To be able to use CSS or SCSS variants
+   - Available for both systematic and free-form use
+2. For general purpose, where the SVGs shown have nothing in common but you still want it as component and to use all the Veudoo magic
 
 Let's dive in to some real world examples
 
-# Icon System
+# The Icon System SVG
 
-In this icon system each SVG is presented with 2 files - The 1st is the SVG wrapper, it's the main `SvgIconSystem.vue`, the 2nd file is the actual SVG path, the drawing of the icon. 
+In my *icon system* all icons have the **same size, color and behavior** (which I might override at the instance level).  
 
-In this example I'll use the Attach icon 
-<IconSystem>
-    <IconSystemAttach />
-</IconSystem>, named  `IconSystemAttach.vue`.
+**I use 2 *SFC*s for each icon** – The 1st file is the SVG wrapper (`SVGIconBase.vue`), the 2nd file is the actual SVG path, the drawing of the icon, which is also a *Vue* file (`IconSomeName.vue`) and it's unique in its shape and name.  
 
-
-In the Icon System case all icons have the **same** size, color and behavior that I might override at the instance level, this is the 1st  file. The icon itself, the 2nd file, is unique in shape and name.
-
-Adding the Attach icon in the a Vue file, will look like this:
+It will look like this in the HTML:
 
 ```html
-<SvgIconSystem>
-    <IconAttach />
-</SvgIconSystem>
+<SVGIconBase> <!-- The wrapper -->
+    <IconSomeName /> <!-- The icon -->
+</SVGIconBase>
 ```
 
-Now let's review the two files
-## The Icon System SFC
+Now let's review these two files
+## The SVGIconBase SFC
 
-This is the 1st file called `SvgIconSystem.vue`:
+This is the 1st file called `SVGIconBase.vue`:
 - The *version*, *viewBox*, *aria-labelledby* and *role* are fixed 
-> my icon system is 24\*24 – if your system is at a different size change the *viewBox*
 - Controlling the *width*, *height* and *fill* as props, data binded with the `:`, with defaults set at the `props` section
 - The icon name and the path will be passed along at the `<slot />`, this is where the SVG paths will be pushed in
 - I've added a rectangular just to act as a bounding box regardless of the icons shape
@@ -84,23 +75,25 @@ Here's how the file looks:
 		viewBox="0 0 24 24" 
 		aria-labelledby="title"
 		role="presentation"
-		:width="width"
-		:height="height"
+		:width="size"
+        :height="size"
 		:fill="iconColor"
-	>
-		<slot /> 
-		<rect id="bounding-box" fill="none" width="100%" height="100%"/>
+	>  <!-- The values with ":" indicate the props
+            The rest is fixed -->
+		<slot /> <!-- The icon -->
+		<rect 
+            id="bounding-box" 
+            fill="none" 
+            size="100%" 
+    
+        />  <!-- For better hovers -->
 	</svg>
 </template>
 
 <script>
 export default {
 	props: {
-		width: {
-			type: [Number, String],
-			default: "1.5em",
-		},
-		height: {
+		size: {
 			type: [Number, String],
 			default: "1.5em",
 		},
@@ -114,204 +107,141 @@ export default {
 
 <style lang="scss" scoped>
 svg {
-	transition: fill 0.35s ease-out;
+	transition: transform 0.25s ease-out;
 	&:hover {
-		fill: var(--system-color-HL);
+		transform: scale(1.025);
 	}
 }
 </style>
 ```
+## The Icon File
 
-### Basic Use
+For the icon drawing I tore apart the *path* form the the *SVG* and added the *title* tag and the *lang* attribute. 
 
-Here are a few icons 
-<IconSystem>
-    <IconSystemAttach />
-</IconSystem>
-of my *Icon System*:
+x> Plan a multi-lang icon system?  
+Make sure to expose the *title* & *lang* values *props* as well
 
-<IconSystem>
-    <IconSystemDoor/>
-</IconSystem>
+x> Using a *stroke* with or instead of a *fill*?  
+Make sure to expose it as a *prop* too
 
-<IconSystem>
-    <IconSystemImage/>
-</IconSystem>
-
-<IconSystem>
-    <IconSystemSettings/>
-</IconSystem>
-
-<IconSystem>
-    <IconSystemOk/>
-</IconSystem>
-
-Let's play around with them:
-
-<IconSystem
-    width="48"
-    height="48"
-    fill="var(--bg-primary-HL)"
-    >
-    <IconSystemAttach />
-</IconSystem>
-
-<IconSystem
-    width="96"
-    height="96"
-    fill="orange"
-    >
-    <IconSystemAttach />
-</IconSystem>
-
-<IconFree>
-    <MonkeySkull />
-</IconFree>
-
-### Kof Icon
-
-<IconBase>
-    <KofIcon />
-</IconBase>
-
-<IconBase
-    width="64"
-    height="64"
-    fill="var(--bg-primary-HL)"
-    >
-    <KofIcon />
-</IconBase>
-
-<IconBase
-    width="128"
-    height="128"
-    >
-    <KofIcon />
-</IconBase>
-
-<Hr hr-margin-top="var(--spacem-2xl)" />
-
-### Sun Icon
-
-<IconBase
-    icon-name="flip-theme-to-bright"
-    icon-color="none"
-    stroke="var(--system-color)"
-    stroke-width="2">
-    <IconBright />
-</IconBase>
-
-<IconBase
-    icon-name="flip-theme-to-bright"
-    icon-color="none"
-    stroke="var(--bg-caution-HL)"
-    stroke-width="2"
-    width="64"
-    height="64"
-    >
-    <IconBright />
-</IconBase>
-
-<IconBase
-    icon-name="flip-theme-to-bright"
-    icon-color="none"
-    stroke="var(--link-color)"
-    stroke-width="2"
-    width="128"
-    height="128"
-    >
-    <IconBright />
-</IconBase>
-
-
-### IconBase.vue
-
-### The  `IconSystemAttach.vue` file
-
-In its origin this file used to be a SVG, something like this:
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1" opacity=".84">
-    <path id="➠-BG-Icon" fill="#333" d=",..."/>
-  </g>
-</svg>
-```
-
-And now I've cleaned it up to something like that:
 ```html
 <template>
 	<g>
-		<title id="title" lang="en">Attach Icon</title>
-		<path d="..."
-		/>
+		<title id="title" lang="en">Some Icon Name</title>
+		<path d="..." />
 	</g>
 </template>
-
 ```
 
-<iframe
-  src="https://app.abstract.com/embed/3f9a3f45-47a1-46fa-b7c2-d788a37aa269"
-  width="100%"
-  height="360"
-  frameborder="0"
-  allowfullscreen
-></iframe>
- 
+## Basic Use
+
+Here are a few icons of my *Icon System* to play around with:
+
+<Hr />
+
+<SVGIconBase>
+    <IconSystemAttach />
+</SVGIconBase>
+
+<SVGIconBase>
+    <IconSystemDoor/>
+</SVGIconBase>
+
+<SVGIconBase>
+    <IconSystemImage/>
+</SVGIconBase>
+
+<SVGIconBase>
+    <IconSystemSettings/>
+</SVGIconBase>
+
+<SVGIconBase>
+    <IconSystemOk/>
+</SVGIconBase>
+
+<Hr />
+
+Now I can easley change the icon size and color
+
+<SVGIconBase
+    size="16"
+    fill="var(--title-color)"
+    >
+    <IconSystemAttach />
+</SVGIconBase>
+
+<SVGIconBase>
+    <IconSystemAttach />
+</SVGIconBase>
+
+<SVGIconBase
+    size="48"
+    fill="var(--bg-primary-HL)"
+    >
+    <IconSystemAttach />
+</SVGIconBase>
+
+<SVGIconBase
+    size="96"
+    fill="var(--system-color-HL)"
+    >
+    <IconSystemAttach />
+</SVGIconBase>
+
+<Hr />
+
+And example code will look like so:
 
 ```html
-<template>
-    <svg
-        xmlns="http://www.w3.org/2000/svg"
-        :width="width"
-        :height="height"
-        :stroke="stroke"
-        :stroke-width="strokeWidth"
-        :viewBox="viewBox"
-        :aria-labelledby="iconName"
-        role="presentation"
-    >
-        <title :id="iconName" lang="en">{{ iconName }}</title>
-        <g :fill="iconColor">
-            <slot />
-        </g>
-    </svg>
-</template>
+<SVGIconBase size="96" fill="orange">
+    <IconSystemAttach />
+</SVGIconBase>
 ```
 
-```javascript
-<script>
-export default {
-    props: {
-        iconName: {
-            type: String,
-            default: ""
-        },
-        width: {
-            type: [Number, String],
-            default: 24
-        },
-        height: {
-            type: [Number, String],
-            default: 24
-        },
-        viewBox: {
-            type: String,
-            default: "0 0 32 32"
-        },
-        iconColor: {
-            type: String,
-            default: "currentColor"
-        },
-        stroke: {
-            type: String,
-            default: "none"
-        },
-        strokeWidth: {
-            type: [Number, String],
-            default: "none"
-        }
-    }
-};
-</script>
+x> My icon system is 24\*24 – If you built your system in a different size make sure to change the *viewBox* and the default *props*
+
+<Hr />
+
+Nice, now for the 2nd use case
+
+# Free Style SVG
+
+For this one is just change your SVG to a *Vue* file and wrap it with a *template* tag. The end. And again, the value of it is that you can use your css/scss vars and to better organize your file - like so:
+
+```html
+<<template>
+	<svg viewBox="0 0 640 240">
+		<rect 
+            fill="var(--bg-code)" 
+            width="100%" height="100%" />
+        <polygon 
+            transform-origin="320 120" 
+            points="320 40 390 80 390 160 320 200 250 160 250 80">
+        </polygon>
+	</svg>
+</template>
+
+<style lang="scss" scoped>
+@keyframes rotate {
+	0% { transform: rotate(0); }
+	to { transform: rotate(360deg); }
+}
+polygon {
+	fill: var(--system-color);
+	transition: fill 0.5s ease-in-out,;
+	animation: rotate 5s cubic-bezier(0.75, 0, 0.25, 1) alternate infinite;
+	&:hover {
+		fill: var(--link-color);
+	}
+}
+</style> 
 ```
+
+Which looks like that:
+
+<Example />
+
+<Hr />
+
+
+#### That's all folks, see ya'll next time
