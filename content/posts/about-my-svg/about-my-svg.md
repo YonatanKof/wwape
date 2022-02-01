@@ -1,23 +1,23 @@
 ---
-title: How I use SVGs in Vue and Gridsome
+title: SVG, Vuedoo Magic
 author_name: Yonatan Ben Knaan
 urlname: svg-vue-gridsome
-date: 2021-07-09
-updated: 2021-07-09
+date: 2022-01-01
+updated: 
 published: true
 tags: ['SVG', 'Creative', 'Code']
 cover_image: ./about-my-svg.svg
 social_image: ./social-cover-about-my-svgs.jpg
-cover_caption: 
-description: 
+cover_caption: Cover art for SVGs & Vue article
+description: How I use SVGs with Vue and Gridsome
 ---
 import SVGIconBase from '~/components/SVGIconBase.vue';    
 import IconBright from '~/components/icons/IconBright.vue';    
-import IconSystemAttach from '~/components/icons-system/icon-system-attach.vue';    
-import IconSystemDoor from '~/components/icons-system/icon-system-door.vue';    
-import IconSystemImage from '~/components/icons-system/icon-system-image.vue';    
-import IconSystemSettings from '~/components/icons-system/icon-system-settings.vue';    
-import IconSystemOk from '~/components/icons-system/icon-system-ok.vue';    
+import IconAttach from '~/components/icons-system/icon-system-attach.vue';    
+import IconDoor from '~/components/icons-system/icon-system-door.vue';    
+import IconImage from '~/components/icons-system/icon-system-image.vue';    
+import IconSettings from '~/components/icons-system/icon-system-settings.vue';    
+import IconOk from '~/components/icons-system/icon-system-ok.vue';    
 import Hr from '~/components/Hr.vue';    
 import Example from './example.vue';    
 
@@ -28,23 +28,25 @@ SVG as components are the **nicest**
 # The need
 
 I'd like my SVGs:
-
-1. As an *Icon System*, where there's a lot of similarly and a few differences. 
-   For this case I'll use a component called `SVGIconBase.vue`
    - Inline so I can CSS them
    - As a component for a cleaner file
    - With *props* like size and color
    - To be able to use CSS or SCSS variants
    - Available for both systematic and free-form use
+
+
+# The use cases 
+
+1. As an *Icon System*, where there's a lot of similarly and a few differences. 
 2. For general purpose, where the SVGs shown have nothing in common but you still want it as component and to use all the Veudoo magic
 
 Let's dive in to some real world examples
 
 # The Icon System SVG
 
-In my *icon system* all icons have the **same size, color and behavior** (which I might override at the instance level).  
+In my *icon system* all the icons have the **same size, color and behavior** which I might override at the instance level.
 
-**I use 2 *SFC*s for each icon** – The 1st file is the SVG wrapper (`SVGIconBase.vue`), the 2nd file is the actual SVG path, the drawing of the icon, which is also a *Vue* file (`IconSomeName.vue`) and it's unique in its shape and name.  
+**I use 2 *SFC*s for each icon** – The 1st file is the SVG wrapper called `SVGIconBase.vue`. T  he 2nd file is the actual SVG drawing of the icon, it's unique in its shape and name, and it's also a *Vue* file called something like `IconSomeName.vue`.
 
 It will look like this in the HTML:
 
@@ -58,10 +60,10 @@ Now let's review these two files
 ## The SVGIconBase SFC
 
 This is the 1st file called `SVGIconBase.vue`:
-- The *version*, *viewBox*, *aria-labelledby* and *role* are fixed 
-- Controlling the *width*, *height* and *fill* as props, data binded with the `:`, with defaults set at the `props` section
+- The *xmlns*, *viewBox*, *aria-labelledby* and *role* are fixed 
+- The *size* and *fill* are props, data binded with the `:`, with defaults set at the `props` section
 - The icon name and the path will be passed along at the `<slot />`, this is where the SVG paths will be pushed in
-- I've added a rectangular just to act as a bounding box regardless of the icons shape
+- I've added a BG rect for better hovers regardless of the icons shape
 - Control over styles like *hovers* and *transitions* will be done with CSS
 
 Here's how the file looks:
@@ -69,21 +71,16 @@ Here's how the file looks:
 ```html
 <template>
 	<svg
-        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24" 
 		aria-labelledby="title"
 		role="presentation"
 		:width="size"
         :height="size"
 		:fill="iconColor"
-	>  <!-- The values with ":" indicate the props
-            The rest is fixed -->
+	>
 		<slot /> <!-- The icon -->
-		<rect 
-            id="bounding-box" 
-            fill="none" 
-            size="100%" 
-        />  <!-- For better hovers -->
+		<rect id="BG" fill="none" width="100%" height="100%"/>  
 	</svg>
 </template>
 
@@ -119,7 +116,7 @@ x> Plan a multi-lang icon system?
 Make sure to expose the *title* & *lang* values *props* as well
 
 x> Using a *stroke* with or instead of a *fill*?  
-Make sure to expose it as a *prop* too
+Make sure to expose the *stroke* as a *prop* too
 
 ```html
 <template>
@@ -137,52 +134,43 @@ Here are a few icons of my *Icon System* to play around with:
 <Hr />
 
 <SVGIconBase>
-    <IconSystemAttach />
+    <IconAttach />
 </SVGIconBase>
 
 <SVGIconBase>
-    <IconSystemDoor/>
+    <IconDoor/>
 </SVGIconBase>
 
 <SVGIconBase>
-    <IconSystemImage/>
+    <IconImage/>
 </SVGIconBase>
 
 <SVGIconBase>
-    <IconSystemSettings/>
+    <IconSettings/>
 </SVGIconBase>
 
 <SVGIconBase>
-    <IconSystemOk/>
+    <IconOk/>
 </SVGIconBase>
 
 <Hr />
 
 Now I can easley change the icon size and color
 
-<SVGIconBase
-    size="16"
-    fill="var(--title-color)"
-    >
-    <IconSystemAttach />
+<SVGIconBase size="16" fill="var(--bg-caution-HL)">
+    <IconAttach />
 </SVGIconBase>
 
 <SVGIconBase>
-    <IconSystemAttach />
+    <IconAttach />
 </SVGIconBase>
 
-<SVGIconBase
-    size="48"
-    fill="var(--bg-primary-HL)"
-    >
-    <IconSystemAttach />
+<SVGIconBase size="48" fill="var(--system-dim)">
+    <IconAttach />
 </SVGIconBase>
 
-<SVGIconBase
-    size="96"
-    fill="var(--system-color-HL)"
-    >
-    <IconSystemAttach />
+<SVGIconBase size="96" fill="var(--bg-primary-HL)">
+    <IconAttach />
 </SVGIconBase>
 
 <Hr />
@@ -190,8 +178,8 @@ Now I can easley change the icon size and color
 And example code will look like so:
 
 ```html
-<SVGIconBase size="96" fill="orange">
-    <IconSystemAttach />
+<SVGIconBase size="96" fill="var(--bg-primary-HL)">
+    <IconAttach />
 </SVGIconBase>
 ```
 
@@ -237,6 +225,36 @@ polygon {
 Which looks like that:
 
 <Example />
+
+# The Gridsome Setup
+
+I'm using the [vue-remark](https://gridsome.org/plugins/@gridsome/vue-remark) plugin which allows, among other, to add vue components into the *markdown* file. 
+
+So the above example, with the 4 attached icons, looks like so
+
+```md
+---
+frontmatter: It matters!
+---
+import SVGIconBase from '~/components/SVGIconBase.vue';    
+import IconAttach from '~/icons-system/IconAttach.vue';    
+
+<SVGIconBase size="16" fill="var(--bg-caution-HL)">
+    <IconAttach />
+</SVGIconBase>
+
+<SVGIconBase>
+    <IconAttach />
+</SVGIconBase>
+
+<SVGIconBase size="48" fill="var(--system-dim)">
+    <IconAttach />
+</SVGIconBase>
+
+<SVGIconBase size="96" fill="var(--bg-primary-HL)">
+    <IconAttach />
+</SVGIconBase>
+```
 
 <Hr />
 
