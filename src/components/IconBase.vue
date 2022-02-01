@@ -10,7 +10,9 @@
 		role="presentation"
 	>
 		<title :id="iconName" lang="en">{{ iconName }}</title>
-		<slot :fill="iconColor" />
+		<g :fill="iconColor">
+			<slot />
+		</g>
 	</svg>
 </template>
 
