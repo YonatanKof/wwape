@@ -21,6 +21,7 @@
     h6 {
         margin-top: var(--spacem-md);
         margin-bottom: var(--space-xs);
+        text-transform: capitalize;
     }
 
     h1 {
@@ -98,7 +99,7 @@
     svg + em, noscript + em {
         font-size: var(--font-size-3xl);
     }
-    p img, svg, .youtube-player {
+    p img, p svg, p .youtube-player {
         transform: translateY(var(--space-sm));
     }
 

@@ -55,7 +55,7 @@
 
 html {
 	font-size: var(--base-font-size);
-	line-height: 1.75em;
+	line-height: 1;
 }
 
 body {
@@ -151,6 +151,9 @@ em {
 	font-size: 1.375em;
 	line-height: 1;
 	margin-inline-end: var(--spacem-3xs);
+}
+p em {
+	display: inline-block;
 }
 
 strong {

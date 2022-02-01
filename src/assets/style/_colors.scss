@@ -7,7 +7,7 @@ $color-bright-O40: transparentize($color-bright-base, 0.7);
 $color-bright-O20: transparentize($color-bright-base, 0.85);
 $color-bright-O10: transparentize($color-bright-base, 0.92);
 
-$color-dark-base: hsl(60, 40%, 5%); // should be darker then
+$color-dark-base: hsl(60, 40%, 10%); // should be darker then
 $color-dark-light: lighten($color-dark-base, 5%);
 $color-dark-dark: darken($color-dark-base, 20%);
 $color-dark-O80: transparentize($color-dark-light, 0.15);
@@ -51,6 +51,7 @@ body {
     // Typography
     --title-color: #{$color-dark-light};
     --system-color: #{$color-dark-base};
+    --system-dimmed: #{$color-dark-O80};
     --system-dim: #{$color-dark-O60};
     --system-color-HL: #{$color-dark-dark};
     --system-color-invert: #{$color-bright-base};
@@ -78,6 +79,7 @@ body[data-theme="dark"] {
     // Typography
     --title-color: #{$color-bright-base};
     --system-color: #{$color-bright-light};
+    --system-dimmed: #{$color-bright-O75};
     --system-dim: #{$color-bright-O50};
     --system-color-HL: #{$color-bright-base};
     --system-color-invert: #{$color-dark-base};
