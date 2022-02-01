@@ -6,15 +6,13 @@ date: 2021-07-09
 updated: 2021-07-09
 published: true
 tags: ['SVG', 'Creative', 'Code']
-cover_image: 
+cover_image: ./about-my-svg.svg
 social_image: ./social-cover-about-my-svgs.jpg
 cover_caption: 
 description: 
 ---
 import SVGIconBase from '~/components/SVGIconBase.vue';    
-import KofIcon from '~/components/icons/KofIcon.vue';    
 import IconBright from '~/components/icons/IconBright.vue';    
-import MonkeySkull from '~/components/icons/MonkeySkull.vue';    
 import IconSystemAttach from '~/components/icons-system/icon-system-attach.vue';    
 import IconSystemDoor from '~/components/icons-system/icon-system-door.vue';    
 import IconSystemImage from '~/components/icons-system/icon-system-image.vue';    
@@ -23,9 +21,9 @@ import IconSystemOk from '~/components/icons-system/icon-system-ok.vue';
 import Hr from '~/components/Hr.vue';    
 import Example from './example.vue';    
 
-> SVGs are **nice**  
-> Inline SVGs are **nicer**  
-> SVG as components are the **nicest**
+!> SVGs are **nice**  
+Inline SVGs are **nicer**  
+SVG as components are the **nicest**
 
 # The need
 
@@ -85,7 +83,6 @@ Here's how the file looks:
             id="bounding-box" 
             fill="none" 
             size="100%" 
-    
         />  <!-- For better hovers -->
 	</svg>
 </template>
@@ -243,5 +240,6 @@ Which looks like that:
 
 <Hr />
 
-
 #### That's all folks, see ya'll next time
+
+<Hr />
