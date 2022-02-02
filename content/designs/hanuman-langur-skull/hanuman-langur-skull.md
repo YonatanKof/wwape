@@ -13,13 +13,8 @@ description: A Hanuman Langur Skull
 canonical_url: false
 series: false
 ---
-import IconBase from '~/components/SVGBase.vue'
 import Hanuman from './hanuman-langur-skull.vue'
 
 An Old World monkey, the Gray langur [AKA the *Hanuman langur*](https://en.wikipedia.org/wiki/Gray_langur) got a nice skull
 
-<p>
-    <SVGBase
-        <Hanuman />
-    </SVGBase>
-</p>
+<Hanuman />
