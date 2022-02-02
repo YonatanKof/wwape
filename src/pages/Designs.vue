@@ -52,10 +52,10 @@ export default {
 
 	data() {
 		return {
-			about: `I like to illustarte and to design, and here is where its at. In this Desisgns page you'll be able to see stuff I'm uploading to the ${
+			about: `I like to illustrate and to design, and here is where its at. In this page you'll be able to see stuff I'm uploading to the ${
 				process.env.GRIDSOME_SITE_NAME
 			}`,
-			postTitle: `Illustations and designs by ${process.env.GRIDSOME_AUTHOR}`,
+			postTitle: `Illustrations and designs by ${process.env.GRIDSOME_AUTHOR}`,
 			pageName: "designs",
 		};
 	},
