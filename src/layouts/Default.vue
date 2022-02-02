@@ -142,10 +142,11 @@ query {
 }
 
 .fade-enter-active {
-	transition: opacity 0.35s;
+	transition: opacity 0.25s ease-out, transform 0.5s ease-out;
 }
 
 .fade-enter {
 	opacity: 0;
+	transform: translateY(-0.5rem);
 }
 </style>
