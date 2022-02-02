@@ -49,14 +49,12 @@ query {
 <script>
 import Author from "~/components/Author.vue";
 import PostCard from "~/components/PostCard.vue";
-import IconBase from "~/components/IconBase.vue";
 import KofIcon from "~/components/icons/KofIcon.vue";
 
 export default {
     components: {
         Author,
         PostCard,
-        IconBase,
         KofIcon,
     },
     data() {
