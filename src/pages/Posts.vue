@@ -22,7 +22,7 @@
 query {
   posts: allPost(
     filter: { published: { eq: true }} 
-    sortBy: "date", order: ASC
+    sortBy: "date", order: DESC
     ) 
   {
     edges {
