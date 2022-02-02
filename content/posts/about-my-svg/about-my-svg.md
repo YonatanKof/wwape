@@ -11,7 +11,7 @@ social_image: ./about-my-svgs-social-cover.jpg
 cover_caption: Cover art for SVGs & Vue article
 description: How I use SVGs with Vue and Gridsome
 ---
-import SVGIconBase from '~/components/SVGIconBase.vue';    
+import SVGIconBase from '~/components/SVGFreeBase.vue';    
 import IconBright from '~/components/icons/IconBright.vue';    
 import IconAttach from '~/components/icons-system/icon-system-attach.vue';    
 import IconDoor from '~/components/icons-system/icon-system-door.vue';    
@@ -155,7 +155,12 @@ Here are a few icons of my *Icon System* to play around with:
 
 <Hr />
 
-Now I can easley change the icon size and color
+I can have them inline 
+<SVGIconBase>
+    <IconOk/>
+</SVGIconBase>
+and can easley change their size and color
+
 
 <SVGIconBase size="16" fill="var(--bg-caution-HL)">
     <IconAttach />
@@ -173,9 +178,8 @@ Now I can easley change the icon size and color
     <IconAttach />
 </SVGIconBase>
 
-<Hr />
 
-And example code will look like so:
+So an example code will look like so:
 
 ```html
 <SVGIconBase size="96" fill="var(--bg-primary-HL)">

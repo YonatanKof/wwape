@@ -6,9 +6,6 @@
 </template>
 
 <script>
-import IconBase from "~/components/IconBase.vue";
-import KofIcon from "~/components/icons/KofIcon.vue";
-
 export default {
 	props: ["showTitle", "showBioText", "authorTitle", "authorBio"],
 };
