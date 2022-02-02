@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import IconBase from "~/components/IconBase.vue";
+import IconBase from "~/components/SVGFreeBase.vue";
 import IconBright from "~/components/icons/IconBright.vue";
 import IconDark from "~/components/icons/IconDark.vue";
 
