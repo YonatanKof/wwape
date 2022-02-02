@@ -7,7 +7,7 @@ updated:
 published: true
 tags: ['SVG', 'Creative', 'Code']
 cover_image: ./about-my-svg.svg
-social_image: ./about-my-svgs-social-cover.jpg
+social_image: ./social-cover-about-my-svgs.jpg
 cover_caption: Cover art for SVGs & Vue article
 description: How I use SVGs with Vue and Gridsome
 ---
