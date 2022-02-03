@@ -7,11 +7,11 @@ updated:
 published: true
 tags: ['SVG', 'Creative', 'Code']
 cover_image: ./about-my-svg.svg
-social_image: ./social-cover-about-my-svgs.jpg
+social_image: ./about-my-svgs-social-cover.jpg
 cover_caption: Cover art for SVGs & Vue article
 description: How I use SVGs with Vue and Gridsome
 ---
-import SVGIconBase from '~/components/SVGFreeBase.vue';    
+import SVGIconBase from '~/components/SVGIconBase.vue';    
 import IconBright from '~/components/icons/IconBright.vue';    
 import IconAttach from '~/components/icons-system/icon-system-attach.vue';    
 import IconDoor from '~/components/icons-system/icon-system-door.vue';    
