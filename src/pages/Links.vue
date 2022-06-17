@@ -1,5 +1,5 @@
 <template>
-	<Layout :show-logo="false" :show-links="false">
+	<Layout :show-logo="true" :show-posts="true">
 		<section class="about">
 			<IntroForPage :intro-script="$data.scriptTitle" :intro-title="$data.myName" :intro-subtitle="theText" />
 			<div class="about__links">
@@ -46,7 +46,7 @@ export default {
 			scriptTitle: "Hi There 👋 <br /> My Name Is",
 			myName: 'Yonatan <span class="grab-word">Ben Knaan</span>',
 			about: `A mismatched persona and an alright dude from TLV 🇮🇱`,
-			theText: "And here are some links from the World Wide Web",
+			theText: "I'm a family man, a mismatched persona, a designer, a maker and an alright dude from TLV – and here are some links from the World Wide Web",
 			webLinks: [
 				{
 					URL: "https://wwape.com/",
@@ -71,42 +71,56 @@ export default {
 				{
 					URL: "https://dribbble.com/yonatan_kof",
 					title: "Dribbble",
-					description: "Some assorted designs",
+					description: "Assorted designs",
+					icon: "icon/dribbble.svg",
 				},
 				{
 					URL: "https://twitter.com/yonatankof",
 					title: "Twitter",
-					description: "I don't Tweet a lot but if I do you can find it here",
+					description: "Zero influence",
+					icon: "icon/twitter.svg",
 				},
 				{
 					URL: "https://github.com/YonatanKof",
 					title: "GitHub",
-					description: "An aspiring developer for a while now",
+					description: "A profile of an aspiring developer",
+					icon: "icon/github.svg",
 				},
 				{
 					URL: "https://www.instagram.com/yonatan_kof/",
 					title: "Instagram",
-					description: "Some photos taken with my lovely cameras",
+					description: "Taken with my precious cameras",
+					icon: "icon/instagram.svg",
 				},
 				{
 					URL: "https://www.tiktok.com/@abu.kof",
 					title: "TikTok",
-					description: "Some weird ass videos here",
+					description: "Some \"what?\" monentes",
+					icon: "icon/tiktok.svg",
 				},
 				{
 					URL: "https://www.last.fm/user/oMonkey",
 					title: "Last.fm",
-					description: "Tracking my listening since 2006",
+					description: "Scrobbling since 2006",
+					icon: "icon/lastfm.svg",
 				},
 				{
 					URL: "https://bandcamp.com/yoantankof",
 					title: "Bandcamp",
-					description: "I love my music and Bandcamp has opened up my range",
+					description: '"Open Source" music',
+					icon: "icon/bandcamp.svg",
 				},
 				{
 					URL: "https://www.linkedin.com/in/yonatankof/",
 					title: "Linkedin",
 					description: "My pro life",
+					icon: "icon/linkedin.svg",
+				},
+				{
+					URL: "https://abu-kof.tumblr.com/",
+					title: "Tumblr",
+					description: "We go way back",
+					icon: "icon/tumblr.svg",
 				},
 			],
 		};
@@ -194,15 +208,13 @@ export default {
 
 .about {
 	max-width: var(--content-width-md);
-	display: flex;
-	flex-direction: column;
-
 	&__links {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 5fr 4fr;
 		gap: var(--space-4xl);
-		@include mQ-max($display-size-sm) {
-			flex-direction: column;
+		@include mQ-max($display-size-xs) {
+			grid-template-columns: unset;
+			grid-template-rows: auto;
 		}
 		#link-list {
 			display: flex;

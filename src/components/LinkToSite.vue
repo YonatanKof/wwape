@@ -9,10 +9,12 @@
 			background="red"
 		/>
 
-		<a :href="linkdata.URL">
-			{{ linkdata.title }}
-		</a>
-		<p v-html="linkdata.description"></p>
+		<span
+			><a :href="linkdata.URL" target="_blank" rel="nofollow noopener noreferrer">
+				{{ linkdata.title }}
+			</a>
+			<p v-html="linkdata.description"></p
+		></span>
 	</div>
 </template>
 
@@ -26,22 +28,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/_layout.scss";
 .link {
 	display: flex;
-	flex-direction: column;
-	gap: var(--space-xs);
+	flex-direction: row;
+	gap: var(--space-sm);
+	align-items: center;
+	@include mQ-max($display-size-sm) {
+		align-items: start;
+	}
 	.image {
+		box-shadow: var(--shadow-sm);
 		width: auto;
-		height: 3rem;
+		height: var(--space-4xl);
+		border-radius: var(--radius);
 	}
 	* {
 		margin-bottom: unset;
 	}
+	span {
+		display: flex;
+		gap: var(--space-3xs);
+		flex-direction: column;
+	}
 	a {
-		font-size: var(--font-size-3xl);
+		font-size: var(--font-size-xl);
+		width: fit-content;
 	}
 	p {
-		font-size: var(--font-size-lg);
+		font-size: var(--font-size-md);
 	}
 }
 </style>
