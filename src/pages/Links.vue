@@ -46,7 +46,7 @@ export default {
 			scriptTitle: "Hi There 👋 <br /> My Name Is",
 			myName: 'Yonatan <span class="grab-word">Ben Knaan</span>',
 			about: `A mismatched persona and an alright dude from TLV 🇮🇱`,
-			theText: "I'm a family man, a mismatched persona, a designer, a maker and an alright dude from TLV – and here are some links from the World Wide Web",
+			theText: "Links from the World Wide Web",
 			webLinks: [
 				{
 					URL: "https://wwape.com/",
@@ -207,10 +207,10 @@ export default {
 @import "../assets/style/_layout.scss";
 
 .about {
-	max-width: var(--content-width-md);
+	max-width: var(--content-width-xs);
 	&__links {
 		display: grid;
-		grid-template-columns: 5fr 4fr;
+		grid-template-columns: 1fr 1fr;
 		gap: var(--space-4xl);
 		@include mQ-max($display-size-xs) {
 			grid-template-columns: unset;
