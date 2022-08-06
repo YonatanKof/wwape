@@ -1,7 +1,7 @@
 <template>
 	<Layout :show-logo="true" :show-posts="true">
 		<section class="about">
-			<IntroForPage :intro-script="$data.scriptTitle" :intro-title="$data.myName" :intro-subtitle="theText" />
+			<IntroForPage :intro-script="$data.scriptTitle" :intro-title="$data.myName" :intro-subtitle="about" />
 			<div class="about__links">
 				<div id="link-list">
 					<h3>Sites</h3>
@@ -45,26 +45,31 @@ export default {
 		return {
 			scriptTitle: "Hi There 👋 <br /> My Name Is",
 			myName: 'Yonatan <span class="grab-word">Ben Knaan</span>',
-			about: `A mismatched persona and an alright dude from TLV 🇮🇱`,
-			theText: "Links from the World Wide Web",
+			about: `A family man & lover, a design system manager & maker, a mismatched persona & an alright dude from TLV 🏴🇮🇱🏴‍☠️`,
 			webLinks: [
 				{
 					URL: "https://wwape.com/",
 					title: "World Wide Ape",
 					description: "My <em>Under Construction</em> Website",
-					// icon: "../icons/link-linkedin.svg",
+					icon: "../icon/weblink-1.svg",
 				},
 				{
 					URL: "https://yonatankof.com/",
 					title: "Yonatan Kof",
 					description: "Showcasing UX/UI",
-					// icon: "../icons/link-twitter.svg",
+					icon: "../icon/weblink-2.svg",
 				},
 				{
 					URL: "https://design.yonatankof.com/",
-					title: "Kof Art & Design",
-					description: "An archival website showing some nice <em>art</em> and <em>design</em> work",
-					// icon: "../assets/images/link-tumblr.svg",
+					title: "Kof Art",
+					description: "Archival site for my <em>art</em> & <em>design</em>",
+					icon: "../icon/weblink-3.svg",
+				},
+				{
+					URL: "https://www.notion.so/yonatankof/Yonatan-Ben-Knaan-CV-615078174644460db169c928cd409f9e",
+					title: "My CV",
+					description: "Learn how I lead design and successfully ship products to market for more than 13 years",
+					icon: "../icon/weblink-4.svg",
 				},
 			],
 			socialLinks: [
@@ -87,33 +92,27 @@ export default {
 					icon: "icon/github.svg",
 				},
 				{
-					URL: "https://www.instagram.com/yonatan_kof/",
-					title: "Instagram",
-					description: "Taken with my precious cameras",
-					icon: "icon/instagram.svg",
-				},
-				{
-					URL: "https://www.tiktok.com/@abu.kof",
-					title: "TikTok",
-					description: "Some \"what?\" monentes",
-					icon: "icon/tiktok.svg",
-				},
-				{
 					URL: "https://www.last.fm/user/oMonkey",
 					title: "Last.fm",
 					description: "Scrobbling since 2006",
 					icon: "icon/lastfm.svg",
 				},
 				{
+					URL: "https://www.mixcloud.com/yonatankof",
+					title: "MixCloud",
+					description: "Leftfield mixed music",
+					icon: "icon/mixcloud.svg",
+				},
+				{
 					URL: "https://bandcamp.com/yoantankof",
 					title: "Bandcamp",
-					description: '"Open Source" music',
+					description: "Fuck the middle men",
 					icon: "icon/bandcamp.svg",
 				},
 				{
 					URL: "https://www.linkedin.com/in/yonatankof/",
 					title: "Linkedin",
-					description: "My pro life",
+					description: "Life as a pro",
 					icon: "icon/linkedin.svg",
 				},
 				{
@@ -121,6 +120,18 @@ export default {
 					title: "Tumblr",
 					description: "We go way back",
 					icon: "icon/tumblr.svg",
+				},
+				{
+					URL: "https://www.instagram.com/yonatan_kof/",
+					title: "Instagram",
+					description: "Love-hate relationship",
+					icon: "icon/instagram.svg",
+				},
+				{
+					URL: "https://www.tiktok.com/@abu.kof",
+					title: "TikTok",
+					description: "A few \"what?\" monentes",
+					icon: "icon/tiktok.svg",
 				},
 			],
 		};
