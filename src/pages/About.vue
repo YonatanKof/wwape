@@ -131,11 +131,7 @@ export default {
 					URL: "https://www.tiktok.com/@abu.kof",
 					title: "TikTok",
 					description: 'A few "what?" monentes',
-<<<<<<< HEAD
-					icon: "../icon/tiktok.svg",
-=======
 					icon: "/icon/tiktok.svg",
->>>>>>> feature—-links-on-the-web
 				},
 			],
 		};
