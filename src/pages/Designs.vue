@@ -91,7 +91,7 @@ export default {
 				},
 				{
 					name: "twitter:image",
-					content: `${process.env.GRIDSOME_BASE_URL}social-cover-${this.$data.pageName}.jpg`,
+					content: `${process.env.GRIDSOME_BASE_URL}/social-cover-${this.$data.pageName}.jpg`,
 				},
 				{
 					name: "twitter:creator",

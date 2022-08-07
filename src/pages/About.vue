@@ -130,7 +130,7 @@ export default {
 				{
 					URL: "https://www.tiktok.com/@abu.kof",
 					title: "TikTok",
-					description: "A few \"what?\" monentes",
+					description: 'A few "what?" monentes',
 					icon: "../icon/tiktok.svg",
 				},
 			],
@@ -168,7 +168,7 @@ export default {
 				},
 				{
 					name: "twitter:image",
-					content: `${process.env.GRIDSOME_BASE_URL}social-cover-about.jpg`,
+					content: `${process.env.GRIDSOME_BASE_URL}/social-cover-about.jpg`,
 				},
 				{
 					name: "twitter:creator",
@@ -176,7 +176,7 @@ export default {
 				},
 				{
 					property: "og:url",
-					content: this.$static.metadata.siteUrl + "about",
+					content: this.$static.metadata.siteUrl + "/about",
 				},
 				{
 					property: "og:type",
@@ -192,7 +192,7 @@ export default {
 				},
 				{
 					property: "og:image",
-					content: `${process.env.GRIDSOME_BASE_URL}social-cover-about.jpg`,
+					content: `${process.env.GRIDSOME_BASE_URL}/social-cover-about.jpg`,
 				},
 				{
 					property: "og:image:width",
