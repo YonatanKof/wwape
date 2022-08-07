@@ -10,8 +10,8 @@ module.exports = {
         "A website by Yonatan Ben Knaan: a designer, a maker and an alright dude",
     siteUrl: "https://wwape.com/",
     icon: {
-        favicon: "./src/assets/images/kof-logo.png",
-        touchicon: "./src/assets/images/kof-logo-full.png.png",
+        favicon: "./static/kof-logo.png",
+        touchicon: "./static/kof-logo-full.png",
     },
     plugins: [
         {
