@@ -7,7 +7,7 @@
 module.exports = {
     siteName: "World Wide Ape",
     siteDescription:
-        "A website by Yonatan Ben Knaan: a family man, mismatched persona, designer, maker and an alright dude",
+        "A website by Yonatan Ben Knaan: a designer, a maker and an alright dude",
     siteUrl: "https://wwape.com/",
     icon: {
         favicon: "./src/assets/images/kof-logo.png",

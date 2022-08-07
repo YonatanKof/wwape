@@ -128,7 +128,7 @@ export default {
 @import "../assets/style/_layout.scss";
 
 .main-page {
-	max-width: var(--content-width-md);
+	max-width: var(--content-width-xs);
 	display: flex;
 	flex-direction: column;
 }

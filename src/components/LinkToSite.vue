@@ -33,7 +33,6 @@ export default {
 	display: flex;
 	flex-direction: row;
 	gap: var(--space-sm);
-	align-items: center;
 	@include mQ-max($display-size-sm) {
 		align-items: start;
 	}

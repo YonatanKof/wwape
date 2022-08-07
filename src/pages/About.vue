@@ -1,38 +1,16 @@
 <template>
 	<Layout :show-logo="true" :show-posts="true">
 		<section class="about">
-			<IntroForPage 
-            :intro-script="$data.scriptTitle" 
-            :intro-title="$data.myName" 
-            :intro-subtitle="$data.about" 
-            />
-			<div class="about__bio-text">
-				<div id="the-text">
-					<p>
-						A design system manager, proficient in brand crafting and hands-on UX/UI with more them 10 years of
-						experience.
-					</p>
-					<p>
-						My passion is merging <em>ideas</em> with <em>business</em>, and <em>people</em> with
-						<em>technology</em> with the goal of creating valuable and beautiful products that are easy to maintain.
-					</p>
-					<p>
-						I design digital products for a living but I build websites for fun, to explore the language of design in
-						code and to tell stories.
-					</p>
-					<p id="cv-text">
-						Check out
-						<g-link to="https://www.notion.so/yonatankof/Yonatan-Ben-Knaan-CV-615078174644460db169c928cd409f9e">
-							my full CV here</g-link
-						>.
-					</p>
-					<Hr id="hidden-hr" hr-margin-top="var(--space-2xl)" hr-margin-bottom="var(--space-2xl)" />
+			<IntroForPage :intro-script="$data.scriptTitle" :intro-title="$data.myName" :intro-subtitle="about" />
+			<div class="about__links">
+				<div id="link-list">
+					<h3>Sites</h3>
+					<LinkToSite v-for="link in webLinks" :key="link.title" :linkdata="link" />
 				</div>
-				<ul id="meta-list">
-					<li v-for="meta in metas" :key="meta.mess">
-						<span>{{ meta.icon }}</span> {{ meta.mess }}
-					</li>
-				</ul>
+				<div id="link-list">
+					<h3>Social</h3>
+					<LinkToSite v-for="link in socialLinks" :key="link.title" :linkdata="link" />
+				</div>
 			</div>
 		</section>
 	</Layout>
@@ -51,48 +29,109 @@ query {
 <script>
 import IntroForPage from "~/components/IntroForPage.vue";
 import Hr from "~/components/Hr.vue";
+import IconBase from "~/components/SVGFreeBase.vue";
+import KofIcon from "~/components/icons/KofIcon.vue";
+import LinkToSite from "~/components/LinkToSite.vue";
 
 export default {
 	components: {
 		IntroForPage,
 		Hr,
+		IconBase,
+		KofIcon,
+		LinkToSite,
 	},
 	data() {
 		return {
 			scriptTitle: "Hi There 👋 <br /> My Name Is",
 			myName: 'Yonatan <span class="grab-word">Ben Knaan</span>',
-			about: `A design system manager, a mismatched persona and an alright dude from TLV 🇮🇱`,
-			infos: {
-				Age: 41,
-				Status: "Married +1* + Cat + Dog",
-				Residence: "Tel Aviv, IL",
-				Education: "Shenkar",
-				Mobile: "+972-50-785-5149",
-			},
-			metas: [
+			about: `A family man & lover, a design system manager & maker, a mismatched persona & an alright dude from TLV 🏴🇮🇱`,
+			webLinks: [
 				{
-					icon: "💪",
-					mess: "High on performance and strong on delivery",
+					URL: "https://wwape.com/",
+					title: "World Wide Ape",
+					description: "This site is <em>Under Construction</em>",
+					icon: "../icon/weblink-1.svg",
 				},
 				{
-					icon: "🤹‍♂️",
-					mess: "Big projects? Not so intimidating when break them down to small stuff",
+					URL: "https://yonatankof.com/",
+					title: "Yonatan Kof",
+					description: "Showcasing UX/UI",
+					icon: "../icon/weblink-2.svg",
 				},
 				{
-					icon: "👂",
-					mess: "My management style is questioning without answering",
+					URL: "https://design.yonatankof.com/",
+					title: "Kof Art",
+					description: "Archival site for my <em>art</em> & <em>design</em>",
+					icon: "../icon/weblink-3.svg",
 				},
 				{
-					icon: "💼",
-					mess: "My DesignOps is simple or complex - where accuracy is the aim",
+					URL: "https://www.notion.so/yonatankof/Yonatan-Ben-Knaan-CV-615078174644460db169c928cd409f9e",
+					title: "My CV",
+					description: "Learn how I lead design and successfully ship products to market for more than 13 years",
+					icon: "../icon/weblink-4.svg",
+				},
+			],
+			socialLinks: [
+				{
+					URL: "https://dribbble.com/yonatan_kof",
+					title: "Dribbble",
+					description: "Assorted designs",
+					icon: "../icon/dribbble.svg",
 				},
 				{
-					icon: "📐",
-					mess: "Love UX engineering and designing with code",
+					URL: "https://twitter.com/yonatankof",
+					title: "Twitter",
+					description: "Zero influence",
+					icon: "../icon/twitter.svg",
 				},
 				{
-					icon: "🖋",
-					mess: "Digital craftsman and documenter",
+					URL: "https://github.com/YonatanKof",
+					title: "GitHub",
+					description: "A profile of an aspiring developer",
+					icon: "../icon/github.svg",
+				},
+				{
+					URL: "https://www.last.fm/user/oMonkey",
+					title: "Last.fm",
+					description: "Scrobbling since 2006",
+					icon: "../icon/lastfm.svg",
+				},
+				{
+					URL: "https://www.mixcloud.com/yonatankof",
+					title: "MixCloud",
+					description: "Leftfield mixed music",
+					icon: "../icon/mixcloud.svg",
+				},
+				{
+					URL: "https://bandcamp.com/yoantankof",
+					title: "Bandcamp",
+					description: "Fuck the middle men",
+					icon: "../icon/bandcamp.svg",
+				},
+				{
+					URL: "https://www.linkedin.com/in/yonatankof/",
+					title: "Linkedin",
+					description: "Life as a pro",
+					icon: "../icon/linkedin.svg",
+				},
+				{
+					URL: "https://abu-kof.tumblr.com/",
+					title: "Tumblr",
+					description: "We go way back",
+					icon: "../icon/tumblr.svg",
+				},
+				{
+					URL: "https://www.instagram.com/yonatan_kof/",
+					title: "Instagram",
+					description: "Love-hate relationship",
+					icon: "../icon/instagram.svg",
+				},
+				{
+					URL: "https://www.tiktok.com/@abu.kof",
+					title: "TikTok",
+					description: "A few \"what?\" monentes",
+					icon: "../icon/tiktok.svg",
 				},
 			],
 		};
@@ -179,56 +218,22 @@ export default {
 @import "../assets/style/_layout.scss";
 
 .about {
-	max-width: var(--content-width-md);
-	display: flex;
-	flex-direction: column;
-
-	&__bio-text {
-		display: flex;
-		font-size: var(--font-size-2xl);
-		#cv-text {
-			font-size: initial;
-			opacity: 0.9;
-			margin-top: var(--space-2xl);
+	max-width: var(--content-width-xs);
+	&__links {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-4xl);
+		@include mQ-max($display-size-xs) {
+			grid-template-columns: unset;
+			grid-template-rows: auto;
 		}
-		@include mQ-max($display-size-sm) {
+		#link-list {
+			display: flex;
 			flex-direction: column;
-		}
-		#the-text {
-			margin-inline-end: var(--space-2xl);
-		}
-		#meta-list {
-			list-style: none;
-			margin-left: 0;
-			min-width: 30%;
-			font-size: var(--font-size-md);
-			li {
-				display: flex;
-			}
-			span {
-				margin-inline-end: var(--spacem-sm);
-			}
+			gap: var(--space-lg);
 			@include mQ-max($display-size-sm) {
-				font-size: var(--font-size-xl);
+				font-size: var(--font-size-3xl);
 			}
-		}
-	}
-
-	&__image-cont {
-		display: flex;
-		flex-direction: row-reverse;
-	}
-	&__image {
-		filter: saturate(0.5) opacity(0.5) hue-rotate(30deg);
-		max-width: 50%;
-		border-radius: 50%;
-		transform: scale(1.35);
-		transform-origin: 80% 100%;
-	}
-	#hidden-hr {
-		display: none;
-		@include mQ-max($display-size-sm) {
-			display: block;
 		}
 	}
 }
