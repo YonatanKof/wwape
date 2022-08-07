@@ -1,7 +1,7 @@
 <template>
 	<Layout :show-logo="true" :show-posts="true">
 		<section class="about">
-			<IntroForPage :intro-script="$data.scriptTitle" :intro-title="$data.myName" :intro-subtitle="about" />
+			<IntroForPage :intro-script="$data.scriptTitle" :intro-title="$data.myName" :intro-subtitle="$data.about" />
 			<div class="about__links">
 				<div id="link-list">
 					<h3>Sites</h3>
@@ -51,25 +51,25 @@ export default {
 					URL: "https://wwape.com/",
 					title: "World Wide Ape",
 					description: "This site is <em>Under Construction</em>",
-					icon: "../icon/weblink-1.svg",
+					icon: "/icon/weblink-1.svg",
 				},
 				{
 					URL: "https://yonatankof.com/",
 					title: "Yonatan Kof",
 					description: "Showcasing UX/UI",
-					icon: "../icon/weblink-2.svg",
+					icon: "/icon/weblink-2.svg",
 				},
 				{
 					URL: "https://design.yonatankof.com/",
 					title: "Kof Art",
 					description: "Archival site for my <em>art</em> & <em>design</em>",
-					icon: "../icon/weblink-3.svg",
+					icon: "/icon/weblink-3.svg",
 				},
 				{
 					URL: "https://www.notion.so/yonatankof/Yonatan-Ben-Knaan-CV-615078174644460db169c928cd409f9e",
 					title: "My CV",
 					description: "Learn how I lead design and successfully ship products to market for more than 13 years",
-					icon: "../icon/weblink-4.svg",
+					icon: "/icon/weblink-4.svg",
 				},
 			],
 			socialLinks: [
@@ -77,61 +77,65 @@ export default {
 					URL: "https://dribbble.com/yonatan_kof",
 					title: "Dribbble",
 					description: "Assorted designs",
-					icon: "../icon/dribbble.svg",
+					icon: "/icon/dribbble.svg",
 				},
 				{
 					URL: "https://twitter.com/yonatankof",
 					title: "Twitter",
 					description: "Zero influence",
-					icon: "../icon/twitter.svg",
+					icon: "/icon/twitter.svg",
 				},
 				{
 					URL: "https://github.com/YonatanKof",
 					title: "GitHub",
 					description: "A profile of an aspiring developer",
-					icon: "../icon/github.svg",
+					icon: "/icon/github.svg",
 				},
 				{
 					URL: "https://www.last.fm/user/oMonkey",
 					title: "Last.fm",
 					description: "Scrobbling since 2006",
-					icon: "../icon/lastfm.svg",
+					icon: "/icon/lastfm.svg",
 				},
 				{
 					URL: "https://www.mixcloud.com/yonatankof",
 					title: "MixCloud",
 					description: "Leftfield mixed music",
-					icon: "../icon/mixcloud.svg",
+					icon: "/icon/mixcloud.svg",
 				},
 				{
 					URL: "https://bandcamp.com/yoantankof",
 					title: "Bandcamp",
 					description: "Fuck the middle men",
-					icon: "../icon/bandcamp.svg",
+					icon: "/icon/bandcamp.svg",
 				},
 				{
 					URL: "https://www.linkedin.com/in/yonatankof/",
 					title: "Linkedin",
 					description: "Life as a pro",
-					icon: "../icon/linkedin.svg",
+					icon: "/icon/linkedin.svg",
 				},
 				{
 					URL: "https://abu-kof.tumblr.com/",
 					title: "Tumblr",
 					description: "We go way back",
-					icon: "../icon/tumblr.svg",
+					icon: "/icon/tumblr.svg",
 				},
 				{
 					URL: "https://www.instagram.com/yonatan_kof/",
 					title: "Instagram",
 					description: "Love-hate relationship",
-					icon: "../icon/instagram.svg",
+					icon: "/icon/instagram.svg",
 				},
 				{
 					URL: "https://www.tiktok.com/@abu.kof",
 					title: "TikTok",
 					description: 'A few "what?" monentes',
+<<<<<<< HEAD
 					icon: "../icon/tiktok.svg",
+=======
+					icon: "/icon/tiktok.svg",
+>>>>>>> feature—-links-on-the-web
 				},
 			],
 		};
